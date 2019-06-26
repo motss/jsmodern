@@ -1,9 +1,4 @@
-export async function greeting(name: string = 'World') {
-  return greetingSync(name);
+export interface PrototypeStruct<T = (...params: any[]) => any> {
+  label: string;
+  function: T;
 }
-
-export function greetingSync(name: string = 'World') {
-  return `Hello, ${name}!`;
-}
-
-export default greeting;
