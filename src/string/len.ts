@@ -1,8 +1,9 @@
 import { PrototypeStruct } from '..';
 
+export type LenFn = () => number;
 export const len: PrototypeStruct = {
   label: 'len',
-  function: function stringLen(): number {
+  fn: function stringLen(): number {
     return (this as unknown as string).length;
   },
 };

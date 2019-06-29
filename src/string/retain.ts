@@ -1,8 +1,9 @@
 import { PrototypeStruct } from '..';
 
+export type RetainFn = (callback: (character: string) => boolean) => string;
 export const retain: PrototypeStruct = {
   label: 'retain',
-  function: function stringRetain(callback: (character: string) => boolean): string {
+  fn: function stringRetain(callback: (character: string) => boolean): string {
     const ctx = this as unknown as string;
 
     if (!ctx.length) return '';

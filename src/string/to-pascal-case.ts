@@ -1,13 +1,15 @@
 import { PrototypeStruct } from '..';
 import { postCase, preCase } from './to-case';
 
+export type ToPascalCaseFn = () => string;
 export const toPascalCase: PrototypeStruct = {
   label: 'toPascalCase',
-  function: function stringToPascalCase(): string {
+  fn: function stringToPascalCase(): string {
     const ctx = (this as unknown as string);
 
-    if (!ctx.length) return '';
-
-    return postCase(preCase(ctx).replace(/\b[a-zA-z]/gi, s => s.toUpperCase()));
+    return !ctx.length ?
+      '' :
+      postCase(
+        preCase(ctx).replace(/(\b[a-zA-Z])/g, (_, c) => c.toUpperCase()));
   },
 };

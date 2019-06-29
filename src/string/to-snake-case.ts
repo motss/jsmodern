@@ -1,9 +1,10 @@
 import { PrototypeStruct } from '..';
 import { postCase, preCase } from './to-case';
 
+export type ToSnakeCaseFn = () => string;
 export const toSnakeCase: PrototypeStruct = {
   label: 'toSnakeCase',
-  function: function stringToSnakeCase(): string {
+  fn: function stringToSnakeCase(): string {
     const ctx = (this as unknown as string);
 
     if (!ctx.length) return '';

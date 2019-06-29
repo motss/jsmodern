@@ -1,0 +1,35 @@
+{
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "coverageDirectory": "./coverage",
+  "coverageThreshold": {
+    "global": {
+      "branches": 80,
+      "functions": 80,
+      "lines": 80,
+      "statements": 80
+    }
+  },
+  "collectCoverageFrom": [
+    "!**/node_modules/**",
+    "!**/src/demo/**/*.js?(x)",
+    "!<rootDir>/dist/**/*.spec.js?(x)",
+    "!<rootDir>/dist/**/test/CONSTANTS.js?(x)",
+    "!<rootDir>/dist/index.js?(x)",
+    "!<rootDir>/dist/lib/**",
+    "<rootDir>/dist/**/*.js?(x)"
+  ],
+  "verbose": true,
+  "bail": true,
+  "roots": [
+    "<rootDir>/dist/"
+  ],
+  "testMatch": [
+    "<rootDir>/dist/test/index.spec.js?(x)"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "jsx",
+    "json"
+  ]
+}

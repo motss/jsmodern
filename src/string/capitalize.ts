@@ -1,8 +1,9 @@
 import { PrototypeStruct } from '..';
 
+export type CapitalizeFn = () => string;
 export const capitalize: PrototypeStruct = {
   label: 'capitalize',
-  function: function stringCapitalize(): string {
+  fn: function stringCapitalize(): string {
     const ctx = (this as unknown as string);
     const len = ctx.length;
 

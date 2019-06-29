@@ -1,10 +1,12 @@
 import { PrototypeStruct } from '..';
 
+export type LastIndexFn = () => number;
 export const lastIndex: PrototypeStruct = {
   label: 'lastIndex',
-  function: function stringLastIndex(): number {
+  fn: function stringLastIndex(): number {
     const ctx = (this as unknown as string);
+    const len = ctx.length;
 
-    return ctx.length < 2 ? 0 : ctx.length - 1;
+    return !len ? -1 : len - 1;
   },
 };

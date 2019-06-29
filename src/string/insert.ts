@@ -1,15 +1,16 @@
 import { PrototypeStruct } from '..';
 
+export type InsertFn = (index: number, s: string) => string;
 export const insert: PrototypeStruct = {
   label: 'insert',
-  function: function stringInsert(index: number, s: string): string {
+  fn: function stringInsert(index: number, s: string): string {
     const ctx = this as unknown as string;
     const len = ctx.length;
 
-    if (index > len) throw new TypeError('String index out of bounds');
+    if (index < 0 || index > len) throw new TypeError('String index out of bound');
 
     if (!len) return s;
-    if (index === len - 1) return `${ctx}${s}`;
+    if (index === len) return `${ctx}${s}`;
     if (!index) return `${s}${ctx}`;
 
     const slice0 = ctx.slice(0, index);

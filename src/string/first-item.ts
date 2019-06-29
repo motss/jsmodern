@@ -1,10 +1,11 @@
 import { PrototypeStruct } from '..';
 
+export type FirstItemFn = () => string;
 export const firstItem: PrototypeStruct = {
   label: 'firstItem',
-  function: function stringFirstItem(): string {
+  fn: function stringFirstItem(): string {
     const ctx = (this as unknown as string);
 
-    return ctx[0];
+    return !ctx.length ? '' : ctx[0];
   },
 };
