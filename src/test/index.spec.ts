@@ -72,3 +72,7 @@ import './array/filled.spec.js';
 
 import './promise/delayed.spec.js';
 import './promise/is-promise.spec.js';
+
+/** Object */
+
+import './object/is-object.spec.js';
