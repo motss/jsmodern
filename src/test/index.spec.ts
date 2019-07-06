@@ -67,3 +67,8 @@ import './array/sum.spec.js';
 import './array/truncate.spec.js';
 
 import './array/filled.spec.js';
+
+/** Promise */
+
+import './promise/delayed.spec.js';
+import './promise/is-promise.spec.js';
