@@ -6,6 +6,6 @@ export const iter: PrototypeStruct = {
   fn: function arrayIter<T>(): IterableIterator<T> {
     const ctx = this as unknown as T[];
 
-    return ctx.values();
+    return ctx[Symbol.iterator]();
   },
 };
