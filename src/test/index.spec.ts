@@ -35,3 +35,35 @@ import './number/mod-floor.spec.js';
 import './number/check-int.spec.js';
 import './number/is-number.spec.js';
 import './number/range.spec.js';
+
+/** Array */
+import './array/all.spec.js';
+import './array/any.spec.js';
+import './array/chunks.spec.js';
+import './array/clear.spec.js';
+import './array/contains.spec.js';
+import './array/ends-with.spec.js';
+import './array/enumerate.spec.js';
+import './array/first-item.spec.js';
+import './array/fold.spec.js';
+import './array/insert.spec.js';
+import './array/is-empty.spec.js';
+import './array/is-sorted.spec.js';
+import './array/iter.spec.js';
+import './array/last-item.spec.js';
+import './array/len.spec.js';
+import './array/max.spec.js';
+import './array/min.spec.js';
+import './array/partition.spec.js';
+import './array/product.spec.js';
+import './array/remove.spec.js';
+import './array/repeat.spec.js';
+import './array/retain.spec.js';
+import './array/shuffle.spec.js';
+import './array/split-at.spec.js';
+import './array/split.spec.js';
+import './array/starts-with.spec.js';
+import './array/sum.spec.js';
+import './array/truncate.spec.js';
+
+import './array/filled.spec.js';

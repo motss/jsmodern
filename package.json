@@ -29,15 +29,17 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "npm run ts -- -p tsconfig.prod.json",
+    "build:test": "npm run ts -- -p tsconfig.test.json",
     "clean": "shx rm -rf dist/",
+    "jest": "jest --config ./.jestrc.json",
     "lint": "npm run lint:debug -- --config tslint.prod.json",
     "lint:debug": "tslint --project tsconfig.json --format stylish",
     "prepublishOnly": "npm run lint && npm run build",
-    "jest": "jest --config ./.jestrc.json",
-    "build:test": "npm run ts -- -p tsconfig.test.json",
     "test": "npm run clean && npm run lint && npm run build:test && npm run jest",
     "ts": "tsc",
-    "watch": "npm run ts -- --watch"
+    "watch": "npm run ts -- --watch",
+    "watch:build": "npm run ts -- --watch -p tsconfig.test.json",
+    "watch:test": "npm run jest -- --watchAll"
   },
   "dependencies": {},
   "devDependencies": {
