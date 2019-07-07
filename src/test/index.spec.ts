@@ -104,3 +104,7 @@ import './date/is-date.spec.js';
 
 import './iterator/is-async-iterator.spec.js';
 import './iterator/is-iterator.spec.js';
+
+/** Symbol */
+
+import './symbol/is-symbol.spec.js';
