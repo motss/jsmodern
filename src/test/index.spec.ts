@@ -85,3 +85,7 @@ import './function/is-function.spec.js';
 /** Boolean */
 
 import './boolean/is-boolean.spec.js';
+
+/** Error */
+
+import './error/is-error.spec.js';

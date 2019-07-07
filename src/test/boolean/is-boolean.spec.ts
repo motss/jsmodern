@@ -31,16 +31,28 @@ describe('Boolean.isBoolean', () => {
     [`.isBoolean(new Boolean(0))`, new Boolean(0), false],
     [`.isBoolean(new Boolean(''))`, new Boolean(''), false],
     [`.isBoolean(new Boolean(false))`, new Boolean(false), false],
+    [`.isBoolean(new Boolean(true))`, new Boolean(true), false],
+    [`.isBoolean(new Boolean('true'))`, new Boolean('true'), false],
+    [`.isBoolean(new Boolean('false'))`, new Boolean('false'), false],
+    [`.isBoolean(new Boolean('a'))`, new Boolean('a'), false],
+    [`.isBoolean(new Boolean([]))`, new Boolean([]), false],
+    [`.isBoolean(new Boolean({}))`, new Boolean({}), false],
 
-    [`.isBoolean(new Boolean(true))`, new Boolean(true), true],
-    [`.isBoolean(new Boolean('true'))`, new Boolean('true'), true],
-    [`.isBoolean(new Boolean('false'))`, new Boolean('false'), true],
-    [`.isBoolean(new Boolean('a'))`, new Boolean('a'), true],
-    [`.isBoolean(new Boolean([]))`, new Boolean([]), true],
-    [`.isBoolean(new Boolean({}))`, new Boolean({}), true],
+    // tslint:enable: no-construct
+    [`.isBoolean(Boolean())`, Boolean(), true],
+    [`.isBoolean(Boolean(undefined))`, Boolean(undefined), true],
+    [`.isBoolean(Boolean(null))`, Boolean(null), true],
+    [`.isBoolean(Boolean(0))`, Boolean(0), true],
+    [`.isBoolean(Boolean(''))`, Boolean(''), true],
+    [`.isBoolean(Boolean(false))`, Boolean(false), true],
+    [`.isBoolean(Boolean(true))`, Boolean(true), true],
+    [`.isBoolean(Boolean('true'))`, Boolean('true'), true],
+    [`.isBoolean(Boolean('false'))`, Boolean('false'), true],
+    [`.isBoolean(Boolean('a'))`, Boolean('a'), true],
+    [`.isBoolean(Boolean([]))`, Boolean([]), true],
+    [`.isBoolean(Boolean({}))`, Boolean({}), true],
     [`.isBoolean(true)`, true, true],
     [`.isBoolean(false)`, false, true],
-    // tslint:enable: no-construct
   ])('%s', (_, a, expected) => {
     const d = Boolean.isBoolean(a);
 
