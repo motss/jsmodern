@@ -81,3 +81,7 @@ import './object/is-object.spec.js';
 
 import './function/is-async-function.spec.js';
 import './function/is-function.spec.js';
+
+/** Boolean */
+
+import './boolean/is-boolean.spec.js';

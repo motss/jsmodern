@@ -1,6 +1,6 @@
 import { PrototypeStruct } from '..';
 
-export type IsObjectFn = (n: any) => boolean;
+export type IsObjectFn = (x: any) => boolean;
 export const isObject: PrototypeStruct = {
   label: 'isObject',
   fn: function numberIsObject(x: any): boolean {
