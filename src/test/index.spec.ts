@@ -80,7 +80,9 @@ import './object/is-object.spec.js';
 /** Function */
 
 import './function/is-async-function.spec.js';
+import './function/is-async-generator-function.spec.js';
 import './function/is-function.spec.js';
+import './function/is-generator-function.spec.js';
 
 /** Boolean */
 
@@ -97,3 +99,8 @@ import './date/is-after.spec.js';
 import './date/is-before.spec.js';
 
 import './date/is-date.spec.js';
+
+/** Iterator */
+
+import './iterator/is-async-iterator.spec.js';
+import './iterator/is-iterator.spec.js';

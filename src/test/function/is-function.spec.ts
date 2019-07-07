@@ -21,7 +21,7 @@ describe('Function.isFunction', () => {
     [`.isFunction({})`, {}, false],
     [`.isFunction({ a: 1 })`, { a: 1 }, false],
 
-    [`.isFunction(async () => {})`, async function a() { return void 0; }, true],
+    [`.isFunction(async () => {})`, async () => void 0, true],
     [`.isFunction(async function () {})`, async function a() { return void 0; }, true],
     [`.isFunction(() => {})`, () => void 0, true],
     [`.isFunction(function () {})`, function a() { return void 0; }, true],
