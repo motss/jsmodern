@@ -3,7 +3,7 @@ import { PrototypeStruct } from '..';
 export type IsIteratorFn = (x: any) => boolean;
 export const isIterator: PrototypeStruct = {
   label: 'isIterator',
-  fn: function numberIsIterator(x: any): boolean {
+  fn: function iteratorIsIterator(x: any): boolean {
     return null == x ?
       false :
       'object' === typeof(x) && Boolean(

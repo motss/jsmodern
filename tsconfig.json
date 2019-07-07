@@ -4,7 +4,8 @@
     "rootDir": "src",
     "outDir": "dist",
     "declarationDir": "dist",
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "incremental": false
   },
   "include": ["src/**/*.ts"],
   "exclude": ["dist"]

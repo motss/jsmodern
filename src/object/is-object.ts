@@ -3,7 +3,7 @@ import { PrototypeStruct } from '..';
 export type IsObjectFn = (x: any) => boolean;
 export const isObject: PrototypeStruct = {
   label: 'isObject',
-  fn: function numberIsObject(x: any): boolean {
+  fn: function objectIsObject(x: any): boolean {
     if (null == x) return false;
 
     const isObjectType = 'object' === typeof(x);

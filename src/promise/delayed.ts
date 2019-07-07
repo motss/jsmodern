@@ -7,7 +7,7 @@ export interface PromiseDelayed {
 }
 export const delayed: PrototypeStruct = {
   label: 'delayed',
-  fn: function arrayDelayed<T>(
+  fn: function promiseDelayed<T>(
     delay: number,
     callback: DelayedCallback<T>
   ): Promise<undefined | T> {

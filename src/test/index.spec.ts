@@ -108,3 +108,7 @@ import './iterator/is-iterator.spec.js';
 /** Symbol */
 
 import './symbol/is-symbol.spec.js';
+
+/** RegExp */
+
+import './regexp/is-regexp.spec.js';
