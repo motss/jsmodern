@@ -1,5 +1,5 @@
 import { isAsyncFunction, IsAsyncFunctionFn } from '../../function/is-async-function';
-import { hasNativeAsync } from './has-native-async';
+import { hasAsync } from './has-async';
 
 const { label, fn } = isAsyncFunction;
 
@@ -31,7 +31,7 @@ describe('Function.isAsyncFunction', () => {
     expect(d).toStrictEqual(expected!);
   });
 
-  const trueIfAsync = hasNativeAsync();
+  const trueIfAsync = hasAsync();
 
   type TestTrue = [string, any, boolean];
   test.each<TestTrue>([

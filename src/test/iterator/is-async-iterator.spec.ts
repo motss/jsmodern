@@ -1,5 +1,6 @@
 import { isAsyncIterator, IsAsyncIteratorFn } from '../../iterator/is-async-iterator';
-import { hasNativeAsync, hasNativeAsyncIterator } from '../function/has-native-async';
+import { hasAsync } from '../function/has-async';
+import { hasAsyncIter } from './has-async-iter';
 
 const { label, fn } = isAsyncIterator;
 
@@ -35,7 +36,7 @@ describe('Iterator.isAsyncIterator', () => {
     expect(d).toStrictEqual(expected!);
   });
 
-  const testIfAsync = hasNativeAsync() && hasNativeAsyncIterator();
+  const testIfAsync = hasAsync() && hasAsyncIter();
 
   type TestTrue = [string, any, boolean];
   test.each<TestTrue>([

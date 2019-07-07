@@ -2,7 +2,8 @@ import {
   isAsyncGeneratorFunction,
   IsAsyncGeneratorFunctionFn,
 } from '../../function/is-async-generator-function';
-import { hasNativeAsync, hasNativeAsyncIterator } from './has-native-async';
+import { hasAsyncIter } from '../iterator/has-async-iter';
+import { hasAsync } from './has-async';
 
 const { label, fn } = isAsyncGeneratorFunction;
 
@@ -39,7 +40,7 @@ describe('Function.isAsyncGeneratorFunction', () => {
     expect(d).toStrictEqual(expected!);
   });
 
-  const trueIfAsync = hasNativeAsync() && hasNativeAsyncIterator();
+  const trueIfAsync = hasAsync() && hasAsyncIter();
 
   type TestTrue = [string, any, boolean];
   test.each<TestTrue>([
