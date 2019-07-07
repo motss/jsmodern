@@ -9,9 +9,7 @@ const { label, fn } = isAsyncGeneratorFunction;
 Object.defineProperty(Function, label, { value: fn });
 
 describe('Function.isAsyncGeneratorFunction', () => {
-  hasAsyncIter();
-
-  const trueIfAsync = hasAsync();
+  const trueIfAsync = hasAsync() && hasAsyncIter();
 
   type TestSuccess = [string, any, boolean];
   test.each<TestSuccess>([
