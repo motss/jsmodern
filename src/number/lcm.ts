@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { gcdUtil } from './gcd';
+import { utilGcd } from './gcd';
 
 export type LcmFn = (divisor: number) => number;
 export const lcm: PrototypeStruct = {
@@ -20,6 +20,6 @@ export const lcm: PrototypeStruct = {
     const x = ctx;
     const y = divisor;
 
-    return Math.abs((x * y) / gcdUtil(x, y));
+    return Math.abs((x * y) / utilGcd(x, y));
   },
 };

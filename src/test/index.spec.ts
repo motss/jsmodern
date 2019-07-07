@@ -89,3 +89,11 @@ import './boolean/is-boolean.spec.js';
 /** Error */
 
 import './error/is-error.spec.js';
+
+/** Date */
+
+import './date/difference.spec.js';
+import './date/is-after.spec.js';
+import './date/is-before.spec.js';
+
+import './date/is-date.spec.js';

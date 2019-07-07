@@ -1,6 +1,6 @@
 import { PrototypeStruct } from '..';
 
-export function divFloorUtil(a: number, b: number): number {
+export function utilDivFloor(a: number, b: number): number {
   return Math.floor(a / b);
 }
 
@@ -15,6 +15,6 @@ export const divFloor: PrototypeStruct = {
     // tslint:disable-next-line: max-line-length
     if (!x) { throw new TypeError(`Invalid 'divisor'. The value must be a number that is greater than zero`); }
 
-    return divFloorUtil(ctx, x);
+    return utilDivFloor(ctx, x);
   },
 };

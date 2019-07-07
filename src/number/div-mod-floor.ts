@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { divFloorUtil } from './div-floor';
+import { utilDivFloor } from './div-floor';
 
 export type DivModFloorFn = (divisor: number) => number[];
 export const divModFloor: PrototypeStruct = {
@@ -12,7 +12,7 @@ export const divModFloor: PrototypeStruct = {
     // tslint:disable-next-line: max-line-length
     if (!x) { throw new TypeError(`Invalid 'divisor'. The value must be a number that is greater than zero`); }
 
-    const quotient = divFloorUtil(ctx, x);
+    const quotient = utilDivFloor(ctx, x);
     const remainder = ctx - (x * quotient);
 
     return [quotient, remainder];
