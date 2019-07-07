@@ -6,6 +6,11 @@ export function hasAsyncIter() {
     a();
     return true;
   } catch (e) {
+    /**
+     * Simple polyfill for `Symbol.asyncIterator` as stated in
+     * {@link https://bit.ly/2JxzBWX|TypeScript 2.3#Caveats}
+     */
+    (Symbol as any).asyncIterator = Symbol.asyncIterator || Symbol.for('Symbol.asyncIterator');
     return false;
   }
 }
