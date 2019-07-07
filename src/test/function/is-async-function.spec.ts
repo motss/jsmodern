@@ -1,13 +1,15 @@
 import { isAsyncFunction, IsAsyncFunctionFn } from '../../function/is-async-function';
-import { hasAsync } from './has-async';
+import { hasAsync } from '../feature-detect';
 
 const { label, fn } = isAsyncFunction;
 
 Object.defineProperty(Function, label, { value: fn });
 
 describe('Function.isAsyncFunction', () => {
-  type TestFalse = [string, any, boolean];
-  test.each<TestFalse>([
+  const trueIfAsync = hasAsync();
+
+  type TestSuccess = [string, any, boolean];
+  test.each<TestSuccess>([
     ['.isAsyncFunction()', undefined, false],
     ['.isAsyncFunction(null)', null, false],
     ['.isAsyncFunction(0)', 0, false],
@@ -25,16 +27,7 @@ describe('Function.isAsyncFunction', () => {
     [`.isAsyncFunction(() => {})`, () => void 0, false],
     [`.isAsyncFunction(function () {})`, function a() { return void 0; }, false],
     [`.isAsyncFunction(() => Promise.resolve(1))`, () => Promise.resolve(1), false],
-  ])('%s', (_, a, expected) => {
-    const d = Function.isAsyncFunction(a);
 
-    expect(d).toStrictEqual(expected!);
-  });
-
-  const trueIfAsync = hasAsync();
-
-  type TestTrue = [string, any, boolean];
-  test.each<TestTrue>([
     [`.isAsyncFunction(async () => {})`, async () => void 0, trueIfAsync],
     [`.isAsyncFunction(async function () {})`, async function a() { return void 0; }, trueIfAsync],
   ])('%s', (_, a, expected) => {

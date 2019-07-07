@@ -2,16 +2,19 @@ import {
   isAsyncGeneratorFunction,
   IsAsyncGeneratorFunctionFn,
 } from '../../function/is-async-generator-function';
-import { hasAsyncIter } from '../iterator/has-async-iter';
-import { hasAsync } from './has-async';
+import { hasAsync, hasAsyncIter } from '../feature-detect';
 
 const { label, fn } = isAsyncGeneratorFunction;
 
 Object.defineProperty(Function, label, { value: fn });
 
 describe('Function.isAsyncGeneratorFunction', () => {
-  type TestFalse = [string, any, boolean];
-  test.each<TestFalse>([
+  hasAsyncIter();
+
+  const trueIfAsync = hasAsync();
+
+  type TestSuccess = [string, any, boolean];
+  test.each<TestSuccess>([
     // tslint:disable: max-line-length
     ['.isAsyncGeneratorFunction()', undefined, false],
     ['.isAsyncGeneratorFunction(null)', null, false],
@@ -33,18 +36,6 @@ describe('Function.isAsyncGeneratorFunction', () => {
     [`.isAsyncGeneratorFunction(async () => {})`, async () => void 0, false],
     [`.isAsyncGeneratorFunction(async function () {})`, async function a() { return void 0; }, false],
 
-    // tslint:disable: max-line-length
-  ])('%s', (_, a, expected) => {
-    const d = Function.isAsyncGeneratorFunction(a);
-
-    expect(d).toStrictEqual(expected!);
-  });
-
-  const trueIfAsync = hasAsync() && hasAsyncIter();
-
-  type TestTrue = [string, any, boolean];
-  test.each<TestTrue>([
-    // tslint:disable: max-line-length
     [`.isAsyncGeneratorFunction(async function* () {})`, async function* a() { return void 0; }, trueIfAsync],
     // tslint:disable: max-line-length
   ])('%s', (_, a, expected) => {
