@@ -1,12 +1,13 @@
 import { isAsyncIterator, IsAsyncIteratorFn } from '../../iterator/is-async-iterator';
+import { hasNativeAsync, hasNativeAsyncIterator } from '../function/has-native-async';
 
 const { label, fn } = isAsyncIterator;
 
 Object.defineProperty(global, label, { value: fn });
 
 describe('Iterator.isAsyncIterator', () => {
-  type TestSuccess = [string, any, boolean];
-  test.each<TestSuccess>([
+  type TestFalse = [string, any, boolean];
+  test.each<TestFalse>([
     ['.isAsyncIterator()', undefined, false],
     ['.isAsyncIterator(null)', null, false],
     ['.isAsyncIterator(0)', 0, false],
@@ -26,12 +27,21 @@ describe('Iterator.isAsyncIterator', () => {
     [`.isAsyncIterator(function () {})`, function a() { return void 0; }, false],
     [`.isAsyncIterator(class A {})`, class A {}, false],
     [`.isAsyncIterator(function* () {})`, function* a() { yield 1; }, false],
-
-    [`.isAsyncIterator(async function* () {})`, async function* a() { yield 1; }, true],
   ])('%s', (_, a, expected) => {
     const d = global.isAsyncIterator(
       'function' === typeof(a) && 'class A {}' !== a.toString() ? a() : a
     );
+
+    expect(d).toStrictEqual(expected!);
+  });
+
+  const testIfAsync = hasNativeAsync() && hasNativeAsyncIterator();
+
+  type TestTrue = [string, any, boolean];
+  test.each<TestTrue>([
+    [`.isAsyncIterator(async function* () {})`, async function* a() { yield 1; }, testIfAsync],
+  ])('%s', (_, a, expected) => {
+    const d = global.isAsyncIterator('function' === typeof(a) ? a() : a);
 
     expect(d).toStrictEqual(expected!);
   });

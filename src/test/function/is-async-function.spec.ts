@@ -1,12 +1,13 @@
 import { isAsyncFunction, IsAsyncFunctionFn } from '../../function/is-async-function';
+import { hasNativeAsync } from './has-native-async';
 
 const { label, fn } = isAsyncFunction;
 
 Object.defineProperty(Function, label, { value: fn });
 
 describe('Function.isAsyncFunction', () => {
-  type TestSuccess = [string, any, boolean];
-  test.each<TestSuccess>([
+  type TestFalse = [string, any, boolean];
+  test.each<TestFalse>([
     ['.isAsyncFunction()', undefined, false],
     ['.isAsyncFunction(null)', null, false],
     ['.isAsyncFunction(0)', 0, false],
@@ -24,14 +25,24 @@ describe('Function.isAsyncFunction', () => {
     [`.isAsyncFunction(() => {})`, () => void 0, false],
     [`.isAsyncFunction(function () {})`, function a() { return void 0; }, false],
     [`.isAsyncFunction(() => Promise.resolve(1))`, () => Promise.resolve(1), false],
-
-    [`.isAsyncFunction(async () => {})`, async () => void 0, true],
-    [`.isAsyncFunction(async function () {})`, async function a() { return void 0; }, true],
   ])('%s', (_, a, expected) => {
     const d = Function.isAsyncFunction(a);
 
     expect(d).toStrictEqual(expected!);
   });
+
+  const trueIfAsync = hasNativeAsync();
+
+  type TestTrue = [string, any, boolean];
+  test.each<TestTrue>([
+    [`.isAsyncFunction(async () => {})`, async () => void 0, trueIfAsync],
+    [`.isAsyncFunction(async function () {})`, async function a() { return void 0; }, trueIfAsync],
+  ])('%s', (_, a, expected) => {
+    const d = Function.isAsyncFunction(a);
+
+    expect(d).toStrictEqual(expected!);
+  });
+
 });
 
 declare global {

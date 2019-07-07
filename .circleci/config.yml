@@ -32,7 +32,12 @@ defaults: &defaults
         command: npm run lint
     - run:
         name: Build
-        command: npm run build:test
+        command: |
+          if [ -z "$(node -v | grep -iE '^v8[.]')" ]; then
+            npm run build:test
+          else
+            npm run build:test-es2017
+          fi
     - run:
         name: Test
         command: npm run jest
