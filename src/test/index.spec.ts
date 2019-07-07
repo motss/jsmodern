@@ -76,3 +76,8 @@ import './promise/is-promise.spec.js';
 /** Object */
 
 import './object/is-object.spec.js';
+
+/** Function */
+
+import './function/is-async-function.spec.js';
+import './function/is-function.spec.js';
