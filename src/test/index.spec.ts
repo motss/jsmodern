@@ -126,3 +126,7 @@ import './map/of.spec.js';
 import './map/remove-entry.spec.js';
 
 import './map/is-map.spec.js';
+
+/** WeakMap */
+
+import './weak-map/is-weak.map.spec.js';
