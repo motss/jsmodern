@@ -112,3 +112,17 @@ import './symbol/is-symbol.spec.js';
 /** RegExp */
 
 import './regexp/is-regexp.spec.js';
+
+/** Map */
+
+import './map/entry-or-default.spec.js';
+import './map/entry.spec.js';
+import './map/from.spec.js';
+import './map/get-or-default.spec.js'
+import './map/is-empty.spec.js';
+import './map/iter.spec.js';
+import './map/len.spec.js';
+import './map/of.spec.js'
+import './map/remove-entry.spec.js';
+
+import './map/is-map.spec.js';
