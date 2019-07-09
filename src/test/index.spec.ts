@@ -131,7 +131,6 @@ import './map/is-map.spec.js';
 
 import './weak-map/is-weak.map.spec.js';
 
-
 /** WeakSet */
 
 import './weak-set/is-weak.set.spec.js';
