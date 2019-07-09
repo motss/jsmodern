@@ -124,6 +124,7 @@ import './map/iter.spec.js';
 import './map/len.spec.js';
 import './map/of.spec.js';
 import './map/remove-entry.spec.js';
+import './map/to-array.spec.js';
 
 import './map/is-map.spec.js';
 
