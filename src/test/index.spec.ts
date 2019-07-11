@@ -39,6 +39,7 @@ import './number/range.spec.js';
 /** Array */
 import './array/all.spec.js';
 import './array/any.spec.js';
+import './array/binary-search.spec.js';
 import './array/chunks.spec.js';
 import './array/clear.spec.js';
 import './array/contains.spec.js';
