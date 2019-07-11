@@ -76,22 +76,22 @@ $ npm install --save jsmodern
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
 
-[Array extensions]: /array/README.md
-[Boolean extensions]: /boolean/README.md
-[Date extensions]: /date/README.md
-[Error extensions]: /error/README.md
-[Function extensions]: /function/README.md
-[Iterator extensions]: /iterator/README.md
-[Map extensions]: /map/README.md
-[Number extensions]: /number/README.md
-[Object extensions]: /object/README.md
-[Promise extensions]: /promise/README.md
-[RegExp extensions]: /regexp/README.md
-[Set extensions]: /set/README.md
-[String extensions]: /string/README.md
-[Symbol extensions]: /symbol/README.md
-[WeakMap extensions]: /weak-map/README.md
-[WeakSet extensions]: /weak-set/README.md
+[Array extensions]: /src/array
+[Boolean extensions]: /src/boolean
+[Date extensions]: /src/date
+[Error extensions]: /src/error
+[Function extensions]: /src/function
+[Iterator extensions]: /src/iterator
+[Map extensions]: /src/map
+[Number extensions]: /src/number
+[Object extensions]: /src/object
+[Promise extensions]: /src/promise
+[RegExp extensions]: /src/regexp
+[Set extensions]: /src/set
+[String extensions]: /src/string
+[Symbol extensions]: /src/symbol
+[WeakMap extensions]: /src/weak-map
+[WeakSet extensions]: /src/weak-set
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
