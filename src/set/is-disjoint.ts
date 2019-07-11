@@ -11,12 +11,8 @@ export const isDisjoint: PrototypeStruct = {
 
     if (!ctx.size && !other.size) return true;
 
-    let disjoint = true;
+    for (const n of ctx) if (other.has(n)) return false;
 
-    for (const n of ctx) {
-      if (other.has(n)) return false;
-    }
-
-    return disjoint;
+    return true;
   },
 };

@@ -13,9 +13,7 @@ export const intersection: PrototypeStruct = {
 
     const intersectionList = [];
 
-    for (const n of ctx) {
-      if (other.has(n)) intersectionList.push(n);
-    }
+    for (const n of ctx) if (other.has(n)) intersectionList.push(n);
 
     return intersectionList;
   },
