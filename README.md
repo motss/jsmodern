@@ -1,7 +1,7 @@
 <div align="center" style="text-align: center;">
   <h1 style="border-bottom: none;">jsmodern</h1>
 
-  <p>An extension to existing JavaScript, inspired by other great languages such as Rust, Dart, etc.</p>
+  <p>An extension to existing JavaScript, influenced by other great languages such as Rust, Dart, Java, Golang, etc.</p>
 </div>
 
 <hr />
@@ -26,59 +26,45 @@
 [![Codacy Badge][codacy-badge]][codacy-url]
 [![Code of Conduct][coc-badge]][coc-url]
 
-> Better greeting message
+> This is, by no means, to replace JavaScript or anything like that. This is just a rather straightforward module that extends native JavaScript with useful methods that are available in some other great languages such as Rust, Dart, Java, Golang, just to name a few. This is the state what I wanted JavaScript to be in next few years. If you're with me, let's hit me up for collaboration! 💯
 
 ## Table of contents <!-- omit in toc -->
 
-- [Pre-requisites](#pre-requisites)
-- [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-    - [Node.js](#nodejs)
-    - [Native ES modules or TypeScript](#native-es-modules-or-typescript)
-- [API Reference](#api-reference)
-  - [greeting([name])](#greetingname)
-  - [greetingSync([name])](#greetingsyncname)
-- [License](#license)
+- [Pre-requisites](#Pre-requisites)
+- [Installation](#Installation)
+- [Available extensions](#Available-extensions)
+- [License](#License)
 
 ## Pre-requisites
 
 - [Node.js][nodejs-url] >= 8.16.0
 - [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][nodejs-url] so there is no need to install separately.)
 
-## Setup
-
-### Install
+## Installation
 
 ```sh
 # Install via NPM
 $ npm install --save jsmodern
 ```
 
-### Usage
+## Available extensions
 
-#### Node.js
-
-```js
-const greeting = require('jsmodern');
-```
-
-#### Native ES modules or TypeScript
-
-```ts
-import greeting from 'jsmodern';
-```
-
-## API Reference
-
-### greeting([name])
-
-- `name` <[string][string-mdn-url]> Name of the person to greet at.
-- returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with a greeting message.
-
-### greetingSync([name])
-
-This methods works the same as `greeting(name)` except that this is the synchronous version.
+* [x] [Array extensions]
+* [x] [Boolean extensions]
+* [x] [Date extensions]
+* [x] [Error extensions]
+* [x] [Function extensions]
+* [x] [Iterator extensions]
+* [x] [Map extensions]
+* [x] [Number extensions]
+* [x] [Object extensions]
+* [x] [Promise extensions]
+* [x] [RegExp extensions]
+* [x] [Set extensions]
+* [x] [String extensions]
+* [x] [Symbol extensions]
+* [x] [WeakMap extensions]
+* [x] [WeakSet extensions]
 
 ## License
 
@@ -89,6 +75,23 @@ This methods works the same as `greeting(name)` except that this is the synchron
 [nodejs-url]: https://nodejs.org
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
+
+[Array extensions]: /array/README.md
+[Boolean extensions]: /boolean/README.md
+[Date extensions]: /date/README.md
+[Error extensions]: /error/README.md
+[Function extensions]: /function/README.md
+[Iterator extensions]: /iterator/README.md
+[Map extensions]: /map/README.md
+[Number extensions]: /number/README.md
+[Object extensions]: /object/README.md
+[Promise extensions]: /promise/README.md
+[RegExp extensions]: /regexp/README.md
+[Set extensions]: /set/README.md
+[String extensions]: /string/README.md
+[Symbol extensions]: /symbol/README.md
+[WeakMap extensions]: /weak-map/README.md
+[WeakSet extensions]: /weak-set/README.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
