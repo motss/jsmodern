@@ -128,6 +128,23 @@ import './map/to-array.spec.js';
 
 import './map/is-map.spec.js';
 
+/** Set */
+
+import './set/difference.spec.js';
+import './set/from.spec.js';
+import './set/intersection.spec.js';
+import './set/is-disjoint.spec.js';
+import './set/is-empty.spec.js';
+import './set/is-set.spec.js';
+import './set/is-subset.spec.js';
+import './set/is-superset.spec.js';
+import './set/iter.spec.js';
+import './set/len.spec.js';
+import './set/of.spec.js';
+import './set/symmetric-difference.spec.js';
+import './set/to-array.spec.js';
+import './set/union.spec.js';
+
 /** WeakMap */
 
 import './weak-map/is-weak.map.spec.js';
