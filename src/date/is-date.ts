@@ -6,6 +6,7 @@ export function dateIsDate(x: any): boolean {
 
 export type IsDateFn = (x: any) => boolean;
 export const isDate: PrototypeStruct = {
+  isStatic: true,
   label: 'isDate',
   fn: dateIsDate,
 };

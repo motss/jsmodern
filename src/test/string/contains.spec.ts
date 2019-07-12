@@ -1,8 +1,7 @@
-import { contains, ContainsFn } from '../../string/contains.js';
+import { extend } from '../../extend.js';
+import { contains } from '../../string/contains.js';
 
-const { label, fn } = contains;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [contains] });
 
 describe('String.prototype.contains', () => {
   type TestSuccess = [string, string, string, boolean];
@@ -32,9 +31,3 @@ describe('String.prototype.contains', () => {
     }
   });
 });
-
-declare global {
-  interface String {
-    contains: ContainsFn;
-  }
-}

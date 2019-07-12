@@ -1,8 +1,7 @@
 import { all, AllFn } from '../../array/all';
+import { extend } from '../../extend';
 
-const { label, fn } = all;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [all] });
 
 describe('Array.prototype.all', () => {
   const cb = (n: number) => n > 2;

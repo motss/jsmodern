@@ -12,3 +12,9 @@ export const contains: PrototypeStruct = {
     return ctx.indexOf(s) >= 0;
   },
 };
+
+declare global {
+  interface String {
+    contains: ContainsFn;
+  }
+}

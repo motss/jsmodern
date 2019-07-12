@@ -2,6 +2,7 @@ import { PrototypeStruct } from '..';
 
 export type IsObjectFn = (x: any) => boolean;
 export const isObject: PrototypeStruct = {
+  isStatic: true,
   label: 'isObject',
   fn: function objectIsObject(x: any): boolean {
     if (null == x) return false;

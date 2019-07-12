@@ -6,6 +6,7 @@ export function isAnyString(s: any): s is string {
 
 export type IsStringFn = (s: any) => boolean;
 export const isString: PrototypeStruct = {
+  isStatic: true,
   label: 'isString',
   fn: isAnyString,
 };

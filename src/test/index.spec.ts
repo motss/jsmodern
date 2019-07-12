@@ -153,3 +153,10 @@ import './weak-map/is-weak.map.spec.js';
 /** WeakSet */
 
 import './weak-set/is-weak.set.spec.js';
+
+/** extend.js */
+import './extend.spec.js';
+
+declare global {
+  var global: any;
+}

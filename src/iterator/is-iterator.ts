@@ -2,6 +2,7 @@ import { PrototypeStruct } from '..';
 
 export type IsIteratorFn = (x: any) => boolean;
 export const isIterator: PrototypeStruct = {
+  isStatic: true,
   label: 'isIterator',
   fn: function iteratorIsIterator(x: any): boolean {
     return null == x ?

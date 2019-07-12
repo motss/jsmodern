@@ -1,8 +1,12 @@
 import { len, LenFn } from '../../array/len';
+import { extend } from '../../extend';
 
-const { label, fn } = len;
+// const { label, fn } = len;
 
-Object.defineProperty(Array.prototype, label, { value: fn });
+// Object.defineProperty(Array.prototype, label, { value: fn });
+extend({
+  array: [len],
+});
 
 describe('Array.prototype.len', () => {
   type TestSuccess = [string, number[], number];

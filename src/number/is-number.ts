@@ -6,6 +6,7 @@ export function numberIsNumber(n: any): n is number {
 
 export type IsNumberFn = (n: any) => boolean;
 export const isNumber: PrototypeStruct = {
+  isStatic: true,
   label: 'isNumber',
   fn: numberIsNumber,
 };

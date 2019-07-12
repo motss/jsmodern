@@ -15,3 +15,9 @@ export const capitalize: PrototypeStruct = {
     return `${char0.toUpperCase()}${ctx.slice(1).toLowerCase()}`;
   },
 };
+
+declare global {
+  interface String {
+    capitalize: CapitalizeFn;
+  }
+}
