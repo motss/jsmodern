@@ -156,7 +156,3 @@ import './weak-set/is-weak.set.spec.js';
 
 /** extend.js */
 import './extend.spec.js';
-
-declare global {
-  var global: any;
-}
