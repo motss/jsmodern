@@ -10,3 +10,9 @@ export const isBefore: PrototypeStruct = {
     return utilDateDifference(ctx, other) < 0;
   },
 };
+
+declare global {
+  interface Date {
+    isBefore: IsBeforeFn;
+  }
+}

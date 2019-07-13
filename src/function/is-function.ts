@@ -8,3 +8,9 @@ export const isFunction: PrototypeStruct = {
     return 'function' === typeof(x);
   },
 };
+
+declare global {
+  interface Function {
+    isFunction: IsFunctionFn;
+  }
+}

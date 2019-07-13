@@ -23,3 +23,9 @@ export const lcm: PrototypeStruct = {
     return Math.abs((x * y) / utilGcd(x, y));
   },
 };
+
+declare global {
+  interface Number {
+    lcm: LcmFn;
+  }
+}

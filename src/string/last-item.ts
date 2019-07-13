@@ -9,3 +9,9 @@ export const lastItem: PrototypeStruct = {
     return ctx.length < 2 ? ctx : ctx[ctx.length - 1];
   },
 };
+
+declare global {
+  interface String {
+    lastItem: LastItemFn;
+  }
+}

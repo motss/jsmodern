@@ -5,7 +5,6 @@ import './string/first-index.spec.js';
 import './string/first-item.spec.js';
 import './string/insert.spec.js';
 import './string/is-empty.spec.js';
-import './string/is-string.spec.js';
 import './string/last-index.spec.js';
 import './string/last-item.spec.js';
 import './string/len.spec.js';
@@ -18,6 +17,7 @@ import './string/to-pascal-case.spec.js';
 import './string/to-snake-case.spec.js';
 import './string/to-start-case.spec.js';
 
+import './string/is-string.spec.js';
 import './string/to-case.spec.js';
 
 /** Number */
@@ -118,16 +118,16 @@ import './regexp/is-regexp.spec.js';
 
 import './map/entry-or-default.spec.js';
 import './map/entry.spec.js';
-import './map/from.spec.js';
 import './map/get-or-default.spec.js';
 import './map/is-empty.spec.js';
 import './map/iter.spec.js';
 import './map/len.spec.js';
-import './map/of.spec.js';
 import './map/remove-entry.spec.js';
 import './map/to-array.spec.js';
 
+import './map/from.spec.js';
 import './map/is-map.spec.js';
+import './map/of.spec.js';
 
 /** Set */
 

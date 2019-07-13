@@ -1,8 +1,7 @@
-import { shuffle, ShuffleFn } from '../../array/shuffle';
+import { shuffle } from '../../array/shuffle';
+import { extend } from '../../extend';
 
-const { label, fn } = shuffle;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [shuffle] });
 
 describe('Array.prototype.shuffle', () => {
   type TestSuccess = [string, number[], number[]];
@@ -18,9 +17,3 @@ describe('Array.prototype.shuffle', () => {
     expect(a.every(n => expected.includes(n))).toStrictEqual(true);
   });
 });
-
-declare global {
-  interface Array<T> {
-    shuffle: ShuffleFn;
-  }
-}

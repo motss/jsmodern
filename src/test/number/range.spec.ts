@@ -1,8 +1,7 @@
-import { range, RangeFn } from '../../number/range.js';
+import { extend } from '../../extend.js';
+import { range } from '../../number/range.js';
 
-const { label, fn } = range;
-
-Object.defineProperty(Number, label, { value: fn });
+extend({ number: [range] });
 
 describe('Number.range', () => {
   type TestError = [string, number | null, number | null, number | null, Error];
@@ -41,9 +40,3 @@ describe('Number.range', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface NumberConstructor {
-    range: RangeFn;
-  }
-}

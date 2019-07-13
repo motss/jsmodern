@@ -18,3 +18,9 @@ export const divModFloor: PrototypeStruct = {
     return [quotient, remainder];
   },
 };
+
+declare global {
+  interface Number {
+    divModFloor: DivModFloorFn;
+  }
+}

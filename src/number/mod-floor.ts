@@ -22,3 +22,9 @@ export const modFloor: PrototypeStruct = {
     return ctx - (quotient * x);
   },
 };
+
+declare global {
+  interface Number {
+    modFloor: ModFloorFn;
+  }
+}

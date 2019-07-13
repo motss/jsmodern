@@ -9,3 +9,9 @@ export const len: PrototypeStruct = {
     return ctx.length;
   },
 };
+
+declare global {
+  interface Array<T> {
+    len: LenFn;
+  }
+}

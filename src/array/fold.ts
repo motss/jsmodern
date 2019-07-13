@@ -10,3 +10,9 @@ export const fold: PrototypeStruct = {
     return ctx.reduce(predicate, init);
   },
 };
+
+declare global {
+  interface Array<T> {
+    fold: FoldFn<T>;
+  }
+}

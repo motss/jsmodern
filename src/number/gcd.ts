@@ -23,3 +23,9 @@ export const gcd: PrototypeStruct = {
     return utilGcd(ctx, Number(divisor));
   },
 };
+
+declare global {
+  interface Number {
+    gcd: GcdFn;
+  }
+}

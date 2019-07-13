@@ -19,3 +19,9 @@ export const insert: PrototypeStruct = {
     return `${slice0}${s}${sliceRest}`;
   },
 };
+
+declare global {
+  interface String {
+    insert: InsertFn;
+  }
+}

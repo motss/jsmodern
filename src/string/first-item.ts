@@ -9,3 +9,9 @@ export const firstItem: PrototypeStruct = {
     return !ctx.length ? '' : ctx[0];
   },
 };
+
+declare global {
+  interface String {
+    firstItem: FirstItemFn;
+  }
+}

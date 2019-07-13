@@ -1,9 +1,8 @@
-import { isAsyncIterator, IsAsyncIteratorFn } from '../../iterator/is-async-iterator';
+import { extend } from '../../extend';
+import { isAsyncIterator } from '../../iterator/is-async-iterator';
 import { hasAsyncIter } from '../feature-detect';
 
-const { label, fn } = isAsyncIterator;
-
-Object.defineProperty(global, label, { value: fn });
+extend({ iterator: [isAsyncIterator] });
 
 describe('Iterator.isAsyncIterator', () => {
   hasAsyncIter();
@@ -40,11 +39,3 @@ describe('Iterator.isAsyncIterator', () => {
   });
 
 });
-
-declare global {
-  namespace NodeJS {
-    interface Global {
-      isAsyncIterator: IsAsyncIteratorFn;
-    }
-  }
-}

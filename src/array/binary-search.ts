@@ -22,3 +22,9 @@ export const binarySearch: PrototypeStruct = {
     return -1;
   },
 };
+
+declare global {
+  interface Array<T> {
+    binarySearch: BinarySearchFn<T>;
+  }
+}

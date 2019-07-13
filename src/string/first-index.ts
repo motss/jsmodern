@@ -7,3 +7,9 @@ export const firstIndex: PrototypeStruct = {
     return 0;
   },
 };
+
+declare global {
+  interface String {
+    firstIndex: FirstIndexFn;
+  }
+}

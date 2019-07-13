@@ -6,6 +6,7 @@ export interface SetFrom {
 }
 export type FromFn<T> = (setEntry: T[], mapFn?: FromSetFn<T>) => Set<T>;
 export const from: PrototypeStruct = {
+  isStatic: true,
   label: 'from',
   fn: function setFrom<T>(setEntry: T[], mapFn?: FromSetFn<T>): Set<T> {
     if (!Array.isArray(setEntry)) {
@@ -17,3 +18,8 @@ export const from: PrototypeStruct = {
     return new Set(entries);
   },
 };
+
+declare global {
+  // tslint:disable-next-line: no-empty-interface
+  interface SetConstructor extends SetFrom {}
+}

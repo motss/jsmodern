@@ -1,8 +1,7 @@
-import { isDate, IsDateFn } from '../../date/is-date';
+import { isDate } from '../../date/is-date';
+import { extend } from '../../extend';
 
-const { label, fn } = isDate;
-
-Object.defineProperty(Date, label, { value: fn });
+extend({ date: [isDate] });
 
 describe('Date.isDate', () => {
   type TestSuccess = [string, any, boolean];
@@ -32,9 +31,3 @@ describe('Date.isDate', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface DateConstructor {
-    isDate: IsDateFn;
-  }
-}

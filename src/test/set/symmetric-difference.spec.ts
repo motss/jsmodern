@@ -1,8 +1,7 @@
-import { symmetricDifference, SymmetricDifferenceFn } from '../../set/symmetric-difference';
+import { extend } from '../../extend';
+import { symmetricDifference } from '../../set/symmetric-difference';
 
-const { label, fn } = symmetricDifference;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [symmetricDifference] });
 
 describe('Set.prototype.symmetricDifference', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -42,9 +41,3 @@ describe('Set.prototype.symmetricDifference', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    symmetricDifference: SymmetricDifferenceFn<T>;
-  }
-}

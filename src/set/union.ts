@@ -20,3 +20,9 @@ export const union: PrototypeStruct = {
     return unionList;
   },
 };
+
+declare global {
+  interface Set<T> {
+    union: UnionFn<T>;
+  }
+}

@@ -1,8 +1,7 @@
-import { isBoolean, IsBooleanFn } from '../../boolean/is-boolean';
+import { isBoolean } from '../../boolean/is-boolean';
+import { extend } from '../../extend';
 
-const { label, fn } = isBoolean;
-
-Object.defineProperty(Boolean, label, { value: fn });
+extend({ boolean: [isBoolean] });
 
 describe('Boolean.isBoolean', () => {
   type TestSuccess = [string, any, boolean];
@@ -59,9 +58,3 @@ describe('Boolean.isBoolean', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface BooleanConstructor {
-    isBoolean: IsBooleanFn;
-  }
-}

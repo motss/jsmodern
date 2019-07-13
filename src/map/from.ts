@@ -6,6 +6,7 @@ export interface MapFrom {
 }
 export type FromFn<K, V> = (mapEntries: [K, V][], mapFn?: FromSetFn<K, V>) => Map<K, V>;
 export const from: PrototypeStruct = {
+  isStatic: true,
   label: 'from',
   fn: function setFrom<K, V>(mapEntries: [K, V][], mapFn?: FromSetFn<K, V>): Map<K, V> {
     if (!Array.isArray(mapEntries)) {
@@ -18,3 +19,8 @@ export const from: PrototypeStruct = {
     return new Map(entries);
   },
 };
+
+declare global {
+  // tslint:disable-next-line: no-empty-interface
+  interface MapConstructor extends MapFrom {}
+}

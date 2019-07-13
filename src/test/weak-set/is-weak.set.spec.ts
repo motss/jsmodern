@@ -1,8 +1,7 @@
-import { isWeakSet, IsWeakSetFn } from '../../weak-set/is-weak-set';
+import { extend } from '../../extend';
+import { isWeakSet } from '../../weak-set/is-weak-set';
 
-const { label, fn } = isWeakSet;
-
-Object.defineProperty(WeakSet, label, { value: fn });
+extend({ weakSet: [isWeakSet] });
 
 describe('WeakSet.isWeakSet', () => {
   type TestSuccess = [string, any, boolean];
@@ -38,9 +37,3 @@ describe('WeakSet.isWeakSet', () => {
   });
 
 });
-
-declare global {
-  interface WeakSetConstructor {
-    isWeakSet: IsWeakSetFn;
-  }
-}

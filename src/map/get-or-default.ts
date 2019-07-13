@@ -9,3 +9,9 @@ export const getOrDefault: PrototypeStruct = {
     return (!ctx.size || !ctx.has(key)) ? defaultValue : ctx.get(key);
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    getOrDefault: GetOrDefaultFn<K, V>;
+  }
+}

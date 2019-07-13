@@ -8,3 +8,9 @@ export const isMap: PrototypeStruct = {
     return null == x ? false : 'object' === typeof(x) && 'Map' === x.constructor.name;
   },
 };
+
+declare global {
+  interface MapConstructor {
+    isMap: IsMapFn;
+  }
+}

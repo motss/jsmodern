@@ -9,3 +9,9 @@ export const enumerate: PrototypeStruct = {
     return ctx.map((n, i) => [i, n]);
   },
 };
+
+declare global {
+  interface Array<T> {
+    enumerate: EnumerateFn<T>;
+  }
+}

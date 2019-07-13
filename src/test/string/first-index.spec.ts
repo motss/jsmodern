@@ -1,8 +1,7 @@
-import { firstIndex, FirstIndexFn } from '../../string/first-index.js';
+import { extend } from '../../extend.js';
+import { firstIndex } from '../../string/first-index.js';
 
-const { label, fn } = firstIndex;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [firstIndex] });
 
 describe('String.prototype.firstIndex', () => {
   type TestSuccess = [string, string, number];
@@ -15,9 +14,3 @@ describe('String.prototype.firstIndex', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    firstIndex: FirstIndexFn;
-  }
-}

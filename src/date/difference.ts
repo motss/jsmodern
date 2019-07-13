@@ -22,3 +22,9 @@ export const difference: PrototypeStruct = {
     return utilDateDifference(ctx, other);
   },
 };
+
+declare global {
+  interface Date {
+    difference: DifferenceFn;
+  }
+}

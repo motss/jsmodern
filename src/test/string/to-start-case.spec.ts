@@ -1,8 +1,7 @@
-import { toStartCase, ToStartCaseFn } from '../../string/to-start-case.js';
+import { extend } from '../../extend.js';
+import { toStartCase } from '../../string/to-start-case.js';
 
-const { label, fn } = toStartCase;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [toStartCase] });
 
 describe('String.prototype.toStartCase', () => {
   type TestSuccess = [string, string, string];
@@ -23,9 +22,3 @@ describe('String.prototype.toStartCase', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    toStartCase: ToStartCaseFn;
-  }
-}

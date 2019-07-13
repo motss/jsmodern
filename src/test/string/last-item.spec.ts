@@ -1,8 +1,7 @@
-import { lastItem, LastItemFn } from '../../string/last-item.js';
+import { extend } from '../../extend.js';
+import { lastItem } from '../../string/last-item.js';
 
-const { label, fn } = lastItem;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [lastItem] });
 
 describe('String.prototype.lastItem', () => {
   type TestSuccess = [string, string, string];
@@ -15,9 +14,3 @@ describe('String.prototype.lastItem', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    lastItem: LastItemFn;
-  }
-}

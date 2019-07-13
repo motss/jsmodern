@@ -1,8 +1,7 @@
-import { partition, PartitionFn } from '../../array/partition';
+import { partition } from '../../array/partition';
+import { extend } from '../../extend';
 
-const { label, fn } = partition;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [partition] });
 
 describe('Array.prototype.partition', () => {
   const errorMessage = new TypeError(`Expect 'predicate' to be a function`);
@@ -35,9 +34,3 @@ describe('Array.prototype.partition', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    partition: PartitionFn<T>;
-  }
-}

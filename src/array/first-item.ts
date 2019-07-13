@@ -12,3 +12,9 @@ export const firstItem: PrototypeStruct = {
     return ctx.slice(0, 1)[0];
   },
 };
+
+declare global {
+  interface Array<T> {
+    firstItem: FirstItemFn<T>;
+  }
+}

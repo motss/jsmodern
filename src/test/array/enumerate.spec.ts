@@ -1,8 +1,7 @@
-import { enumerate, EnumerateFn } from '../../array/enumerate';
+import { enumerate } from '../../array/enumerate';
+import { extend } from '../../extend';
 
-const { label, fn } = enumerate;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [enumerate] });
 
 describe('Array.prototype.enumerate', () => {
   type TestSuccess = [string, number[], [undefined | number, undefined | number][]];
@@ -17,9 +16,3 @@ describe('Array.prototype.enumerate', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    enumerate: EnumerateFn<T>;
-  }
-}

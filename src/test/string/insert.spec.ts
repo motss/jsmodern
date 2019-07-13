@@ -1,8 +1,7 @@
-import { insert, InsertFn } from '../../string/insert.js';
+import { extend } from '../../extend.js';
+import { insert } from '../../string/insert.js';
 
-const { label, fn } = insert;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [insert] });
 
 describe('String.prototype.insert', () => {
   type TestError = [string, string, number, string];
@@ -30,9 +29,3 @@ describe('String.prototype.insert', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    insert: InsertFn;
-  }
-}

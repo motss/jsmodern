@@ -1,8 +1,7 @@
-import { splitWhitespace, SplitWhitespaceFn } from '../../string/split-whitespace.js';
+import { extend } from '../../extend.js';
+import { splitWhitespace } from '../../string/split-whitespace.js';
 
-const { label, fn } = splitWhitespace;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [splitWhitespace] });
 
 describe('String.prototype.splitWhitespace', () => {
   type TestSuccess = [string, string, string[]];
@@ -17,9 +16,3 @@ describe('String.prototype.splitWhitespace', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    splitWhitespace: SplitWhitespaceFn;
-  }
-}

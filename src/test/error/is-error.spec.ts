@@ -1,8 +1,7 @@
-import { isError, IsErrorFn } from '../../error/is-error';
+import { isError } from '../../error/is-error';
+import { extend } from '../../extend';
 
-const { label, fn } = isError;
-
-Object.defineProperty(Error, label, { value: fn });
+extend({ error: [isError] });
 
 describe('Error.isError', () => {
   type TestSuccess = [string, any, boolean];
@@ -31,9 +30,3 @@ describe('Error.isError', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface ErrorConstructor {
-    isError: IsErrorFn;
-  }
-}

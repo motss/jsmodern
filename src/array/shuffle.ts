@@ -21,3 +21,9 @@ export const shuffle: PrototypeStruct = {
     }
   },
 };
+
+declare global {
+  interface Array<T> {
+    shuffle: ShuffleFn;
+  }
+}

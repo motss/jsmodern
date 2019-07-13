@@ -1,8 +1,7 @@
-import { max, MaxFn } from '../../array/max';
+import { max } from '../../array/max';
+import { extend } from '../../extend';
 
-const { label, fn } = max;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [max] });
 
 describe('Array.prototype.max', () => {
   type TestSuccess = [string, (number | string)[], undefined | number | string];
@@ -25,9 +24,3 @@ describe('Array.prototype.max', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    max: MaxFn<T>;
-  }
-}

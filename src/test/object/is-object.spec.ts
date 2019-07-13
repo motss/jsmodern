@@ -1,8 +1,7 @@
-import { isObject, IsObjectFn } from '../../object/is-object';
+import { extend } from '../../extend';
+import { isObject } from '../../object/is-object';
 
-const { label, fn } = isObject;
-
-Object.defineProperty(Object, label, { value: fn });
+extend({ object: [isObject] });
 
 describe('Object.isObject', () => {
   type TestSuccess = [string, any, boolean];
@@ -31,9 +30,3 @@ describe('Object.isObject', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface Object {
-    isObject: IsObjectFn;
-  }
-}

@@ -12,3 +12,9 @@ export const removeEntry: PrototypeStruct = {
     return [key, val];
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    removeEntry: RemoveEntryFn<K, V>;
+  }
+}

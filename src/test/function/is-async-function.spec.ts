@@ -1,9 +1,8 @@
-import { isAsyncFunction, IsAsyncFunctionFn } from '../../function/is-async-function';
+import { extend } from '../../extend';
+import { isAsyncFunction } from '../../function/is-async-function';
 import { hasAsync } from '../feature-detect';
 
-const { label, fn } = isAsyncFunction;
-
-Object.defineProperty(Function, label, { value: fn });
+extend({ function: [isAsyncFunction] });
 
 describe('Function.isAsyncFunction', () => {
   const trueIfAsync = hasAsync();
@@ -37,9 +36,3 @@ describe('Function.isAsyncFunction', () => {
   });
 
 });
-
-declare global {
-  interface Function {
-    isAsyncFunction: IsAsyncFunctionFn;
-  }
-}

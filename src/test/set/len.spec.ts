@@ -1,8 +1,7 @@
-import { len, LenFn } from '../../set/len';
+import { extend } from '../../extend';
+import { len } from '../../set/len';
 
-const { label, fn } = len;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [len] });
 
 describe('Set.prototype.len', () => {
   type TestSuccess = [string, Set<number>, number];
@@ -18,9 +17,3 @@ describe('Set.prototype.len', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    len: LenFn;
-  }
-}

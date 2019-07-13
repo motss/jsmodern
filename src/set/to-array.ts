@@ -14,3 +14,9 @@ export const toArray: PrototypeStruct = {
     return list;
   },
 };
+
+declare global {
+  interface Set<T> {
+    toArray: ToArrayFn<T>;
+  }
+}

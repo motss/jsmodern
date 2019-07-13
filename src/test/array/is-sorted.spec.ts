@@ -1,8 +1,7 @@
-import { isSorted, IsSortedFn } from '../../array/is-sorted';
+import { isSorted } from '../../array/is-sorted';
+import { extend } from '../../extend';
 
-const { label, fn } = isSorted;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [isSorted] });
 
 describe('Array.prototype.isSorted', () => {
   // tslint:disable-next-line: max-line-length
@@ -28,9 +27,3 @@ describe('Array.prototype.isSorted', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    isSorted: IsSortedFn;
-  }
-}

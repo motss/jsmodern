@@ -8,3 +8,9 @@ export const isBoolean: PrototypeStruct = {
     return null == x ? false : 'boolean' === typeof(x);
   },
 };
+
+declare global {
+  interface BooleanConstructor {
+    isBoolean: IsBooleanFn;
+  }
+}

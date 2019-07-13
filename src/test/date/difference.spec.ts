@@ -1,8 +1,7 @@
-import { difference, DifferenceFn } from '../../date/difference';
+import { difference } from '../../date/difference';
+import { extend } from '../../extend';
 
-const { label, fn } = difference;
-
-Object.defineProperty(Date.prototype, label, { value: fn });
+extend({ date: [difference] });
 
 describe('Date.prototype.difference', () => {
   const errorMessage = new TypeError(`Cannot compare dates with non-date argument`);
@@ -41,9 +40,3 @@ describe('Date.prototype.difference', () => {
   });
 
 });
-
-declare global {
-  interface Date {
-    difference: DifferenceFn;
-  }
-}

@@ -1,8 +1,7 @@
-import { isSuperset, IsSupersetFn } from '../../set/is-superset';
+import { extend } from '../../extend';
+import { isSuperset } from '../../set/is-superset';
 
-const { label, fn } = isSuperset;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [isSuperset] });
 
 describe('Set.prototype.isSuperset', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -47,9 +46,3 @@ describe('Set.prototype.isSuperset', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    isSuperset: IsSupersetFn<T>;
-  }
-}

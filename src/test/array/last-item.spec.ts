@@ -1,8 +1,7 @@
-import { lastItem, LastItemFn } from '../../array/last-item';
+import { lastItem } from '../../array/last-item';
+import { extend } from '../../extend';
 
-const { label, fn } = lastItem;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [lastItem] });
 
 describe('Array.prototype.lastItem', () => {
   type TestSuccess = [string, number[], undefined | number];
@@ -17,9 +16,3 @@ describe('Array.prototype.lastItem', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    lastItem: LastItemFn<T>;
-  }
-}

@@ -10,3 +10,9 @@ export const isNumber: PrototypeStruct = {
   label: 'isNumber',
   fn: numberIsNumber,
 };
+
+declare global {
+  interface NumberConstructor {
+    isNumber: IsNumberFn;
+  }
+}

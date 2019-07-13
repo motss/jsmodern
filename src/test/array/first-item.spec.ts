@@ -1,8 +1,7 @@
-import { firstItem, FirstItemFn } from '../../array/first-item';
+import { firstItem } from '../../array/first-item';
+import { extend } from '../../extend';
 
-const { label, fn } = firstItem;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [firstItem] });
 
 describe('Array.prototype.firstItem', () => {
   type TestSuccess = [string, number[], undefined | number];
@@ -17,9 +16,3 @@ describe('Array.prototype.firstItem', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    firstItem: FirstItemFn<T>;
-  }
-}

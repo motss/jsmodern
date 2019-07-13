@@ -1,8 +1,7 @@
-import { remove, RemoveFn } from '../../array/remove';
+import { remove } from '../../array/remove';
+import { extend } from '../../extend';
 
-const { label, fn } = remove;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [remove] });
 
 describe('Array.prototype.remove', () => {
   const errorMessage = new TypeError(`Array index out of bound`);
@@ -33,9 +32,3 @@ describe('Array.prototype.remove', () => {
     expect(a).toEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    remove: RemoveFn<T>;
-  }
-}

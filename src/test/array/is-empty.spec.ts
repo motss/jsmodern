@@ -1,8 +1,7 @@
-import { isEmpty, IsEmptyFn } from '../../array/is-empty';
+import { isEmpty } from '../../array/is-empty';
+import { extend } from '../../extend';
 
-const { label, fn } = isEmpty;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [isEmpty] });
 
 describe('Array.prototype.isEmpty', () => {
   type TestSuccess = [string, number[], boolean];
@@ -15,9 +14,3 @@ describe('Array.prototype.isEmpty', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    isEmpty: IsEmptyFn;
-  }
-}

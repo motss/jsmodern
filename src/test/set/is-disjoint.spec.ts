@@ -1,8 +1,7 @@
-import { isDisjoint, IsDisjointFn } from '../../set/is-disjoint';
+import { extend } from '../../extend';
+import { isDisjoint } from '../../set/is-disjoint';
 
-const { label, fn } = isDisjoint;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [isDisjoint] });
 
 describe('Set.prototype.isDisjoint', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -46,9 +45,3 @@ describe('Set.prototype.isDisjoint', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    isDisjoint: IsDisjointFn<T>;
-  }
-}

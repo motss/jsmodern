@@ -1,8 +1,7 @@
-import { isSymbol, IsSymbolFn } from '../../symbol/is-symbol';
+import { extend } from '../../extend';
+import { isSymbol } from '../../symbol/is-symbol';
 
-const { label, fn } = isSymbol;
-
-Object.defineProperty(Symbol, label, { value: fn });
+extend({ symbol: [isSymbol] });
 
 describe('Symbol.isSymbol', () => {
   type TestSuccess = [string, any, boolean];
@@ -34,9 +33,3 @@ describe('Symbol.isSymbol', () => {
   });
 
 });
-
-declare global {
-  interface SymbolConstructor {
-    isSymbol: IsSymbolFn;
-  }
-}

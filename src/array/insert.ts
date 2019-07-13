@@ -25,3 +25,9 @@ export const insert: PrototypeStruct = {
     }
   },
 };
+
+declare global {
+  interface Array<T> {
+    insert: InsertFn<T>;
+  }
+}

@@ -1,8 +1,7 @@
-import { product, ProductFn } from '../../array/product';
+import { product } from '../../array/product';
+import { extend } from '../../extend';
 
-const { label, fn } = product;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [product] });
 
 describe('Array.prototype.product', () => {
   // tslint:disable-next-line: max-line-length
@@ -25,9 +24,3 @@ describe('Array.prototype.product', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    product: ProductFn<T>;
-  }
-}

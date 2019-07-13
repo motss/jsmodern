@@ -8,3 +8,9 @@ export const isRegExp: PrototypeStruct = {
     return null == x ? false : 'object' === typeof(x) && 'RegExp' === x.constructor.name;
   },
 };
+
+declare global {
+  interface RegExpConstructor {
+    isRegExp: IsRegExpFn;
+  }
+}

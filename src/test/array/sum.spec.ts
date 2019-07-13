@@ -1,8 +1,7 @@
-import { sum, SumFn } from '../../array/sum';
+import { sum } from '../../array/sum';
+import { extend } from '../../extend';
 
-const { label, fn } = sum;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [sum] });
 
 describe('Array.prototype.sum', () => {
   // tslint:disable-next-line: max-line-length
@@ -25,9 +24,3 @@ describe('Array.prototype.sum', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    sum: SumFn<T>;
-  }
-}

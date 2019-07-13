@@ -1,8 +1,7 @@
-import { contains, ContainsFn } from '../../array/contains';
+import { contains } from '../../array/contains';
+import { extend } from '../../extend';
 
-const { label, fn } = contains;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [contains] });
 
 describe('Array.prototype.contains', () => {
   type TestSuccess = [string, number[], null | undefined | number, boolean];
@@ -23,9 +22,3 @@ describe('Array.prototype.contains', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    contains: ContainsFn<T>;
-  }
-}

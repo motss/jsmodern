@@ -1,8 +1,7 @@
-import { getOrDefault, GetOrDefaultFn } from '../../map/get-or-default';
+import { extend } from '../../extend';
+import { getOrDefault } from '../../map/get-or-default';
 
-const { label, fn } = getOrDefault;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [getOrDefault] });
 
 describe('Map.prototype.getOrDefault', () => {
   // tslint:disable-next-line: max-line-length
@@ -23,9 +22,3 @@ describe('Map.prototype.getOrDefault', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    getOrDefault: GetOrDefaultFn<K, V>;
-  }
-}

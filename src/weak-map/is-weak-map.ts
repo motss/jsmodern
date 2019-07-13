@@ -8,3 +8,9 @@ export const isWeakMap: PrototypeStruct = {
     return null == x ? false : 'object' === typeof(x) && 'WeakMap' === x.constructor.name;
   },
 };
+
+declare global {
+  interface WeakMapConstructor {
+    isWeakMap: IsWeakMapFn;
+  }
+}

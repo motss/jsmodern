@@ -28,3 +28,9 @@ export const symmetricDifference: PrototypeStruct = {
     return symDiffList;
   },
 };
+
+declare global {
+  interface Set<T> {
+    symmetricDifference: SymmetricDifferenceFn<T>;
+  }
+}

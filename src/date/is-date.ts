@@ -10,3 +10,9 @@ export const isDate: PrototypeStruct = {
   label: 'isDate',
   fn: dateIsDate,
 };
+
+declare global {
+  interface DateConstructor {
+    isDate: IsDateFn;
+  }
+}

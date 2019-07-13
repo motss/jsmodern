@@ -1,8 +1,7 @@
-import { isSubset, IsSubsetFn } from '../../set/is-subset';
+import { extend } from '../../extend';
+import { isSubset } from '../../set/is-subset';
 
-const { label, fn } = isSubset;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [isSubset] });
 
 describe('Set.prototype.isSubset', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -46,9 +45,3 @@ describe('Set.prototype.isSubset', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    isSubset: IsSubsetFn<T>;
-  }
-}

@@ -1,8 +1,7 @@
-import { isMap, IsMapFn } from '../../map/is-map';
+import { extend } from '../../extend';
+import { isMap } from '../../map/is-map';
 
-const { label, fn } = isMap;
-
-Object.defineProperty(Map, label, { value: fn });
+extend({ map: [isMap] });
 
 describe('Map.isMap', () => {
   type TestSuccess = [string, any, boolean];
@@ -35,9 +34,3 @@ describe('Map.isMap', () => {
   });
 
 });
-
-declare global {
-  interface MapConstructor {
-    isMap: IsMapFn;
-  }
-}

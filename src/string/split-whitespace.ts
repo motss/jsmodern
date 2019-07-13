@@ -9,3 +9,9 @@ export const splitWhitespace: PrototypeStruct = {
     return !ctx.length ? [] : ctx.split(/\s/gi).filter(n => '' !== n);
   },
 };
+
+declare global {
+  interface String {
+    splitWhitespace: SplitWhitespaceFn;
+  }
+}

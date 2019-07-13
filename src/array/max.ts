@@ -32,3 +32,9 @@ export const max: PrototypeStruct = {
     return maxValue as T;
   },
 };
+
+declare global {
+  interface Array<T> {
+    max: MaxFn<T>;
+  }
+}

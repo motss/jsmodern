@@ -1,8 +1,7 @@
-import { isIterator, IsIteratorFn } from '../../iterator/is-iterator';
+import { extend } from '../../extend';
+import { isIterator } from '../../iterator/is-iterator';
 
-const { label, fn } = isIterator;
-
-Object.defineProperty(global, label, { value: fn });
+extend({ iterator: [isIterator] });
 
 describe('Iterator.isIterator', () => {
   type TestSuccess = [string, any, boolean];
@@ -36,11 +35,3 @@ describe('Iterator.isIterator', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  namespace NodeJS {
-    interface Global {
-      isIterator: IsIteratorFn;
-    }
-  }
-}

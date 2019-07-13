@@ -1,8 +1,7 @@
-import { isOdd, IsOddFn } from '../../number/is-odd';
+import { extend } from '../../extend';
+import { isOdd } from '../../number/is-odd';
 
-const { label, fn } = isOdd;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [isOdd] });
 
 describe('Number.prototype.isOdd', () => {
   type TestSuccess = [string, number, boolean];
@@ -17,9 +16,3 @@ describe('Number.prototype.isOdd', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    isOdd: IsOddFn;
-  }
-}

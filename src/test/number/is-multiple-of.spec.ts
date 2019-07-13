@@ -1,8 +1,7 @@
-import { isMultipleOf, IsMultipleOfFn } from '../../number/is-multiple-of';
+import { extend } from '../../extend';
+import { isMultipleOf } from '../../number/is-multiple-of';
 
-const { label, fn } = isMultipleOf;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [isMultipleOf] });
 
 describe('Number.prototype.isMultipleOf', () => {
   type TestSuccess = [string, number, number | null, boolean];
@@ -19,9 +18,3 @@ describe('Number.prototype.isMultipleOf', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    isMultipleOf: IsMultipleOfFn;
-  }
-}

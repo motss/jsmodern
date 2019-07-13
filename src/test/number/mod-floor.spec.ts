@@ -1,8 +1,7 @@
-import { modFloor, ModFloorFn } from '../../number/mod-floor.js';
+import { extend } from '../../extend.js';
+import { modFloor } from '../../number/mod-floor.js';
 
-const { label, fn } = modFloor;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [modFloor] });
 
 describe('Number.prototype.modFloor', () => {
   // tslint:disable-next-line: max-line-length
@@ -38,9 +37,3 @@ describe('Number.prototype.modFloor', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    modFloor: ModFloorFn;
-  }
-}

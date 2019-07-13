@@ -10,3 +10,9 @@ export const isSet: PrototypeStruct = {
   label: 'isSet',
   fn: utilIsSet,
 };
+
+declare global {
+  interface SetConstructor {
+    isSet: IsSetFn;
+  }
+}

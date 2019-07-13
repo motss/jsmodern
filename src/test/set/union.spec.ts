@@ -1,8 +1,7 @@
-import { union, UnionFn } from '../../set/union';
+import { extend } from '../../extend';
+import { union } from '../../set/union';
 
-const { label, fn } = union;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [union] });
 
 describe('Set.prototype.union', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -43,9 +42,3 @@ describe('Set.prototype.union', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    union: UnionFn<T>;
-  }
-}

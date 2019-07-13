@@ -1,8 +1,7 @@
-import { toSnakeCase, ToSnakeCaseFn } from '../../string/to-snake-case.js';
+import { extend } from '../../extend.js';
+import { toSnakeCase } from '../../string/to-snake-case.js';
 
-const { label, fn } = toSnakeCase;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [toSnakeCase] });
 
 describe('String.prototype.toSnakeCase', () => {
   type TestSuccess = [string, string, string];
@@ -23,9 +22,3 @@ describe('String.prototype.toSnakeCase', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    toSnakeCase: ToSnakeCaseFn;
-  }
-}

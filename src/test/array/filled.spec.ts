@@ -1,8 +1,7 @@
-import { filled, FilledFn } from '../../array/filled';
+import { filled } from '../../array/filled';
+import { extend } from '../../extend';
 
-const { label, fn } = filled;
-
-Object.defineProperty(Array, label, { value: fn });
+extend({ array: [filled] });
 
 describe('Array.filled', () => {
   // tslint:disable-next-line: max-line-length
@@ -64,9 +63,3 @@ describe('Array.filled', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface ArrayConstructor {
-    filled: FilledFn;
-  }
-}

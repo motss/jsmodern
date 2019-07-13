@@ -1,8 +1,7 @@
-import { gcd, GcdFn } from '../../number/gcd.js';
+import { extend } from '../../extend.js';
+import { gcd } from '../../number/gcd.js';
 
-const { label, fn } = gcd;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [gcd] });
 
 describe('Number.prototype.gcd', () => {
   type TestSuccess = [string, number, number | null, number];
@@ -19,9 +18,3 @@ describe('Number.prototype.gcd', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    gcd: GcdFn;
-  }
-}

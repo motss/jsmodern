@@ -1,8 +1,7 @@
-import { fold, FoldFn } from '../../array/fold';
+import { fold } from '../../array/fold';
+import { extend } from '../../extend';
 
-const { label, fn } = fold;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [fold] });
 
 describe('Array.prototype.fold', () => {
   const cb = (p: number, n: number) => p + n;
@@ -23,9 +22,3 @@ describe('Array.prototype.fold', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    fold: FoldFn<T>;
-  }
-}

@@ -1,8 +1,7 @@
-import { iter, IterFn } from '../../map/iter';
+import { extend } from '../../extend';
+import { iter } from '../../map/iter';
 
-const { label, fn } = iter;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [iter] });
 
 describe('Map.prototype.iter', () => {
   type TestSuccess = [string, Map<number, number>, [number, number][]];
@@ -24,9 +23,3 @@ describe('Map.prototype.iter', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    iter: IterFn<K, V>;
-  }
-}

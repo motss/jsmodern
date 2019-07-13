@@ -1,8 +1,7 @@
-import { MapOf, of } from '../../map/of';
+import { extend } from '../../extend';
+import { of } from '../../map/of';
 
-const { label, fn } = of;
-
-Object.defineProperty(Map, label, { value: fn });
+extend({ map: [of] });
 
 describe('Map.of', () => {
   const errorMessage = new TypeError(`A map entry must contain key/ value pairs`);
@@ -50,8 +49,3 @@ describe('Map.of', () => {
   });
 
 });
-
-declare global {
-  // tslint:disable-next-line: no-empty-interface
-  interface MapConstructor extends MapOf {}
-}

@@ -1,8 +1,7 @@
-import { lastIndex, LastIndexFn } from '../../string/last-index.js';
+import { extend } from '../../extend.js';
+import { lastIndex } from '../../string/last-index.js';
 
-const { label, fn } = lastIndex;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [lastIndex] });
 
 describe('String.prototype.lastIndex', () => {
   type TestSuccess = [string, string, number];
@@ -15,9 +14,3 @@ describe('String.prototype.lastIndex', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    lastIndex: LastIndexFn;
-  }
-}

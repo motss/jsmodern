@@ -14,3 +14,9 @@ export const toArray: PrototypeStruct = {
     return list;
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    toArray: ToArrayFn<K, V>;
+  }
+}

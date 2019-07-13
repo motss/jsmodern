@@ -1,8 +1,7 @@
-import { isEmpty, IsEmptyFn } from '../../map/is-empty';
+import { extend } from '../../extend';
+import { isEmpty } from '../../map/is-empty';
 
-const { label, fn } = isEmpty;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [isEmpty] });
 
 describe('Map.prototype.isEmpty', () => {
   type TestSuccess = [string, Map<number, number>, boolean];
@@ -16,9 +15,3 @@ describe('Map.prototype.isEmpty', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    isEmpty: IsEmptyFn;
-  }
-}

@@ -1,8 +1,7 @@
-import { repeat, RepeatFn } from '../../array/repeat';
+import { repeat } from '../../array/repeat';
+import { extend } from '../../extend';
 
-const { label, fn } = repeat;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [repeat] });
 
 describe('Array.prototype.repeat', () => {
   // tslint:disable-next-line: max-line-length
@@ -28,9 +27,3 @@ describe('Array.prototype.repeat', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    repeat: RepeatFn<T>;
-  }
-}

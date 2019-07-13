@@ -1,8 +1,7 @@
-import { delayed, PromiseDelayed } from '../../promise/delayed';
+import { extend } from '../../extend';
+import { delayed } from '../../promise/delayed';
 
-const { label, fn } = delayed;
-
-Object.defineProperty(Promise, label, { value: fn });
+extend({ promise: [delayed] });
 
 describe('Promise.delayed', () => {
   const errorMessage = new Error('err');
@@ -33,8 +32,3 @@ describe('Promise.delayed', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  // tslint:disable-next-line: no-empty-interface
-  interface PromiseConstructor extends PromiseDelayed {}
-}

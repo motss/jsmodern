@@ -1,8 +1,7 @@
-import { isEven, IsEvenFn } from '../../number/is-even';
+import { extend } from '../../extend';
+import { isEven } from '../../number/is-even';
 
-const { label, fn } = isEven;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [isEven] });
 
 describe('Number.prototype.isEven', () => {
   type TestSuccess = [string, number, boolean];
@@ -17,9 +16,3 @@ describe('Number.prototype.isEven', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    isEven: IsEvenFn;
-  }
-}

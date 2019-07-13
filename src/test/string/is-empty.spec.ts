@@ -1,8 +1,7 @@
-import { isEmpty, IsEmptyFn } from '../../string/is-empty.js';
+import { extend } from '../../extend.js';
+import { isEmpty } from '../../string/is-empty.js';
 
-const { label, fn } = isEmpty;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [isEmpty] });
 
 describe('String.prototype.isEmpty', () => {
   type TestSuccess = [string, string, boolean];
@@ -15,9 +14,3 @@ describe('String.prototype.isEmpty', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    isEmpty: IsEmptyFn;
-  }
-}

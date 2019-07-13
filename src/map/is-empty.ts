@@ -9,3 +9,9 @@ export const isEmpty: PrototypeStruct = {
     return !ctx.size;
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    isEmpty: IsEmptyFn;
+  }
+}

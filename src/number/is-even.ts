@@ -10,3 +10,9 @@ export const isEven: PrototypeStruct = {
     return !(ctx & 1);
   },
 };
+
+declare global {
+  interface Number {
+    isEven: IsEvenFn;
+  }
+}

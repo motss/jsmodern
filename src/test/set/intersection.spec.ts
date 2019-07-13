@@ -1,8 +1,7 @@
-import { intersection, IntersectionFn } from '../../set/intersection';
+import { extend } from '../../extend';
+import { intersection } from '../../set/intersection';
 
-const { label, fn } = intersection;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [intersection] });
 
 describe('Set.prototype.intersection', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -43,9 +42,3 @@ describe('Set.prototype.intersection', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    intersection: IntersectionFn<T>;
-  }
-}

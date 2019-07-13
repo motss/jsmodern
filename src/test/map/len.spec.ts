@@ -1,8 +1,7 @@
-import { len, LenFn } from '../../map/len';
+import { extend } from '../../extend';
+import { len } from '../../map/len';
 
-const { label, fn } = len;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [len] });
 
 describe('Map.prototype.len', () => {
   type TestSuccess = [string, Map<number, number>, number];
@@ -16,9 +15,3 @@ describe('Map.prototype.len', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    len: LenFn;
-  }
-}

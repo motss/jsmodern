@@ -1,8 +1,7 @@
-import { truncate, TruncateFn } from '../../array/truncate';
+import { truncate } from '../../array/truncate';
+import { extend } from '../../extend';
 
-const { label, fn } = truncate;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [truncate] });
 
 describe('Array.prototype.truncate', () => {
   const errorMessage = new TypeError(`Expect 'len' to be in the range of 0 and length of array`);
@@ -34,9 +33,3 @@ describe('Array.prototype.truncate', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    truncate: TruncateFn;
-  }
-}

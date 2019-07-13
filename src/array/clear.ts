@@ -9,3 +9,9 @@ export const clear: PrototypeStruct = {
     if (ctx.length > 0) ctx.length = 0;
   },
 };
+
+declare global {
+  interface Array<T> {
+    clear: ClearFn;
+  }
+}

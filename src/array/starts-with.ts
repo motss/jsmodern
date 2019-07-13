@@ -31,3 +31,9 @@ export const startsWith: PrototypeStruct = {
     return Boolean(matched);
   },
 };
+
+declare global {
+  interface Array<T> {
+    startsWith: StartsWithFn<T>;
+  }
+}

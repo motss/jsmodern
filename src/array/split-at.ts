@@ -21,3 +21,9 @@ export const splitAt: PrototypeStruct = {
     return [ctx.slice(0, atInt), ctx.slice(atInt)];
   },
 };
+
+declare global {
+  interface Array<T> {
+    splitAt: SplitAtFn<T>;
+  }
+}

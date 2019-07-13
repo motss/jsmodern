@@ -1,8 +1,7 @@
-import { divRem, DivRemFn } from '../../number/div-rem';
+import { extend } from '../../extend';
+import { divRem } from '../../number/div-rem';
 
-const { label, fn } = divRem;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [divRem] });
 
 describe('Number.prototype.divRem', () => {
   // tslint:disable-next-line: max-line-length
@@ -32,9 +31,3 @@ describe('Number.prototype.divRem', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    divRem: DivRemFn;
-  }
-}

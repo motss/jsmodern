@@ -1,8 +1,7 @@
-import { startsWith, StartsWithFn } from '../../array/starts-with';
+import { startsWith } from '../../array/starts-with';
+import { extend } from '../../extend';
 
-const { label, fn } = startsWith;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [startsWith] });
 
 describe('Array.prototype.startsWith', () => {
   const errorMessage = new TypeError(`Expect 'needle' to be an array`);
@@ -39,9 +38,3 @@ describe('Array.prototype.startsWith', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    startsWith: StartsWithFn<T>;
-  }
-}

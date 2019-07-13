@@ -14,3 +14,9 @@ export const isObject: PrototypeStruct = {
     return isObjectType && !isArray && !isPromise;
   },
 };
+
+declare global {
+  interface Object {
+    isObject: IsObjectFn;
+  }
+}

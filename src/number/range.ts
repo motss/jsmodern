@@ -3,6 +3,7 @@ import { checkInt } from './check-int';
 
 export type RangeFn = (start: number, end?: number, step?: number) => number[];
 export const range: PrototypeStruct = {
+  isStatic: true,
   label: 'range',
   fn: function numberRange(start: number, end?: number, step?: number): number[] {
     // range table
@@ -36,3 +37,9 @@ export const range: PrototypeStruct = {
       Array(Math.ceil((endInt - startInt) / stepInt)), (_, i) => startInt + (i * stepInt));
   },
 };
+
+declare global {
+  interface NumberConstructor {
+    range: RangeFn;
+  }
+}

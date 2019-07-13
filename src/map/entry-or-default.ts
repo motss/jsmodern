@@ -10,3 +10,9 @@ export const entryOrDefault: PrototypeStruct = {
     return [key, val];
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    entryOrDefault: EntryOrDefaultFn<K, V>;
+  }
+}

@@ -8,3 +8,9 @@ export const isWeakSet: PrototypeStruct = {
     return null == x ? false : 'object' === typeof(x) && 'WeakSet' === x.constructor.name;
   },
 };
+
+declare global {
+  interface WeakSetConstructor {
+    isWeakSet: IsWeakSetFn;
+  }
+}

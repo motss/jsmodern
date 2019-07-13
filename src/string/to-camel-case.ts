@@ -13,3 +13,9 @@ export const toCamelCase: PrototypeStruct = {
         preCase(ctx).replace(/([^a-zA-Z0-9]+)(\b[a-zA-z])/g, (_, __, c) => c.toUpperCase()));
   },
 };
+
+declare global {
+  interface String {
+    toCamelCase: ToCamelCaseFn;
+  }
+}

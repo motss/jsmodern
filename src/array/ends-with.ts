@@ -75,3 +75,9 @@ export const endsWith: PrototypeStruct = {
     return Boolean(matched);
   },
 };
+
+declare global {
+  interface Array<T> {
+    endsWith: EndsWithFn<T>;
+  }
+}

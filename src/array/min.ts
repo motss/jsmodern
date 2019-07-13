@@ -32,3 +32,9 @@ export const min: PrototypeStruct = {
     return minValue as T;
   },
 };
+
+declare global {
+  interface Array<T> {
+    min: MinFn<T>;
+  }
+}

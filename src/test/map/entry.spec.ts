@@ -1,8 +1,7 @@
-import { entry, EntryFn } from '../../map/entry';
+import { extend } from '../../extend';
+import { entry } from '../../map/entry';
 
-const { label, fn } = entry;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [entry] });
 
 describe('Map.prototype.entry', () => {
   // tslint:disable-next-line: max-line-length
@@ -19,9 +18,3 @@ describe('Map.prototype.entry', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    entry: EntryFn<K, V>;
-  }
-}

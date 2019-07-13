@@ -11,3 +11,9 @@ export const retain: PrototypeStruct = {
     return ctx.split('').filter(callback).join('');
   },
 };
+
+declare global {
+  interface String {
+    retain: RetainFn;
+  }
+}

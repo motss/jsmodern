@@ -1,8 +1,7 @@
-import { toArray, ToArrayFn } from '../../map/to-array';
+import { extend } from '../../extend';
+import { toArray } from '../../map/to-array';
 
-const { label, fn } = toArray;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [toArray] });
 
 describe('Map.prototype.toArray', () => {
   // tslint:disable-next-line: max-line-length
@@ -19,9 +18,3 @@ describe('Map.prototype.toArray', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    toArray: ToArrayFn<K, V>;
-  }
-}

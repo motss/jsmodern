@@ -1,8 +1,7 @@
-import { any, AnyFn } from '../../array/any';
+import { any } from '../../array/any';
+import { extend } from '../../extend';
 
-const { label, fn } = any;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [any] });
 
 describe('Array.prototype.any', () => {
   const cb = (n: number) => n > 2;
@@ -21,9 +20,3 @@ describe('Array.prototype.any', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    any: AnyFn<T>;
-  }
-}

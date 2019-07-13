@@ -1,8 +1,7 @@
-import { retain, RetainFn } from '../../array/retain';
+import { retain } from '../../array/retain';
+import { extend } from '../../extend';
 
-const { label, fn } = retain;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [retain] });
 
 describe('Array.prototype.retain', () => {
   const errorMessage = new TypeError(`Expect 'callback' to be a function`);
@@ -29,9 +28,3 @@ describe('Array.prototype.retain', () => {
     expect(a).toEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    retain: RetainFn<T>;
-  }
-}

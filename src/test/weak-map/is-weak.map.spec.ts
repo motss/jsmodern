@@ -1,8 +1,7 @@
-import { isWeakMap, IsWeakMapFn } from '../../weak-map/is-weak-map';
+import { extend } from '../../extend';
+import { isWeakMap } from '../../weak-map/is-weak-map';
 
-const { label, fn } = isWeakMap;
-
-Object.defineProperty(WeakMap, label, { value: fn });
+extend({ weakMap: [isWeakMap] });
 
 describe('WeakMap.isWeakMap', () => {
   type TestSuccess = [string, any, boolean];
@@ -36,9 +35,3 @@ describe('WeakMap.isWeakMap', () => {
   });
 
 });
-
-declare global {
-  interface WeakMapConstructor {
-    isWeakMap: IsWeakMapFn;
-  }
-}

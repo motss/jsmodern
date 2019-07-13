@@ -1,8 +1,7 @@
-import { divModFloor, DivModFloorFn } from '../../number/div-mod-floor';
+import { extend } from '../../extend';
+import { divModFloor } from '../../number/div-mod-floor';
 
-const { label, fn } = divModFloor;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [divModFloor] });
 
 describe('Number.prototype.divModFloor', () => {
   // tslint:disable-next-line: max-line-length
@@ -37,9 +36,3 @@ describe('Number.prototype.divModFloor', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    divModFloor: DivModFloorFn;
-  }
-}

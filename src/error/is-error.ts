@@ -8,3 +8,9 @@ export const isError: PrototypeStruct = {
     return null == x ? false : x instanceof Error;
   },
 };
+
+declare global {
+  interface ErrorConstructor {
+    isError: IsErrorFn;
+  }
+}

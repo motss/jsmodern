@@ -13,3 +13,9 @@ export const sum: PrototypeStruct = {
     return ctx.reduce((p, n) => p + (n as unknown as number), 0);
   },
 };
+
+declare global {
+  interface Array<T> {
+    sum: SumFn<T>;
+  }
+}

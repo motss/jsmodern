@@ -37,3 +37,9 @@ export const chunks: PrototypeStruct = {
     return set;
   },
 };
+
+declare global {
+  interface Array<T> {
+    chunks: ChunksFn<T>;
+  }
+}

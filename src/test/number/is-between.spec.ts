@@ -1,8 +1,7 @@
-import { isBetween, IsBetweenFn } from '../../number/is-between.js';
+import { extend } from '../../extend.js';
+import { isBetween } from '../../number/is-between.js';
 
-const { label, fn } = isBetween;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [isBetween] });
 
 describe('Number.prototype.isBetween', () => {
   type TestSuccess = [string, number, number | null, number | null, boolean];
@@ -25,9 +24,3 @@ describe('Number.prototype.isBetween', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    isBetween: IsBetweenFn;
-  }
-}

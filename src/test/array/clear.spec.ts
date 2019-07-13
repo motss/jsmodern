@@ -1,8 +1,7 @@
-import { clear, ClearFn } from '../../array/clear';
+import { clear } from '../../array/clear';
+import { extend } from '../../extend';
 
-const { label, fn } = clear;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [clear] });
 
 describe('Array.prototype.clear', () => {
   type TestSuccess = [string, any[], any[]];
@@ -16,9 +15,3 @@ describe('Array.prototype.clear', () => {
     expect(a).toEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    clear: ClearFn;
-  }
-}

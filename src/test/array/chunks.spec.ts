@@ -1,8 +1,7 @@
-import { chunks, ChunksFn } from '../../array/chunk';
+import { chunks } from '../../array/chunk';
+import { extend } from '../../extend';
 
-const { label, fn } = chunks;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [chunks] });
 
 describe('Array.prototype.chunks', () => {
   // tslint:disable-next-line: max-line-length
@@ -38,9 +37,3 @@ describe('Array.prototype.chunks', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    chunks: ChunksFn<T>;
-  }
-}

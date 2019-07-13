@@ -10,3 +10,9 @@ export const lastIndex: PrototypeStruct = {
     return !len ? -1 : len - 1;
   },
 };
+
+declare global {
+  interface String {
+    lastIndex: LastIndexFn;
+  }
+}

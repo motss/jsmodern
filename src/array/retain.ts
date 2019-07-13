@@ -21,3 +21,9 @@ export const retain: PrototypeStruct = {
     for (const n of retained) ctx.push(n);
   },
 };
+
+declare global {
+  interface Array<T> {
+    retain: RetainFn<T>;
+  }
+}

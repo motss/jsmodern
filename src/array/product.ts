@@ -13,3 +13,9 @@ export const product: PrototypeStruct = {
     return ctx.reduce((p, n) => p * (n as unknown as number), 1);
   },
 };
+
+declare global {
+  interface Array<T> {
+    product: ProductFn<T>;
+  }
+}

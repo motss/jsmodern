@@ -1,8 +1,7 @@
-import { iter, IterFn } from '../../array/iter';
+import { iter } from '../../array/iter';
+import { extend } from '../../extend';
 
-const { label, fn } = iter;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [iter] });
 
 describe('Array.prototype.iter', () => {
   type TestSuccess = [string, number[], number];
@@ -19,9 +18,3 @@ describe('Array.prototype.iter', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    iter: IterFn<T>;
-  }
-}

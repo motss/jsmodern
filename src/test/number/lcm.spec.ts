@@ -1,8 +1,7 @@
-import { lcm, LcmFn } from '../../number/lcm';
+import { extend } from '../../extend';
+import { lcm } from '../../number/lcm';
 
-const { label, fn } = lcm;
-
-Object.defineProperty(Number.prototype, label, { value: fn });
+extend({ number: [lcm] });
 
 describe('Number.prototype.lcm', () => {
   type TestSuccess = [string, number, number | null, number];
@@ -19,9 +18,3 @@ describe('Number.prototype.lcm', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Number {
-    lcm: LcmFn;
-  }
-}

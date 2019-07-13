@@ -16,3 +16,9 @@ export const isSuperset: PrototypeStruct = {
     return true;
   },
 };
+
+declare global {
+  interface Set<T> {
+    isSuperset: IsSupersetFn<T>;
+  }
+}

@@ -10,3 +10,9 @@ export const isString: PrototypeStruct = {
   label: 'isString',
   fn: isAnyString,
 };
+
+declare global {
+  interface StringConstructor {
+    isString: IsStringFn;
+  }
+}

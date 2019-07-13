@@ -1,12 +1,7 @@
-import { len, LenFn } from '../../array/len';
+import { len } from '../../array/len';
 import { extend } from '../../extend';
 
-// const { label, fn } = len;
-
-// Object.defineProperty(Array.prototype, label, { value: fn });
-extend({
-  array: [len],
-});
+extend({ array: [len] });
 
 describe('Array.prototype.len', () => {
   type TestSuccess = [string, number[], number];
@@ -19,9 +14,3 @@ describe('Array.prototype.len', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    len: LenFn;
-  }
-}

@@ -1,8 +1,7 @@
-import { isNumber, IsNumberFn } from '../../number/is-number.js';
+import { extend } from '../../extend.js';
+import { isNumber } from '../../number/is-number.js';
 
-const { label, fn } = isNumber;
-
-Object.defineProperty(Number, label, { value: fn });
+extend({ number: [isNumber] });
 
 describe('Number.isNumber', () => {
   type TestSuccess = [string, any, boolean];
@@ -32,9 +31,3 @@ describe('Number.isNumber', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface NumberConstructor {
-    isNumber: IsNumberFn;
-  }
-}

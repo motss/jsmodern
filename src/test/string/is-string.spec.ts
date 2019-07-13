@@ -1,8 +1,7 @@
-import { isString, IsStringFn } from '../../string/is-string.js';
+import { extend } from '../../extend.js';
+import { isString } from '../../string/is-string.js';
 
-const { label, fn } = isString;
-
-Object.defineProperty(String, label, { value: fn });
+extend({ string: [isString] });
 
 describe('String.isString', () => {
   type TestSuccess = [string, any, boolean];
@@ -22,9 +21,3 @@ describe('String.isString', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface StringConstructor {
-    isString: IsStringFn;
-  }
-}

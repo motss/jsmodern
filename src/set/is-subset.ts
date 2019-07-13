@@ -16,3 +16,9 @@ export const isSubset: PrototypeStruct = {
     return true;
   },
 };
+
+declare global {
+  interface Set<T> {
+    isSubset: IsSubsetFn<T>;
+  }
+}

@@ -1,8 +1,7 @@
-import { removeEntry, RemoveEntryFn } from '../../map/remove-entry';
+import { extend } from '../../extend';
+import { removeEntry } from '../../map/remove-entry';
 
-const { label, fn } = removeEntry;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [removeEntry] });
 
 describe('Map.prototype.removeEntry', () => {
   // tslint:disable-next-line: max-line-length
@@ -23,9 +22,3 @@ describe('Map.prototype.removeEntry', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    removeEntry: RemoveEntryFn<K, V>;
-  }
-}

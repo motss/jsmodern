@@ -13,3 +13,9 @@ export const toStartCase: PrototypeStruct = {
       preCase(ctx).replace(/\b[a-zA-z]/gi, s => s.toUpperCase()), ' ');
   },
 };
+
+declare global {
+  interface String {
+    toStartCase: ToStartCaseFn;
+  }
+}

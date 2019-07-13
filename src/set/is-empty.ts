@@ -9,3 +9,9 @@ export const isEmpty: PrototypeStruct = {
     return !ctx.size;
   },
 };
+
+declare global {
+  interface Set<T> {
+    isEmpty: IsEmptyFn;
+  }
+}

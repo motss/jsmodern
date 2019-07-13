@@ -47,3 +47,9 @@ export const isSorted: PrototypeStruct = {
     return isArraySorted(ctx);
   },
 };
+
+declare global {
+  interface Array<T> {
+    isSorted: IsSortedFn;
+  }
+}

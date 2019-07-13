@@ -1,8 +1,7 @@
-import { min, MinFn } from '../../array/min';
+import { min } from '../../array/min';
+import { extend } from '../../extend';
 
-const { label, fn } = min;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [min] });
 
 describe('Array.prototype.min', () => {
   type TestSuccess = [string, (number | string)[], undefined | number | string];
@@ -25,9 +24,3 @@ describe('Array.prototype.min', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    min: MinFn<T>;
-  }
-}

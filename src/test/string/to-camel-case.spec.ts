@@ -1,8 +1,7 @@
-import { toCamelCase, ToCamelCaseFn } from '../../string/to-camel-case.js';
+import { extend } from '../../extend.js';
+import { toCamelCase } from '../../string/to-camel-case.js';
 
-const { label, fn } = toCamelCase;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [toCamelCase] });
 
 describe('String.prototype.toCamelCase', () => {
   type TestSuccess = [string, string, string];
@@ -23,9 +22,3 @@ describe('String.prototype.toCamelCase', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    toCamelCase: ToCamelCaseFn;
-  }
-}

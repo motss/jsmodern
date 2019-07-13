@@ -1,8 +1,7 @@
-import { isFunction, IsFunctionFn } from '../../function/is-function';
+import { extend } from '../../extend';
+import { isFunction } from '../../function/is-function';
 
-const { label, fn } = isFunction;
-
-Object.defineProperty(Function, label, { value: fn });
+extend({ function: [isFunction] });
 
 describe('Function.isFunction', () => {
   type TestSuccess = [string, any, boolean];
@@ -32,9 +31,3 @@ describe('Function.isFunction', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface Function {
-    isFunction: IsFunctionFn;
-  }
-}

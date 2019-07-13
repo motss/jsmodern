@@ -16,3 +16,9 @@ export const isDisjoint: PrototypeStruct = {
     return true;
   },
 };
+
+declare global {
+  interface Set<T> {
+    isDisjoint: IsDisjointFn<T>;
+  }
+}

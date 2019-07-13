@@ -1,8 +1,7 @@
-import { of, SetOf } from '../../set/of';
+import { extend } from '../../extend';
+import { of } from '../../set/of';
 
-const { label, fn } = of;
-
-Object.defineProperty(Set, label, { value: fn });
+extend({ set: [of] });
 
 describe('Set.of', () => {
   // tslint:disable: only-arrow-functions no-empty max-classes-per-file
@@ -49,8 +48,3 @@ describe('Set.of', () => {
   });
 
 });
-
-declare global {
-  // tslint:disable-next-line: no-empty-interface
-  interface SetConstructor extends SetOf {}
-}

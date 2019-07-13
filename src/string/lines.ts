@@ -17,3 +17,9 @@ export const lines: PrototypeStruct = {
     return isEmptyStr ? strArray.slice(0, -1) : strArray;
   },
 };
+
+declare global {
+  interface String {
+    lines: LinesFn;
+  }
+}

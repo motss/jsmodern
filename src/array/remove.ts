@@ -15,3 +15,9 @@ export const remove: PrototypeStruct = {
     return ctx.splice(indexInt, 1)[0];
   },
 };
+
+declare global {
+  interface Array<T> {
+    remove: RemoveFn<T>;
+  }
+}

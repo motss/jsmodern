@@ -1,8 +1,7 @@
-import { insert, InsertFn } from '../../array/insert';
+import { insert } from '../../array/insert';
+import { extend } from '../../extend';
 
-const { label, fn } = insert;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [insert] });
 
 describe('Array.prototype.insert', () => {
   const errorMessage = new TypeError('Array index out of bound');
@@ -36,9 +35,3 @@ describe('Array.prototype.insert', () => {
     expect(a).toEqual(expected);
   });
 });
-
-declare global {
-  interface Array<T> {
-    insert: InsertFn<T>;
-  }
-}

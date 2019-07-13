@@ -1,8 +1,7 @@
-import { split, SplitFn } from '../../array/split';
+import { split } from '../../array/split';
+import { extend } from '../../extend';
 
-const { label, fn } = split;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [split] });
 
 describe('Array.prototype.split', () => {
   const errorMessage = new TypeError(`Expect 'predicate' to be a function`);
@@ -40,9 +39,3 @@ describe('Array.prototype.split', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    split: SplitFn<T>;
-  }
-}

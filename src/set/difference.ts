@@ -22,3 +22,9 @@ export const difference: PrototypeStruct = {
     return diffList;
   },
 };
+
+declare global {
+  interface Set<T> {
+    difference: DifferenceFn<T>;
+  }
+}

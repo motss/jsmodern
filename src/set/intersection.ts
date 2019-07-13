@@ -18,3 +18,9 @@ export const intersection: PrototypeStruct = {
     return intersectionList;
   },
 };
+
+declare global {
+  interface Set<T> {
+    intersection: IntersectionFn<T>;
+  }
+}

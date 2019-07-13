@@ -1,8 +1,7 @@
-import { retain, RetainFn } from '../../string/retain.js';
+import { extend } from '../../extend.js';
+import { retain } from '../../string/retain.js';
 
-const { label, fn } = retain;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [retain] });
 
 describe('String.prototype.retain', () => {
   type TestSuccess = [string, string, (character: string) => boolean, string];
@@ -15,9 +14,3 @@ describe('String.prototype.retain', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    retain: RetainFn;
-  }
-}

@@ -8,3 +8,9 @@ export const isAsyncFunction: PrototypeStruct = {
     return 'function' === typeof(x) && 'AsyncFunction' === x.constructor.name;
   },
 };
+
+declare global {
+  interface Function {
+    isAsyncFunction: IsAsyncFunctionFn;
+  }
+}

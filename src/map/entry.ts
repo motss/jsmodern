@@ -10,3 +10,9 @@ export const entry: PrototypeStruct = {
     return [key, val];
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    entry: EntryFn<K, V>;
+  }
+}

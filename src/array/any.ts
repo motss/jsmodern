@@ -11,3 +11,9 @@ export const any: PrototypeStruct = {
     return ctx.some(predicate);
   },
 };
+
+declare global {
+  interface Array<T> {
+    any: AnyFn<T>;
+  }
+}

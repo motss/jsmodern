@@ -15,3 +15,11 @@ export const isIterator: PrototypeStruct = {
       );
   },
 };
+
+declare global {
+  namespace NodeJS {
+    interface Global {
+      isIterator: IsIteratorFn;
+    }
+  }
+}

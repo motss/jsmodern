@@ -9,3 +9,9 @@ export const contains: PrototypeStruct = {
     return ctx.indexOf(valueToFind) >= 0;
   },
 };
+
+declare global {
+  interface Array<T> {
+    contains: ContainsFn<T>;
+  }
+}

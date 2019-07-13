@@ -13,3 +13,9 @@ export const toKebabCase: PrototypeStruct = {
         preCase(ctx).replace(/\b[a-zA-z]/gi, s => s.toLowerCase()), '-');
   },
 };
+
+declare global {
+  interface String {
+    toKebabCase: ToKebabCaseFn;
+  }
+}

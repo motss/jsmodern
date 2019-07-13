@@ -1,8 +1,7 @@
-import { from, MapFrom } from '../../map/from';
+import { extend } from '../../extend';
+import { from } from '../../map/from';
 
-const { label, fn } = from;
-
-Object.defineProperty(Map, label, { value: fn });
+extend({ map: [from] });
 
 describe('Map.from', () => {
   // tslint:disable-next-line: max-line-length
@@ -56,8 +55,3 @@ describe('Map.from', () => {
   });
 
 });
-
-declare global {
-  // tslint:disable-next-line: no-empty-interface
-  interface MapConstructor extends MapFrom {}
-}

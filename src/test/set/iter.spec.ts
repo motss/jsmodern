@@ -1,8 +1,7 @@
-import { iter, IterFn } from '../../set/iter';
+import { extend } from '../../extend';
+import { iter } from '../../set/iter';
 
-const { label, fn } = iter;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [iter] });
 
 describe('Set.prototype.iter', () => {
   type TestSuccess = [string, Set<number>, number[]];
@@ -26,9 +25,3 @@ describe('Set.prototype.iter', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    iter: IterFn<T>;
-  }
-}

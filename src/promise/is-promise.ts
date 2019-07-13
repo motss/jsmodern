@@ -8,3 +8,9 @@ export const isPromise: PrototypeStruct = {
     return Boolean(x && x.then);
   },
 };
+
+declare global {
+  interface PromiseConstructor {
+    isPromise: IsPromiseFn;
+  }
+}

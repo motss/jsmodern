@@ -1,4 +1,4 @@
-import { all, AllFn } from '../../array/all';
+import { all } from '../../array/all';
 import { extend } from '../../extend';
 
 extend({ array: [all] });
@@ -20,9 +20,3 @@ describe('Array.prototype.all', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    all: AllFn<T>;
-  }
-}

@@ -23,3 +23,9 @@ export const partition: PrototypeStruct = {
     return [matched, rest];
   },
 };
+
+declare global {
+  interface Array<T> {
+    partition: PartitionFn<T>;
+  }
+}

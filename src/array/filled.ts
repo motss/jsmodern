@@ -2,6 +2,7 @@ import { PrototypeStruct } from '..';
 
 export type FilledFn<T = unknown> = (len: number, value?: T) => T[];
 export const filled: PrototypeStruct = {
+  isStatic: true,
   label: 'filled',
   fn: function arrayFilled<T = unknown>(...args: unknown[]): T[] {
     const errorMessage = new TypeError(`Unable to create list with unknown length`);
@@ -15,3 +16,9 @@ export const filled: PrototypeStruct = {
     return Array.from<unknown, T>(Array(len), () => filledValue);
   },
 };
+
+declare global {
+  interface ArrayConstructor {
+    filled: FilledFn;
+  }
+}

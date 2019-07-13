@@ -1,8 +1,7 @@
-import { endsWith, EndsWithFn } from '../../array/ends-with';
+import { endsWith } from '../../array/ends-with';
+import { extend } from '../../extend';
 
-const { label, fn } = endsWith;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [endsWith] });
 
 describe('Array.prototype.endsWith', () => {
   const errorMessage = new TypeError(`Expect 'needle' to be an array`);
@@ -42,9 +41,3 @@ describe('Array.prototype.endsWith', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    endsWith: EndsWithFn<T>;
-  }
-}

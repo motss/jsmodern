@@ -9,3 +9,9 @@ export const isBetween: PrototypeStruct = {
     return ctx >= Number(min) && ctx < Number(max);
   },
 };
+
+declare global {
+  interface Number {
+    isBetween: IsBetweenFn;
+  }
+}

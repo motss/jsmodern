@@ -7,3 +7,9 @@ export const isEmpty: PrototypeStruct = {
     return !(this as unknown as string).length;
   },
 };
+
+declare global {
+  interface String {
+    isEmpty: IsEmptyFn;
+  }
+}

@@ -7,3 +7,9 @@ export const len: PrototypeStruct = {
     return (this as unknown as string).length;
   },
 };
+
+declare global {
+  interface String {
+    len: LenFn;
+  }
+}

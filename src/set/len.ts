@@ -9,3 +9,9 @@ export const len: PrototypeStruct = {
     return ctx.size;
   },
 };
+
+declare global {
+  interface Set<T> {
+    len: LenFn;
+  }
+}

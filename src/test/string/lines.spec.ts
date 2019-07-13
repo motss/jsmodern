@@ -1,8 +1,7 @@
-import { lines, LinesFn } from '../../string/lines.js';
+import { extend } from '../../extend.js';
+import { lines } from '../../string/lines.js';
 
-const { label, fn } = lines;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [lines] });
 
 describe('String.prototype.lines', () => {
   type TestSuccess = [string, string, string[]];
@@ -17,9 +16,3 @@ describe('String.prototype.lines', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    lines: LinesFn;
-  }
-}

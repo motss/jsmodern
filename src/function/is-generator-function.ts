@@ -8,3 +8,9 @@ export const isGeneratorFunction: PrototypeStruct = {
     return 'function' === typeof(x) && 'GeneratorFunction' === x.constructor.name;
   },
 };
+
+declare global {
+  interface Function {
+    isGeneratorFunction: IsGeneratorFunctionFn;
+  }
+}

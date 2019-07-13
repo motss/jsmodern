@@ -9,3 +9,9 @@ export const iter: PrototypeStruct = {
     return ctx[Symbol.iterator]();
   },
 };
+
+declare global {
+  interface Map<K, V> {
+    iter: IterFn<K, V>;
+  }
+}

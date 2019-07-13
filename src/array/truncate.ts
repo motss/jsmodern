@@ -22,3 +22,9 @@ export const truncate: PrototypeStruct = {
     }
   },
 };
+
+declare global {
+  interface Array<T> {
+    truncate: TruncateFn;
+  }
+}

@@ -13,3 +13,9 @@ export const lastItem: PrototypeStruct = {
     return ctx[len - 1];
   },
 };
+
+declare global {
+  interface Array<T> {
+    lastItem: LastItemFn<T>;
+  }
+}

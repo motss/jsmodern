@@ -1,8 +1,7 @@
-import { toPascalCase, ToPascalCaseFn } from '../../string/to-pascal-case.js';
+import { extend } from '../../extend.js';
+import { toPascalCase } from '../../string/to-pascal-case.js';
 
-const { label, fn } = toPascalCase;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [toPascalCase] });
 
 describe('String.prototype.toPascalCase', () => {
   type TestSuccess = [string, string, string];
@@ -23,9 +22,3 @@ describe('String.prototype.toPascalCase', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    toPascalCase: ToPascalCaseFn;
-  }
-}

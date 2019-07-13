@@ -1,8 +1,7 @@
-import { isBefore, IsBeforeFn } from '../../date/is-before';
+import { isBefore } from '../../date/is-before';
+import { extend } from '../../extend';
 
-const { label, fn } = isBefore;
-
-Object.defineProperty(Date.prototype, label, { value: fn });
+extend({ date: [isBefore] });
 
 describe('Date.prototype.isBefore', () => {
   type TestSuccess = [string, Date, Date, boolean];
@@ -23,9 +22,3 @@ describe('Date.prototype.isBefore', () => {
   });
 
 });
-
-declare global {
-  interface Date {
-    isBefore: IsBeforeFn;
-  }
-}

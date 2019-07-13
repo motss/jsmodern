@@ -12,3 +12,9 @@ export const toSnakeCase: PrototypeStruct = {
     return postCase(preCase(ctx).replace(/\b[a-zA-z]/gi, s => s.toLowerCase()), '_');
   },
 };
+
+declare global {
+  interface String {
+    toSnakeCase: ToSnakeCaseFn;
+  }
+}

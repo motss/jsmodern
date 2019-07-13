@@ -1,8 +1,7 @@
-import { splitAt, SplitAtFn } from '../../array/split-at';
+import { splitAt } from '../../array/split-at';
+import { extend } from '../../extend';
 
-const { label, fn } = splitAt;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [splitAt] });
 
 describe('Array.prototype.splitAt', () => {
   const errorMessage = new TypeError(`Expect 'at' to be in the range of 0 and length of array`);
@@ -35,9 +34,3 @@ describe('Array.prototype.splitAt', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    splitAt: SplitAtFn<T>;
-  }
-}

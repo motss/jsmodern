@@ -18,3 +18,9 @@ export const divFloor: PrototypeStruct = {
     return utilDivFloor(ctx, x);
   },
 };
+
+declare global {
+  interface Number {
+    divFloor: DivFloorFn;
+  }
+}

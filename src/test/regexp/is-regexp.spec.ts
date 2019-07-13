@@ -1,8 +1,7 @@
-import { isRegExp, IsRegExpFn } from '../../regexp/is-regexp';
+import { extend } from '../../extend';
+import { isRegExp } from '../../regexp/is-regexp';
 
-const { label, fn } = isRegExp;
-
-Object.defineProperty(RegExp, label, { value: fn });
+extend({ regExp: [isRegExp] });
 
 describe('RegExp.isRegExp', () => {
   type TestSuccess = [string, any, boolean];
@@ -36,9 +35,3 @@ describe('RegExp.isRegExp', () => {
   });
 
 });
-
-declare global {
-  interface RegExpConstructor {
-    isRegExp: IsRegExpFn;
-  }
-}

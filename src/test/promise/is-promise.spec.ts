@@ -1,8 +1,7 @@
-import { isPromise, IsPromiseFn } from '../../promise/is-promise';
+import { extend } from '../../extend';
+import { isPromise } from '../../promise/is-promise';
 
-const { label, fn } = isPromise;
-
-Object.defineProperty(Promise, label, { value: fn });
+extend({ promise: [isPromise] });
 
 describe('Promise.isPromise', () => {
   type TestSuccess = [string, any, boolean];
@@ -27,9 +26,3 @@ describe('Promise.isPromise', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface PromiseConstructor {
-    isPromise: IsPromiseFn;
-  }
-}

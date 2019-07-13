@@ -1,8 +1,7 @@
-import { toKebabCase, ToKebabCaseFn } from '../../string/to-kebab-case.js';
+import { extend } from '../../extend.js';
+import { toKebabCase } from '../../string/to-kebab-case.js';
 
-const { label, fn } = toKebabCase;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [toKebabCase] });
 
 describe('String.prototype.toKebabCase', () => {
   type TestSuccess = [string, string, string];
@@ -23,9 +22,3 @@ describe('String.prototype.toKebabCase', () => {
     expect(d).toEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    toKebabCase: ToKebabCaseFn;
-  }
-}

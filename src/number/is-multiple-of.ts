@@ -11,3 +11,9 @@ export const isMultipleOf: PrototypeStruct = {
     return !x ? false : !(ctx % x);
   },
 };
+
+declare global {
+  interface Number {
+    isMultipleOf: IsMultipleOfFn;
+  }
+}

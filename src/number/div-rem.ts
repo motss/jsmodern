@@ -13,3 +13,9 @@ export const divRem: PrototypeStruct = {
     return [quotient, remainder];
   },
 };
+
+declare global {
+  interface Number {
+    divRem: DivRemFn;
+  }
+}

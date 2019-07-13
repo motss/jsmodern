@@ -1,8 +1,7 @@
-import { difference, DifferenceFn } from '../../set/difference';
+import { extend } from '../../extend';
+import { difference } from '../../set/difference';
 
-const { label, fn } = difference;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [difference] });
 
 describe('Set.prototype.difference', () => {
   const errorMessage = new TypeError(`Expect 'other' to be a Set`);
@@ -42,9 +41,3 @@ describe('Set.prototype.difference', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    difference: DifferenceFn<T>;
-  }
-}

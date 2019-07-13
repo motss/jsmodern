@@ -8,3 +8,9 @@ export const isSymbol: PrototypeStruct = {
     return 'symbol' === typeof(x);
   },
 };
+
+declare global {
+  interface SymbolConstructor {
+    isSymbol: IsSymbolFn;
+  }
+}

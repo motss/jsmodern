@@ -1,8 +1,7 @@
-import { from, SetFrom } from '../../set/from';
+import { extend } from '../../extend';
+import { from } from '../../set/from';
 
-const { label, fn } = from;
-
-Object.defineProperty(Set, label, { value: fn });
+extend({ set: [from] });
 
 describe('Set.from', () => {
   // tslint:disable-next-line: max-line-length
@@ -62,8 +61,3 @@ describe('Set.from', () => {
   });
 
 });
-
-declare global {
-  // tslint:disable-next-line: no-empty-interface
-  interface SetConstructor extends SetFrom {}
-}

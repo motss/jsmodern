@@ -13,3 +13,9 @@ export const toPascalCase: PrototypeStruct = {
         preCase(ctx).replace(/(\b[a-zA-Z])/g, (_, c) => c.toUpperCase()));
   },
 };
+
+declare global {
+  interface String {
+    toPascalCase: ToPascalCaseFn;
+  }
+}

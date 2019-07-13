@@ -1,12 +1,8 @@
-import {
-  isAsyncGeneratorFunction,
-  IsAsyncGeneratorFunctionFn,
-} from '../../function/is-async-generator-function';
+import { extend } from '../../extend';
+import { isAsyncGeneratorFunction } from '../../function/is-async-generator-function';
 import { hasAsync, hasAsyncIter } from '../feature-detect';
 
-const { label, fn } = isAsyncGeneratorFunction;
-
-Object.defineProperty(Function, label, { value: fn });
+extend({ function: [isAsyncGeneratorFunction] });
 
 describe('Function.isAsyncGeneratorFunction', () => {
   const trueIfAsync = hasAsync() && hasAsyncIter();
@@ -42,9 +38,3 @@ describe('Function.isAsyncGeneratorFunction', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface Function {
-    isAsyncGeneratorFunction: IsAsyncGeneratorFunctionFn;
-  }
-}

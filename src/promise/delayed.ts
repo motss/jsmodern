@@ -6,6 +6,7 @@ export interface PromiseDelayed {
   delayed<T>(delay: number, callback: DelayedCallback<T>): Promise<undefined | T>;
 }
 export const delayed: PrototypeStruct = {
+  isStatic: true,
   label: 'delayed',
   fn: function promiseDelayed<T>(
     delay: number,
@@ -27,3 +28,8 @@ export const delayed: PrototypeStruct = {
     });
   },
 };
+
+declare global {
+  // tslint:disable-next-line: no-empty-interface
+  interface PromiseConstructor extends PromiseDelayed {}
+}

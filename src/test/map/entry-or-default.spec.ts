@@ -1,8 +1,7 @@
-import { entryOrDefault, EntryOrDefaultFn } from '../../map/entry-or-default';
+import { extend } from '../../extend';
+import { entryOrDefault } from '../../map/entry-or-default';
 
-const { label, fn } = entryOrDefault;
-
-Object.defineProperty(Map.prototype, label, { value: fn });
+extend({ map: [entryOrDefault] });
 
 describe('Map.prototype.entryOrDefault', () => {
   // tslint:disable-next-line: max-line-length
@@ -23,9 +22,3 @@ describe('Map.prototype.entryOrDefault', () => {
   });
 
 });
-
-declare global {
-  interface Map<K, V> {
-    entryOrDefault: EntryOrDefaultFn<K, V>;
-  }
-}

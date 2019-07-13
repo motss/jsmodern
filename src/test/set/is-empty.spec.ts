@@ -1,8 +1,7 @@
-import { isEmpty, IsEmptyFn } from '../../set/is-empty';
+import { extend } from '../../extend';
+import { isEmpty } from '../../set/is-empty';
 
-const { label, fn } = isEmpty;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [isEmpty] });
 
 describe('Set.prototype.isEmpty', () => {
   type TestSuccess = [string, Set<number>, boolean];
@@ -17,9 +16,3 @@ describe('Set.prototype.isEmpty', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    isEmpty: IsEmptyFn;
-  }
-}

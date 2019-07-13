@@ -1,8 +1,7 @@
-import { firstItem, FirstItemFn } from '../../string/first-item.js';
+import { extend } from '../../extend.js';
+import { firstItem } from '../../string/first-item.js';
 
-const { label, fn } = firstItem;
-
-Object.defineProperty(String.prototype, label, { value: fn });
+extend({ string: [firstItem] });
 
 describe('String.prototype.firstItem', () => {
   test.each([
@@ -14,9 +13,3 @@ describe('String.prototype.firstItem', () => {
     expect(d).toStrictEqual(expected);
   });
 });
-
-declare global {
-  interface String {
-    firstItem: FirstItemFn;
-  }
-}

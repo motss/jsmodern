@@ -13,3 +13,9 @@ export const repeat: PrototypeStruct = {
     return Array.from(Array(nInt), () => ctx).reduce((p, o) => p.concat(o));
   },
 };
+
+declare global {
+  interface Array<T> {
+    repeat: RepeatFn<T>;
+  }
+}

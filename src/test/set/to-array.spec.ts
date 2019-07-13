@@ -1,8 +1,7 @@
-import { toArray, ToArrayFn } from '../../set/to-array';
+import { extend } from '../../extend';
+import { toArray } from '../../set/to-array';
 
-const { label, fn } = toArray;
-
-Object.defineProperty(Set.prototype, label, { value: fn });
+extend({ set: [toArray] });
 
 describe('Set.prototype.toArray', () => {
   // tslint:disable-next-line: max-line-length
@@ -19,9 +18,3 @@ describe('Set.prototype.toArray', () => {
   });
 
 });
-
-declare global {
-  interface Set<T> {
-    toArray: ToArrayFn<T>;
-  }
-}

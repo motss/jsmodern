@@ -1,8 +1,7 @@
-import { isGeneratorFunction, IsGeneratorFunctionFn } from '../../function/is-generator-function';
+import { extend } from '../../extend';
+import { isGeneratorFunction } from '../../function/is-generator-function';
 
-const { label, fn } = isGeneratorFunction;
-
-Object.defineProperty(Function, label, { value: fn });
+extend({ function: [isGeneratorFunction] });
 
 describe('Function.isGeneratorFunction', () => {
   type TestSuccess = [string, any, boolean];
@@ -34,9 +33,3 @@ describe('Function.isGeneratorFunction', () => {
     expect(d).toStrictEqual(expected!);
   });
 });
-
-declare global {
-  interface Function {
-    isGeneratorFunction: IsGeneratorFunctionFn;
-  }
-}

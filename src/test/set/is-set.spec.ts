@@ -1,8 +1,7 @@
-import { isSet, IsSetFn } from '../../set/is-set';
+import { extend } from '../../extend';
+import { isSet } from '../../set/is-set';
 
-const { label, fn } = isSet;
-
-Object.defineProperty(Set, label, { value: fn });
+extend({ set: [isSet] });
 
 describe('Set.isSet', () => {
   type TestSuccess = [string, any, boolean];
@@ -38,9 +37,3 @@ describe('Set.isSet', () => {
   });
 
 });
-
-declare global {
-  interface SetConstructor {
-    isSet: IsSetFn;
-  }
-}

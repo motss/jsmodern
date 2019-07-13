@@ -44,3 +44,9 @@ export const split: PrototypeStruct = {
     return set;
   },
 };
+
+declare global {
+  interface Array<T> {
+    split: SplitFn<T>;
+  }
+}

@@ -1,8 +1,7 @@
-import { isAfter, IsAfterFn } from '../../date/is-after';
+import { isAfter } from '../../date/is-after';
+import { extend } from '../../extend';
 
-const { label, fn } = isAfter;
-
-Object.defineProperty(Date.prototype, label, { value: fn });
+extend({ date: [isAfter] });
 
 describe('Date.prototype.isAfter', () => {
   type TestSuccess = [string, Date, Date, boolean];
@@ -23,9 +22,3 @@ describe('Date.prototype.isAfter', () => {
   });
 
 });
-
-declare global {
-  interface Date {
-    isAfter: IsAfterFn;
-  }
-}

@@ -10,3 +10,9 @@ export const isOdd: PrototypeStruct = {
     return 1 === (ctx & 1);
   },
 };
+
+declare global {
+  interface Number {
+    isOdd: IsOddFn;
+  }
+}

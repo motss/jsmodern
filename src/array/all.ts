@@ -10,3 +10,9 @@ export const all: PrototypeStruct = {
     return ctx.every(predicate);
   },
 };
+
+declare global {
+  interface Array<T> {
+    all: AllFn<T>;
+  }
+}

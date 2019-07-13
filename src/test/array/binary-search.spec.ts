@@ -1,8 +1,7 @@
-import { binarySearch, BinarySearchFn } from '../../array/binary-search';
+import { binarySearch } from '../../array/binary-search';
+import { extend } from '../../extend';
 
-const { label, fn } = binarySearch;
-
-Object.defineProperty(Array.prototype, label, { value: fn });
+extend({ array: [binarySearch] });
 
 describe('Array.prototype.binarySearch', () => {
   type TestSuccess = [string, number[], undefined | null | number, number];
@@ -25,9 +24,3 @@ describe('Array.prototype.binarySearch', () => {
   });
 
 });
-
-declare global {
-  interface Array<T> {
-    binarySearch: BinarySearchFn<T>;
-  }
-}
