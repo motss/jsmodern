@@ -1,0 +1,11 @@
+import './map/entry-or-default.js';
+import './map/entry.js';
+import './map/from.js';
+import './map/get-or-default.js';
+import './map/is-empty.js';
+import './map/is-map.js';
+import './map/iter.js';
+import './map/len.js';
+import './map/of.js';
+import './map/remove-entry.js';
+import './map/to-array.js';

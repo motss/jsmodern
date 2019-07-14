@@ -1,4 +1,4 @@
-import { chunks } from '../../array/chunk';
+import { chunks } from '../../array/chunks';
 import { extend } from '../../extend';
 
 extend({ array: [chunks] });

@@ -20,6 +20,8 @@ import './string/to-start-case.spec.js';
 import './string/is-string.spec.js';
 import './string/to-case.spec.js';
 
+import './string.spec.js';
+
 /** Number */
 import './number/div-floor.spec.js';
 import './number/div-mod-floor.spec.js';
@@ -35,6 +37,8 @@ import './number/mod-floor.spec.js';
 import './number/check-int.spec.js';
 import './number/is-number.spec.js';
 import './number/range.spec.js';
+
+import './number.spec.js';
 
 /** Array */
 import './array/all.spec.js';
@@ -69,14 +73,20 @@ import './array/truncate.spec.js';
 
 import './array/filled.spec.js';
 
+import './array.spec.js';
+
 /** Promise */
 
 import './promise/delayed.spec.js';
 import './promise/is-promise.spec.js';
 
+import './promise.spec.js';
+
 /** Object */
 
 import './object/is-object.spec.js';
+
+import './object.spec.js';
 
 /** Function */
 
@@ -85,13 +95,19 @@ import './function/is-async-generator-function.spec.js';
 import './function/is-function.spec.js';
 import './function/is-generator-function.spec.js';
 
+import './function.spec.js';
+
 /** Boolean */
 
 import './boolean/is-boolean.spec.js';
 
+import './boolean.spec.js';
+
 /** Error */
 
 import './error/is-error.spec.js';
+
+import './error.spec.js';
 
 /** Date */
 
@@ -101,18 +117,26 @@ import './date/is-before.spec.js';
 
 import './date/is-date.spec.js';
 
+import './date.spec.js';
+
 /** Iterator */
 
 import './iterator/is-async-iterator.spec.js';
 import './iterator/is-iterator.spec.js';
 
+import './iterator.spec.js';
+
 /** Symbol */
 
 import './symbol/is-symbol.spec.js';
 
+import './symbol.spec.js';
+
 /** RegExp */
 
 import './regexp/is-regexp.spec.js';
+
+import './regexp.spec.js';
 
 /** Map */
 
@@ -128,6 +152,8 @@ import './map/to-array.spec.js';
 import './map/from.spec.js';
 import './map/is-map.spec.js';
 import './map/of.spec.js';
+
+import './map.spec.js';
 
 /** Set */
 
@@ -146,13 +172,19 @@ import './set/symmetric-difference.spec.js';
 import './set/to-array.spec.js';
 import './set/union.spec.js';
 
+import './set.spec.js';
+
 /** WeakMap */
 
 import './weak-map/is-weak.map.spec.js';
 
+import './weak-map.spec.js';
+
 /** WeakSet */
 
 import './weak-set/is-weak.set.spec.js';
+
+import './weak-set.spec.js';
 
 /** extend.js */
 import './extend.spec.js';
