@@ -6,6 +6,8 @@
 
 <hr />
 
+<a href="https://www.buymeacoffee.com/RLmMhgXFb" target="_blank" rel="noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 20px !important;width: auto !important;" ></a>
+[![tippin.me][tippin-me-badge]][tippin-me-url]
 [![Follow me][follow-me-badge]][follow-me-url]
 
 [![Version][version-badge]][version-url]
@@ -93,20 +95,9 @@ $ npm install --save jsmodern
 [WeakMap extensions]: /src/weak-map
 [WeakSet extensions]: /src/weak-set
 
-<!-- MDN -->
-[array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-[boolean-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-[function-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
-[map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
-[number-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
-[object-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-[promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[regexp-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
-[set-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
-[string-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-
 <!-- Badges -->
-[follow-me-badge]: https://flat.badgen.net/twitter/follow/motss?icon=twitter
+[tippin-me-badge]: https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@igarshmyb/F0918E
+[follow-me-badge]: https://flat.badgen.net/twitter/follow/igarshmyb?icon=twitter
 
 [version-badge]: https://flat.badgen.net/npm/v/jsmodern?icon=npm
 [node-version-badge]: https://flat.badgen.net/npm/node/jsmodern
@@ -122,12 +113,13 @@ $ npm install --save jsmodern
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/jsmodern?label=codecov&icon=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/jsmodern?label=coveralls
 
-[codebeat-badge]: https://codebeat.co/badges/123
-[codacy-badge]: https://api.codacy.com/project/badge/Grade/123
+[codebeat-badge]: https://codebeat.co/badges/9a16d4cb-4821-48eb-a10a-7b47960870ea
+[codacy-badge]: https://api.codacy.com/project/badge/Grade/7ccfc89554e24398bc5056f66dc680a7
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
-[follow-me-url]: https://twitter.com/motss?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/jsmodern
+[tippin-me-url]: https://tippin.me/@igarshmyb
+[follow-me-url]: https://twitter.com/igarshmyb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/app-datepicker
 
 [version-url]: https://www.npmjs.com/package/jsmodern
 [node-version-url]: https://nodejs.org/en/download
