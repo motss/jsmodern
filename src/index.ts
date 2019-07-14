@@ -4,21 +4,40 @@ export interface PrototypeStruct<T = (...params: any[]) => any> {
   fn: T;
 }
 
-export * from './array.js';
-export * from './boolean.js';
-export * from './date.js';
-export * from './error.js';
-export * from './function.js';
-export * from './iterator.js';
-export * from './map.js';
-export * from './number.js';
-export * from './object.js';
-export * from './promise.js';
-export * from './regexp.js';
-export * from './set.js';
-export * from './string.js';
-export * from './symbol.js';
-export * from './weak-map.js';
-export * from './weak-set.js';
+import * as arrayExtend from './array.js';
+import * as booleanExtend from './boolean.js';
+import * as dateExtend from './date.js';
+import * as errorExtend from './error.js';
+import * as functionExtend from './function.js';
+import * as iteratorExtend from './iterator.js';
+import * as mapExtend from './map.js';
+import * as numberExtend from './number.js';
+import * as objectExtend from './object.js';
+import * as promiseExtend from './promise.js';
+import * as regExpExtend from './regexp.js';
+import * as setExtend from './set.js';
+import * as stringExtend from './string.js';
+import * as symbolExtend from './symbol.js';
+import * as weakMapExtend from './weak-map.js';
+import * as weakSetExtend from './weak-set.js';
 
 export * from './extend.js';
+
+export {
+  arrayExtend,
+  booleanExtend,
+  dateExtend,
+  errorExtend,
+  functionExtend,
+  iteratorExtend,
+  mapExtend,
+  numberExtend,
+  objectExtend,
+  promiseExtend,
+  regExpExtend,
+  setExtend,
+  stringExtend,
+  symbolExtend,
+  weakMapExtend,
+  weakSetExtend,
+};

@@ -4,6 +4,5 @@
     "module": "commonjs",
     "target": "es2017"
   },
-  "include": ["src/**/*.ts"],
   "exclude": ["src/demo/**/*"]
 }

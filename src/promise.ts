@@ -1,2 +1,2 @@
-import './promise/delayed.js';
-import './promise/is-promise.js';
+export * from './promise/delayed.js';
+export * from './promise/is-promise.js';

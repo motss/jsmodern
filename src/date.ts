@@ -1,4 +1,4 @@
-import './date/difference.js';
-import './date/is-after.js';
-import './date/is-before.js';
-import './date/is-date.js';
+export * from './date/difference.js';
+export * from './date/is-after.js';
+export * from './date/is-before.js';
+export * from './date/is-date.js';

@@ -1,1 +1,1 @@
-import './regexp/is-regexp.js';
+export * from './regexp/is-regexp.js';

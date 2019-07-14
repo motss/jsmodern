@@ -1,1 +1,1 @@
-import './weak-map/is-weak-map.js';
+export * from './weak-map/is-weak-map.js';

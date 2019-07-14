@@ -36,8 +36,8 @@
     "lint": "npm run lint:debug -- --config tslint.prod.json",
     "lint:debug": "tslint --project tsconfig.json --format stylish",
     "prepublishOnly": "npm run lint && npm run build",
-    "test": "npm run clean && npm run lint && npm run build:test && npm run jest",
-    "ts": "tsc",
+    "test": "npm run lint && npm run build:test && npm run jest",
+    "ts": "npm run clean && tsc",
     "watch": "npm run ts -- --watch",
     "watch:build": "npm run ts -- --watch -p tsconfig.test.json",
     "watch:test": "npm run jest -- --watchAll"
