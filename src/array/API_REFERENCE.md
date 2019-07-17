@@ -4,301 +4,360 @@
 
 ### Constructor
 
-* `filled(length[, filledValue = 0])` - Creates a list of the given `length` with optional `filledValue` which defaults to `0` when it is not set at each position.
+#### filled(length[, filledValue = 0])
 
-  ```ts
-  /** [0, 0, 0], a list of 3 elements with each set to `0` when `filledValue` is not set */
-  Array.filed(3);
+Creates a list of the given `length` with optional `filledValue` which defaults to `0` when it is not set at each position.
 
-  /** [1, 1, 1], a list of 3 elements, each filled with the defined value `1` */
-  Array.filled(3, 1);
+```ts
+/** [0, 0, 0], a list of 3 elements with each set to `0` when `filledValue` is not set */
+Array.filed(3);
 
-  /** [[], [], []], a list of 3 elements, each filled with an empty array */
-  const a = Array.filled(3, []);
+/** [1, 1, 1], a list of 3 elements, each filled with the defined value `1` */
+Array.filled(3, 1);
 
-  a[0][0] = 2;
-  a; /** [[2], [2], [2]], each filled value is pointing to the same array */
-  ```
+/** [[], [], []], a list of 3 elements, each filled with an empty array */
+const a = Array.filled(3, []);
+
+a[0][0] = 2;
+a; /** [[2], [2], [2]], each filled value is pointing to the same array */
+```
 
 ### Prototype
 
-* `all(predicate)` - Tests if every element of the list matches a `predicate`.
+#### all(predicate)
 
-  ```ts
-  const a = [1, 2, 3];
+Tests if every element of the list matches a `predicate`.
 
-  a.all(x => x > 0) === true;
-  a.all(x => x > 5) === false;
-  ```
+```ts
+const a = [1, 2, 3];
 
-* `any(predicate)` - Tests if any element of the list matches a `predicate`.
+a.all(x => x > 0) === true;
+a.all(x => x > 5) === false;
+```
 
-  ```ts
-  const a = [1, 2, 3];
+#### any(predicate)
 
-  a.any(x => x > 0) === true;
-  a.any(x => x > 5) === false;
-  ```
+Tests if any element of the list matches a `predicate`.
 
-* `binarySearch(x)` - Binary searches this sorted array for a given element. Returns the index of the matching element if the value is found, otherwise, `-1` indicates no match for `x`. If there are multiple matches, then any one of the matches could be returned. _Note that this function will not check if the `sortedArray` is always sorted. Passing an unsorted array will produce expected result._
+```ts
+const a = [1, 2, 3];
 
-  ```ts
-  const s = [0, 1, 1, 1, 1, 2, 3, 5, 8, 13 , 21, 34, 55]
+a.any(x => x > 0) === true;
+a.any(x => x > 5) === false;
+```
 
-  s.binarySearch(13) === 9;
-  s.binarySearch(4) === -1;
-  s.binarySearch(100) === -1;
-  s.binarySearch(1) === 2;
-  ```
+#### binarySearch(x)
 
-* `chunks(chunkSize)` - Returns a list of `chunkSize` elements of this array.
+Binary searches this sorted array for a given element. Returns the index of the matching element if the value is found, otherwise, `-1` indicates no match for `x`. If there are multiple matches, then any one of the matches could be returned. _Note that this function will not check if the `sortedArray` is always sorted. Passing an unsorted array will produce expected result._
 
-  ```ts
-  const a = [1, 2, 3, 4, 5];
+```ts
+const s = [0, 1, 1, 1, 1, 2, 3, 5, 8, 13 , 21, 34, 55]
 
-  a.chunks(2); /** [[1, 2], [3, 4], [5]] */
-  ```
+s.binarySearch(13) === 9;
+s.binarySearch(4) === -1;
+s.binarySearch(100) === -1;
+s.binarySearch(1) === 2;
+```
 
-* `clear()` - Clears the list, removing all values.
+#### chunks(chunkSize)
 
-  ```ts
-  const a = [1, 2, 3];
+Returns a list of `chunkSize` elements of this array.
 
-  a.clear();
-  a; /** [] */
-  ```
+```ts
+const a = [1, 2, 3, 4, 5];
 
-* `contains(x)` - Returns `true` if the array contains an element with the given value.
+a.chunks(2); /** [[1, 2], [3, 4], [5]] */
+```
 
-  ```ts
-  const a = [10, 40, 30];
+#### clear()
 
-  a.contains(30) === true;
-  a.contains(50) === false;
-  ```
+Clears the list, removing all values.
 
-* `endsWith(needle)` - Returns `true` if `needle` is a suffice of the array.
+```ts
+const a = [1, 2, 3];
 
-  ```ts
-  const v = [10, 40, 30];
+a.clear();
+a; /** [] */
+```
 
-  v.endsWith(30) === true;
-  v.endsWith([40, 30]) == true;
-  v.endsWith([]) === true;
+#### contains(x)
 
-  v.endsWith([50]) === false;
-  v.endsWith([50, 30]) === false;
+Returns `true` if the array contains an element with the given value.
 
-  const y = [];
-  y.endsWith([]) === true;
-  ```
+```ts
+const a = [10, 40, 30];
 
-* `enumerate()` - Iterates over the entire list which gives the current iteration count as well as the element.
+a.contains(30) === true;
+a.contains(50) === false;
+```
 
-  ```ts
-  const a = [1, 2, 3];
+#### endsWith(needle)
 
-  a.enumerate(); /** [[0, 1], [1, 2], [2, 3]] */
+Returns `true` if `needle` is a suffice of the array.
 
-  for const [idx, element] of a.enumerate() {
-    console.log('idx = %d, element = %d', idx, element);
-  }
-  ```
+```ts
+const v = [10, 40, 30];
 
-* `firstItem()` - Returns the first element of the array, or `undefined` if it is empty.
+v.endsWith(30) === true;
+v.endsWith([40, 30]) == true;
+v.endsWith([]) === true;
 
-  ```ts
-  const a = [10, 40, 30];
+v.endsWith([50]) === false;
+v.endsWith([50, 30]) === false;
 
-  a.firstItem() === 10;
+const y = [];
+y.endsWith([]) === true;
+```
 
-  const b = [];
+#### enumerate()
 
-  b.firstItem() === undefined;
-  ```
+Iterates over the entire list which gives the current iteration count as well as the element.
 
-* `fold(initialValue, predicate)` - Reduces a collection to a single value by iteratively combining each element of the collection with an `initialValue`.
+```ts
+const a = [1, 2, 3];
 
-  ```ts
-  const a = [1, 2, 3];
+a.enumerate(); /** [[0, 1], [1, 2], [2, 3]] */
 
-  a.fold(0, (acc, x) => acc + x) === 6;
-  ```
+for const [idx, element] of a.enumerate() {
+  console.log('idx = %d, element = %d', idx, element);
+}
+```
 
-* `insert(index, element)` - Inserts an element at position `index` within the list, shifting all elements after it to the right, where `index` is between `0` and the length of the list.
+#### firstItem()
 
+Returns the first element of the array, or `undefined` if it is empty.
 
-  ```ts
-  const a = [1, 2, 3];
+```ts
+const a = [10, 40, 30];
 
-  a.insert(1, 4);
-  a; /** [1, 4, 2, 3] */
+a.firstItem() === 10;
 
-  a.insert(4, 5);
-  a; /** [1, 4, 2, 3, 5] */
-  ```
+const b = [];
 
-* `isEmpty()` - Returns `true` if the list contains no elements.
+b.firstItem() === undefined;
+```
 
-  ```ts
-  const a = [];
+#### fold(initialValue, predicate)
 
-  a.isEmpty() === true;
+Reduces a collection to a single value by iteratively combining each element of the collection with an `initialValue`.
 
-  a.push(1);
-  a.isEmpty() === false;
-  ```
+```ts
+const a = [1, 2, 3];
 
-* `isSorted()` - Checks if the elements of the list are sorted.
+a.fold(0, (acc, x) => acc + x) === 6;
+```
 
-  ```ts
-  [1, 2, 2, 9].isSorted() === true;
-  [1, 3, 2, 4].isSorted() === false;
-  [0].isSorted() === true;
-  [].isSorted() === true;
-  [0.0, 1.0, NaN].isSorted() === false;
-  ```
+#### insert(index, element)
 
-* `iter()` - Returns an iterator over the list.
+Inserts an element at position `index` within the list, shifting all elements after it to the right, where `index` is between `0` and the length of the list.
 
-  ```ts
-  const a = [1, 2, 4];
-  const iterator = a.iter();
+```ts
+const a = [1, 2, 3];
 
-  iterator.next().value === 1;
-  iterator.next().value === 2;
-  iterator.next().value === 4;
-  iterator.next().done === true;
-  ```
+a.insert(1, 4);
+a; /** [1, 4, 2, 3] */
 
-* `lastItem()` - Returns the last element of the array, or `undefined` if it is empty.
+a.insert(4, 5);
+a; /** [1, 4, 2, 3, 5] */
+```
 
-  ```ts
-  const v = [10, 40, 30];
+#### isEmpty()
 
-  v.lastItem() === 30;
+Returns `true` if the list contains no elements.
 
-  const x = [];
+```ts
+const a = [];
 
-  v.lastItem() === undefined;
-  ```
+a.isEmpty() === true;
 
-* `len()` - Returns the number of elements in the list, also referred to as its `length`.
+a.push(1);
+a.isEmpty() === false;
+```
 
-  ```ts
-  [1, 2, 3].len() === 3;
-  ```
+#### isSorted()
 
-* `max()` - Returns the maximum element of a list.
+Checks if the elements of the list are sorted.
 
-  ```ts
-  [1, 2, 3].max() === 3;
-  [].max() === undefined;
-  ```
+```ts
+[1, 2, 2, 9].isSorted() === true;
+[1, 3, 2, 4].isSorted() === false;
+[0].isSorted() === true;
+[].isSorted() === true;
+[0.0, 1.0, NaN].isSorted() === false;
+```
 
-* `min()` - Returns the minimum elemnt of a list.
+#### iter()
 
-  ```ts
-  [1, 2, 3].min() === 1;
-  [].min() === undefined;
-  ```
+Returns an iterator over the list.
 
-* `partition(predicate)` - Creats two collections from a list.
+```ts
+const a = [1, 2, 4];
+const iterator = a.iter();
 
-  ```ts
-  [1, 2, 3].partition(n => n % 2 === 0); /** [[2], [1, 3]] */
-  ```
+iterator.next().value === 1;
+iterator.next().value === 2;
+iterator.next().value === 4;
+iterator.next().done === true;
+```
 
-* `product()` - Iterates over the entire list, multiplying all the elements.
+#### lastItem()
 
-  ```ts
-  [1, 2, 3].product() === 6;
-  ```
+Returns the last element of the array, or `undefined` if it is empty.
 
-* `remove([index])` - Removes and returns the element at position `index` within the list, shifting all elemnets after it to the left, where `index` is between `0` and the length of the list and defaults to `0` if it is not set.
+```ts
+const v = [10, 40, 30];
 
-  ```ts
-  const a = [1, 2 ,3];
+v.lastItem() === 30;
 
-  a.remove() === 1;
-  a.remove(1) === 1;
-  a; /** [2] */
-  ```
+const x = [];
 
-* `repeat(n)` - Creates a list by repeating a slice `n` times.
+v.lastItem() === undefined;
+```
 
-  ```ts
-  [1, 2].repeat(3); /** [1, 2, 1, 2, 1, 2] */
-  ```
+#### len()
 
-* `retain(predicate)` - Retains only the elements specified by the `predicate`. In other words, remove all elements `e` such as `f(e)` returns `false`. This method operates in place and preserves the order of the retained elements.
+Returns the number of elements in the list, also referred to as its `length`.
 
-  ```ts
-  const a = [1, 2, 3, 4];
+```ts
+[1, 2, 3].len() === 3;
+```
 
-  a.retain(n => n % 2 === 0);
-  a; /** [2, 4] */
-  ```
+#### max()
 
-* `shuffle()` - Shuffles the elements of the list randomly.
+Returns the maximum element of a list.
 
-  ```ts
-  const a = [1, 2, 3, 4];
-  
-  a.shuffle();
-  a; /** [2, 3, 1, 4] */
-  ```
+```ts
+[1, 2, 3].max() === 3;
+[].max() === undefined;
+```
 
-* `splitAt(at)` - Splits the collection into two at the given index. Returns a newly allocated list. List contains elements `[0, at)`, and the returned list contains elements `[at, len)`.
+#### min()
 
-  ```ts
-  const a = [1, 2, 3];
-  const b = a.splitAt(1);
+Returns the minimum elemnt of a list.
 
-  a; /** [1] */
-  b; /** [2, 3] */
-  ```
+```ts
+[1, 2, 3].min() === 1;
+[].min() === undefined;
+```
 
-* `split(predicate)` - Returns a list of subslices separated by elements that match `predicate`. The matched element is not contained in the subslices. If the first element is matched, any empty slice will be the first item returned. Similary, the last item in the slice is matched, an empty slice will be the last item. If two matched elements are directly adjacent, an empty slice will be present between them.
+#### partition(predicate)
 
-  ```ts
-  const a = [10, 40, 33, 20];
-  a.split(num => num % 3 === 0); /** [[10, 40], [20]] */
+Creats two collections from a list.
 
-  const y = [10, 40, 33];
-  y.split(num => num % 3 === 0); /** [[10, 40], []] */
+```ts
+[1, 2, 3].partition(n => n % 2 === 0); /** [[2], [1, 3]] */
+```
 
-  const z = [10, 6, 33, 20];
-  z.split(num => num % 3 === 0); /** [[10], [], 20] */
-  ```
+#### product()
 
-* `startsWith(needle)` - Returns `true` if the `needle` is a prefix of the slice.
+Iterates over the entire list, multiplying all the elements.
 
-  ```ts
-  const  v = [10, 40, 30];
+```ts
+[1, 2, 3].product() === 6;
+```
 
-  v.startsWith([10]) === true;
-  v.startsWith([10, 40]) === true;
-  v.startsWith([]) === true;
+#### remove([index])
 
-  v.startsWith([50]) === false;
-  v.startsWith([10, 50]) === false;
+Removes and returns the element at position `index` within the list, shifting all elemnets after it to the left, where `index` is between `0` and the length of the list and defaults to `0` if it is not set.
 
-  const x = [];
-  x.startsWith([]) === true;
-  ```
+```ts
+const a = [1, 2 ,3];
 
-* `sum()` - Iterates over the entire list, adding all the elements.
+a.remove() === 1;
+a.remove(1) === 1;
+a; /** [2] */
+```
 
-  ```ts
-  [1, 2, 3].sum() === 6;
-  ```
+#### repeat(n)
 
-* `truncate(len)` - Shortens the list, keeping the first `len` elements and dropping the rest. If `len` is greater than the list's current length, this has no effect.
+Creates a list by repeating a slice `n` times.
 
-  ```ts
-  const a = [1, 2, 3, 4, 5];
+```ts
+[1, 2].repeat(3); /** [1, 2, 1, 2, 1, 2] */
+```
 
-  a.truncate(2);
-  a; /** [1, 2] */
-  ```
+#### retain(predicate)
+
+Retains only the elements specified by the `predicate`. In other words, remove all elements `e` such as `f(e)` returns `false`. This method operates in place and preserves the order of the retained elements.
+
+```ts
+const a = [1, 2, 3, 4];
+
+a.retain(n => n % 2 === 0);
+a; /** [2, 4] */
+```
+
+#### shuffle()
+
+Shuffles the elements of the list randomly.
+
+```ts
+const a = [1, 2, 3, 4];
+
+a.shuffle();
+a; /** [2, 3, 1, 4] */
+```
+
+#### splitAt(at)
+
+Splits the collection into two at the given index. Returns a newly allocated list. List contains elements `[0, at)`, and the returned list contains elements `[at, len)`.
+
+```ts
+const a = [1, 2, 3];
+const b = a.splitAt(1);
+
+a; /** [1] */
+b; /** [2, 3] */
+```
+
+#### split(predicate)
+
+Returns a list of subslices separated by elements that match `predicate`. The matched element is not contained in the subslices. If the first element is matched, any empty slice will be the first item returned. Similary, the last item in the slice is matched, an empty slice will be the last item. If two matched elements are directly adjacent, an empty slice will be present between them.
+
+```ts
+const a = [10, 40, 33, 20];
+a.split(num => num % 3 === 0); /** [[10, 40], [20]] */
+
+const y = [10, 40, 33];
+y.split(num => num % 3 === 0); /** [[10, 40], []] */
+
+const z = [10, 6, 33, 20];
+z.split(num => num % 3 === 0); /** [[10], [], 20] */
+```
+
+#### startsWith(needle)
+
+Returns `true` if the `needle` is a prefix of the slice.
+
+```ts
+const  v = [10, 40, 30];
+
+v.startsWith([10]) === true;
+v.startsWith([10, 40]) === true;
+v.startsWith([]) === true;
+
+v.startsWith([50]) === false;
+v.startsWith([10, 50]) === false;
+
+const x = [];
+x.startsWith([]) === true;
+```
+
+#### sum()
+
+Iterates over the entire list, adding all the elements.
+
+```ts
+[1, 2, 3].sum() === 6;
+```
+
+#### truncate(len)
+
+Shortens the list, keeping the first `len` elements and dropping the rest. If `len` is greater than the list's current length, this has no effect.
+
+```ts
+const a = [1, 2, 3, 4, 5];
+
+a.truncate(2);
+a; /** [1, 2] */
+```

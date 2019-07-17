@@ -4,7 +4,7 @@ import { extend } from '../../extend';
 extend({ array: [retain] });
 
 describe('Array.prototype.retain', () => {
-  const errorMessage = new TypeError(`Expect 'callback' to be a function`);
+  const errorMessage = new TypeError(`Expect 'predicate' to be a function`);
 
   type TestError = [string, number[], null | undefined, Error];
   test.each<TestError>([
