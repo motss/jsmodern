@@ -45,9 +45,9 @@
   "dependencies": {},
   "devDependencies": {
     "@reallyland/tsconfig": "^1.0.0",
-    "@reallyland/tslint-config": "^1.1.0",
+    "@reallyland/tslint-config": "^1.1.1",
     "@types/jest": "^24.0.15",
-    "@types/node": "^12.6.2",
+    "@types/node": "^12.6.6",
     "jest": "^24.8.0",
     "shx": "^0.3.2",
     "tslint": "^5.17.0",
