@@ -60,8 +60,12 @@ export function extend(extensions?: Partial<Extensions>) {
   for (const { type, features } of featuresList) {
     for (const { fn, label, isStatic } of features) {
       const ctr = (type as unknown as ObjectConstructor);
+      const root = isStatic || !ctr.prototype ? ctr : ctr.prototype;
 
-      Object.defineProperty(isStatic || !ctr.prototype ? ctr : ctr.prototype, label, {
+      /** Skip registering new extension if it has been supported natively */
+      if (label in root) continue;
+
+      Object.defineProperty(root, label, {
         configurable: true,
         value: fn,
         writable: true,
