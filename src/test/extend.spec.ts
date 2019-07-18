@@ -55,11 +55,38 @@ describe('extend', () => {
 
     expect(d).toStrictEqual(undefined!);
   });
+
+  test(`Skip registering an extension if it has been natively supported`, () => {
+    const dummy2: PrototypeStruct = {
+      label: 'dummy2',
+      fn: function dummyDummy2() { return 'dummy2'; },
+    };
+
+    try {
+      expect('dummy2' in String.prototype).toStrictEqual(false);
+
+      Object.defineProperty(String.prototype, 'dummy2', {
+        value: () => null,
+      });
+
+      expect('dummy2' in String.prototype).toStrictEqual(true);
+
+      extend({ string: [dummy2] });
+
+      expect(String.prototype.dummy2()).toStrictEqual(null!);
+    } catch (e) {
+      expect(e).not.toBeDefined();
+    }
+  });
 });
 
 type DummyFn = () => true;
 type StaticDummyFn = () => true;
 declare global {
+  interface String {
+    dummy2: () => string;
+  }
+
   interface Object {
     dummy: DummyFn;
   }
