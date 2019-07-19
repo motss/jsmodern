@@ -32,8 +32,8 @@ None
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isPromise(x)]: /src/object/API_REFERENCE.md#ispromisex
-[delayed(delay, callback)]: /src/object/API_REFERENCE.md#delayeddelayed-callback
+[isPromise(x)]: /src/promise/API_REFERENCE.md#ispromisex
+[delayed(delay, callback)]: /src/promise/API_REFERENCE.md#delayeddelayed-callback
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

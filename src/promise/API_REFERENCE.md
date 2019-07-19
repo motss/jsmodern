@@ -16,7 +16,7 @@ Promise.isPromise(a) === true;
 
 #### delayed(delay, callback)
 
-Creates a `Promise` that runs its computation after `delay`.
+Creates a `Promise` that runs `callback` after `delay`.
 
 ```ts
 Promise.delayed(3e3, () => {}); /** Runs callback after 3 seconds */
