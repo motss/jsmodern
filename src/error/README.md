@@ -31,7 +31,7 @@ None
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isError(x)]: /src/boolean/API_REFERENCE.md#iserrorx
+[isError(x)]: /src/error/API_REFERENCE.md#iserrorx
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
