@@ -4,9 +4,9 @@
 
 ### Constructor
 
-#### isDate()
+#### isDate(x)
 
-Returns `true` if the value is a `Date` instance.
+Returns `true` if the `x` is a `Date` instance.
 
 ```ts
 Date.isDate(new Date()) === true;
@@ -44,5 +44,3 @@ const a = new Date('2020-02-02');
 
 a.isBefore(new Date('2020-01-01')) === false;
 ```
-
-None

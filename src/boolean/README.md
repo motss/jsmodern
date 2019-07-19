@@ -20,7 +20,7 @@
 
 ### Constructor
 
-* [isBoolean()]
+* [isBoolean(x)]
 
 ### Prototype
 
@@ -31,8 +31,7 @@ None
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isBoolean()]: /src/boolean/API_REFERENCE.md#isboolean
-
+[isBoolean(x)]: /src/boolean/API_REFERENCE.md#isbooleanx
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

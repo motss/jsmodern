@@ -4,9 +4,9 @@
 
 ### Constructor
 
-#### isBoolean()
+#### isBoolean(x)
 
-Returns `true` if the value is a boolean.
+Returns `true` if the `x` is a boolean.
 
 ```ts
 Boolean.isBoolean(true) === true;

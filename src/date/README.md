@@ -20,7 +20,7 @@
 
 ### Constructor
 
-* [isDate()]
+* [isDate(x)]
 
 ### Prototype
 
@@ -33,7 +33,7 @@
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isDate()]: /src/date/API_REFERENCE.md#isdate
+[isDate(x)]: /src/date/API_REFERENCE.md#isdatex
 
 [difference(other)]: /src/date/API_REFERENCE.md#differenceother
 [isAfter(other)]: /src/date/API_REFERENCE.md#isafterother
