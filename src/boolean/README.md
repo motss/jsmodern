@@ -8,7 +8,7 @@
 
 [![MIT License][mit-license-badge]][mit-license-url]
 
-> 
+> Boolean extensions
 
 ## Table of contents <!-- omit in toc -->
 
@@ -16,18 +16,23 @@
 - [API Reference](#API-Reference)
 - [License](#License)
 
-## Usage
+## Available extensions
 
-```ts
-```
+### Constructor
 
-## API Reference
+* [isBoolean()]
+
+### Prototype
+
+None
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
+[isBoolean()]: /src/array/API_REFERENCE.md#isboolean
+
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

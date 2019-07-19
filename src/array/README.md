@@ -20,7 +20,7 @@
 
 ### Constructor
 
-* [filled]
+* [filled(length\[, filledValue = 0\])]
 
 ### Prototype
 
@@ -58,7 +58,7 @@
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[filled]: /src/array/API_REFERENCE.md#filledlength-filledValue--0
+[filled(length\[, filledValue = 0\])]: /src/array/API_REFERENCE.md#filledlength-filledValue--0
 
 [all(predicate)]: /src/array/API_REFERENCE.md#allpredicate
 [any(predicate)]: /src/array/API_REFERENCE.md#anypredicate
