@@ -40,9 +40,9 @@
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[from(mapEntries\[, mapFn\])]: /src/map/API_REFERENCE.md#frommapentries--mapfn
+[from(mapEntries\[, mapFn\])]: /src/map/API_REFERENCE.md#frommapentries-mapfn
 [isMap(x)]: /src/map/API_REFERENCE.md#ismapx
-[of(element0\[, element1\[, ...\[, elementN\]\]\])]: /src/map/API_REFERENCE.md#ofelement0--element1--elementN
+[of(element0\[, element1\[, ...\[, elementN\]\]\])]: /src/map/API_REFERENCE.md#ofelement0-element1--elementn
 
 [entry(key)]: /src/map/API_REFERENCE.md#entrykey
 [entryOrDefault(key, defaultValue)]: /src/map/API_REFERENCE.md#entryordefaultkey-defaultvalue
