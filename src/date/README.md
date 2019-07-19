@@ -8,7 +8,7 @@
 
 [![MIT License][mit-license-badge]][mit-license-url]
 
-> 
+> Date extensions
 
 ## Table of contents <!-- omit in toc -->
 
@@ -16,18 +16,28 @@
 - [API Reference](#API-Reference)
 - [License](#License)
 
-## Usage
+## Available extensions
 
-```ts
-```
+### Constructor
 
-## API Reference
+* [isDate()]
+
+### Prototype
+
+* [difference(other)]
+* [isAfter(other)]
+* [isBefore(other)]
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
+[isDate()]: /src/date/API_REFERENCE.md#isdate
+
+[difference(other)]: /src/date/API_REFERENCE.md#differenceother
+[isAfter(other)]: /src/date/API_REFERENCE.md#isafterother
+[isBefore(other)]: /src/date/API_REFERENCE.md#isbeforeother
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
