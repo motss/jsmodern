@@ -8,7 +8,7 @@
 
 [![MIT License][mit-license-badge]][mit-license-url]
 
-> 
+> Map extensions
 
 ## Table of contents <!-- omit in toc -->
 
@@ -16,18 +16,42 @@
 - [API Reference](#API-Reference)
 - [License](#License)
 
-## Usage
+## Available extensions
 
-```ts
-```
+### Constructor
 
-## API Reference
+* [from(mapEntries\[, mapFn\])]
+* [isMap(x)]
+* [of(element0\[, element1\[, ...\[, elementN\]\]\])]
+
+### Prototype
+
+* [entry(key)]
+* [entryOrDefault(key, defaultValue)]
+* [getOrDefault(key, defaultValue)]
+* [isEmpty()]
+* [iter()]
+* [len()]
+* [removeEntry(key)]
+* [toArray()]
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
+[from(mapEntries\[, mapFn\])]: /src/map/API_REFERENCE.md#frommapentries--mapfn
+[isMap(x)]: /src/map/API_REFERENCE.md#ismapx
+[of(element0\[, element1\[, ...\[, elementN\]\]\])]: /src/map/API_REFERENCE.md#ofelement0--element1--elementN
+
+[entry(key)]: /src/map/API_REFERENCE.md#entrykey
+[entryOrDefault(key, defaultValue)]: /src/map/API_REFERENCE.md#entryordefaultkey-defaultvalue
+[getOrDefault(key, defaultValue)]: /src/map/API_REFERENCE.md#getordefaultkey-defaultvalue
+[isEmpty()]: /src/map/API_REFERENCE.md#isempty
+[iter()]: /src/map/API_REFERENCE.md#iter
+[len()]: /src/map/API_REFERENCE.md#len
+[removeEntry(key)]: /src/map/API_REFERENCE.md#removeentrykey
+[toArray()]: /src/map/API_REFERENCE.md#toarray
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

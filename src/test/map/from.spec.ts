@@ -5,7 +5,7 @@ extend({ map: [from] });
 
 describe('Map.from', () => {
   // tslint:disable-next-line: max-line-length
-  const errorMessage = new TypeError(`Invalid map entries. Each map entry in a list must be an array of key/ value pairs.`);
+  const errorMessage = new TypeError(`Invalid map entries. Each map entry in a list must be an array of key-value pairs.`);
 
   type TestError = [string, any, TypeError];
   test.each<TestError>([

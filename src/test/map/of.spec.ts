@@ -4,7 +4,7 @@ import { of } from '../../map/of';
 extend({ map: [of] });
 
 describe('Map.of', () => {
-  const errorMessage = new TypeError(`A map entry must contain key/ value pairs`);
+  const errorMessage = new TypeError(`A map entry must contain key-value pairs`);
 
   type TestError = [string, any, TypeError];
   test.each<TestError>([

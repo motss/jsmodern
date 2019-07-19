@@ -11,7 +11,7 @@ export const from: PrototypeStruct = {
   fn: function setFrom<K, V>(mapEntries: [K, V][], mapFn?: FromSetFn<K, V>): Map<K, V> {
     if (!Array.isArray(mapEntries)) {
       // tslint:disable-next-line: max-line-length
-      throw new TypeError(`Invalid map entries. Each map entry in a list must be an array of key/ value pairs.`);
+      throw new TypeError(`Invalid map entries. Each map entry in a list must be an array of key-value pairs.`);
     }
 
     const entries = 'function' === typeof(mapFn) ? mapEntries.map(mapFn) : mapEntries;

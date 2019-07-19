@@ -11,7 +11,7 @@ export const of: PrototypeStruct = {
     try {
       return new Map(elements);
     } catch (_) {
-      throw new TypeError(`A map entry must contain key/ value pairs`);
+      throw new TypeError(`A map entry must contain key-value pairs`);
     }
   },
 };
