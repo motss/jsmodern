@@ -33,7 +33,7 @@ None
 
 <!-- References -->
 [isPromise(x)]: /src/promise/API_REFERENCE.md#ispromisex
-[delayed(delay, callback)]: /src/promise/API_REFERENCE.md#delayeddelayed-callback
+[delayed(delay, callback)]: /src/promise/API_REFERENCE.md#delayeddelay-callback
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
