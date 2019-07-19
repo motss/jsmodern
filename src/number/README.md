@@ -42,13 +42,13 @@
 
 <!-- References -->
 [isNumber(value)]: /src/number/API_REFERENCE.md#isnumbervalue
-[range(start\[, stop, step\])]: /src/number/API_REFERENCE.md#rangestart-stopstep
+[range(start\[, stop, step\])]: /src/number/API_REFERENCE.md#rangestart-stop-step
 
 [divFloor(divisor)]: /src/number/API_REFERENCE.md#divfloordivisor
 [divModFloor(divisor)]: /src/number/API_REFERENCE.md#divmodfloordivisor
 [divRem(divisor)]: /src/number/API_REFERENCE.md#divremdivisor
 [gcd(divisor)]: /src/number/API_REFERENCE.md#gcddivisor
-[isBetween(min, max)]: /src/number/API_REFERENCE.md#isbetweenminmax
+[isBetween(min, max)]: /src/number/API_REFERENCE.md#isbetweenmin-max
 [isEven()]: /src/number/API_REFERENCE.md#iseven
 [isMultipleOf(other)]: /src/number/API_REFERENCE.md#ismultipleofother
 [isOdd()]: /src/number/API_REFERENCE.md#isodd
