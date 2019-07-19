@@ -20,8 +20,8 @@ describe('Object.isObject', () => {
     [`.isObject(true)`, true, false],
     [`.isObject('a')`, 'a', false],
     [`.isObject(class A {})`, class A {}, false],
+    [`.isObject(new Error())`, new Error(), false],
 
-    [`.isObject(new Error())`, new Error(), true],
     [`.isObject({})`, {}, true],
     [`.isObject({ a: 1 })`, { a: 1 }, true],
   ])('%s', (_, a, expected) => {

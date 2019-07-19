@@ -8,7 +8,7 @@
 
 [![MIT License][mit-license-badge]][mit-license-url]
 
-> 
+> Object extensions
 
 ## Table of contents <!-- omit in toc -->
 
@@ -16,18 +16,22 @@
 - [API Reference](#API-Reference)
 - [License](#License)
 
-## Usage
+## Available extensions
 
-```ts
-```
+### Constructor
 
-## API Reference
+* [isObject(x)]
+
+### Prototype
+
+None
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
+[isObject(x)]: /src/object/API_REFERENCE.md#isobjectx
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

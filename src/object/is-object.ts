@@ -8,10 +8,10 @@ export const isObject: PrototypeStruct = {
     if (null == x) return false;
 
     const isObjectType = 'object' === typeof(x);
-    const isArray = Array.isArray(x);
-    const isPromise = Boolean(x && x.then);
+    const isNotArray = !Array.isArray(x);
+    const isObjectObject = '[object Object]' === Object.prototype.toString.call(x);
 
-    return isObjectType && !isArray && !isPromise;
+    return isObjectType && isNotArray && isObjectObject;
   },
 };
 
