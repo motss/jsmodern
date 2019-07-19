@@ -48,7 +48,7 @@ a.any(x => x > 5) === false;
 
 #### binarySearch(x)
 
-Binary searches this sorted array for a given element. Returns the index of the matching element if the value is found, otherwise, `-1` indicates no match for `x`. If there are multiple matches, then any one of the matches could be returned. _Note that this function will not check if the `sortedArray` is always sorted. Passing an unsorted array will produce expected result._
+Binary searches this sorted array for a given element. Returns the index of the matching element if the value is found, otherwise, `-1` indicates no match for `x`. If there are multiple matches, then any one of the matches could be returned. _Note that this function will not check if the array is always sorted. Passing an unsorted array will produce the expected result._
 
 ```ts
 const s = [0, 1, 1, 1, 1, 2, 3, 5, 8, 13 , 21, 34, 55]
@@ -233,7 +233,7 @@ Returns the maximum element of a list.
 
 #### min()
 
-Returns the minimum elemnt of a list.
+Returns the minimum element of a list.
 
 ```ts
 [1, 2, 3].min() === 1;
@@ -242,7 +242,7 @@ Returns the minimum elemnt of a list.
 
 #### partition(predicate)
 
-Creats two collections from a list.
+Creates two collections from a list.
 
 ```ts
 [1, 2, 3].partition(n => n % 2 === 0); /** [[2], [1, 3]] */
@@ -258,7 +258,7 @@ Iterates over the entire list, multiplying all the elements.
 
 #### remove([index])
 
-Removes and returns the element at position `index` within the list, shifting all elemnets after it to the left, where `index` is between `0` and the length of the list and defaults to `0` if it is not set.
+Removes and returns the element at position `index` within the list, shifting all elements after it to the left, where `index` is between `0` and the length of the list and defaults to `0` if it is not set.
 
 ```ts
 const a = [1, 2 ,3];
@@ -312,7 +312,7 @@ b; /** [2, 3] */
 
 #### split(predicate)
 
-Returns a list of subslices separated by elements that match `predicate`. The matched element is not contained in the subslices. If the first element is matched, any empty slice will be the first item returned. Similary, the last item in the slice is matched, an empty slice will be the last item. If two matched elements are directly adjacent, an empty slice will be present between them.
+Returns a list of subslices separated by elements that match `predicate`. The matched element is not contained in the subslices. If the first element is matched, an empty slice will be the first item returned. Similarly, the last item in the slice is matched, an empty slice will be the last item. If two matched elements are directly adjacent, an empty slice will be present between them.
 
 ```ts
 const a = [10, 40, 33, 20];
