@@ -31,7 +31,7 @@ None
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isBoolean()]: /src/array/API_REFERENCE.md#isboolean
+[isBoolean()]: /src/boolean/API_REFERENCE.md#isboolean
 
 
 <!-- MDN -->
