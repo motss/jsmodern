@@ -8,7 +8,7 @@
 
 [![MIT License][mit-license-badge]][mit-license-url]
 
-> 
+> Iterator extensions
 
 ## Table of contents <!-- omit in toc -->
 
@@ -16,18 +16,24 @@
 - [API Reference](#API-Reference)
 - [License](#License)
 
-## Usage
+## Available extensions
 
-```ts
-```
+### Constructor
 
-## API Reference
+* [isAsyncIterator(x)]
+* [isIterator(x)]
+
+### Prototype
+
+None
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
+[isAsyncIterator(x)]: /src/iterator/API_REFERENCE.md#isasynciteratorx
+[isIterator(x)]: /src/iterator/API_REFERENCE.md#isiteratorx
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
