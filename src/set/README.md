@@ -50,7 +50,7 @@
 [difference(other)]: /src/set/API_REFERENCE.md#differenceother
 [intersection(other)]: /src/set/API_REFERENCE.md#intersectionother
 [isDisjoint(other)]: /src/set/API_REFERENCE.md#isdisjointother
-[isEmpty()]: /src/set/API_REFERENCE.md#isemptyother
+[isEmpty()]: /src/set/API_REFERENCE.md#isempty
 [isSubset(other)]: /src/set/API_REFERENCE.md#issubsetother
 [isSuperset(other)]: /src/set/API_REFERENCE.md#issupersetother
 [iter()]: /src/set/API_REFERENCE.md#iter
