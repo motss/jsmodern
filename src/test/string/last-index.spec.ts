@@ -6,7 +6,7 @@ extend({ string: [lastIndex] });
 describe('String.prototype.lastIndex', () => {
   type TestSuccess = [string, string, number];
   test.each<TestSuccess>([
-    ['empty string', '', -1],
+    ['empty string', '', 0],
     ['single character', 's', 0],
     ['string', 'string', 5],
   ])('%s', (_, a, expected) => {

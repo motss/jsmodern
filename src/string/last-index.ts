@@ -7,7 +7,7 @@ export const lastIndex: PrototypeStruct = {
     const ctx = (this as unknown as string);
     const len = ctx.length;
 
-    return !len ? -1 : len - 1;
+    return !len ? 0 : len - 1;
   },
 };
 
