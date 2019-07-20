@@ -3,6 +3,9 @@
   "version": "0.1.6",
   "description": "An extension to existing JavaScript, influenced by other great languages such as Rust, Dart, Java, Golang, etc.",
   "keywords": [
+    "extensions",
+    "javascript",
+    "javascript-extensions",
     "jsmodern",
     "node",
     "typescript"
