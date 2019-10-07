@@ -145,3 +145,74 @@ function deletion(tree, value) {
   return tree;
 }
 ```
+
+### Create Binary Tree from a given parent array
+
+```ts
+// Time complexity: O(n)
+// Space complexity: O(n)
+
+// createNode(p, c, i):
+//   return if c[i] is not null
+//
+//   n = node(i);
+//   c[i] = n;
+//
+//   return (tree = c[i]) if p[i] == -1;
+//
+//   createNode(x, y, i) if c[p[i]] is null;
+//
+//   pn = c[p[i]];
+//   pn.left = c[i] if pn.left is null; else
+//   pn.right = c[i]
+
+//     [0, 1, 2, 3, 4,  5, 6]; // index
+// a = [1, 5, 5, 2, 2, -1, 3]; // parent
+// c = [null; a.length] = [null; 7]; // created
+//
+// loop while i < a.length:
+//   createNode(a, c, i);
+//   i += 1;
+// return tree;
+
+function createTree(list) {
+  if (null == list) return null;
+
+  let tree = null;
+
+  const createNode = (p, c, i) => {
+    // Return if node already in `created`
+    if (null != c[i]) return;
+
+    // create new node and set in `created`
+    const n = node(i);
+    c[i] = n;
+
+    // create new node if it is a root node
+    if (p[i] == -1) {
+      tree = c[i];
+      return;
+    }
+
+    // create parent node if not found
+    if (null == c[p[i]]) createNode(p, c, p[i]);
+
+    // Get parent node in `created` and insert node from LTR
+    const pn = c[p[i]];
+    const dir = null == pn.left ? 'left' : 'right';
+
+    pn[dir] = c[i];
+  };
+
+  const len = list.length;
+  const created = Array.from(Array(len), () => null);
+
+  let i = 0;
+  while (i < len) {
+    createNode(list, created, i);
+    i += 1;
+  }
+
+  return tree;
+}
+```
