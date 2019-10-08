@@ -1,4 +1,21 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Map](#map)
+  - [Constructor](#constructor)
+    - [from(mapEntries\[, mapFn\])](#frommapentries-mapfn)
+    - [isMap(x)](#ismapx)
+    - [of(element0[, element1[, ...[, elementN]]])](#ofelement0-element1--elementn)
+  - [Prototype](#prototype)
+    - [entry(key)](#entrykey)
+    - [entryOrDefault(key, defaultValue)](#entryordefaultkey-defaultvalue)
+    - [getOrDefault(key, defaultValue)](#getordefaultkey-defaultvalue)
+    - [isEmpty()](#isempty)
+    - [iter()](#iter)
+    - [len()](#len)
+    - [removeEntry(key)](#removeentrykey)
+    - [toArray()](#toarray)
 
 ## Map
 

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type LenFn = () => number;
+interface Len {
+  len(): number;
+}
+
 export const len: PrototypeStruct = {
   label: 'len',
   fn: function mapLen<K, V>(): number {
@@ -11,7 +14,6 @@ export const len: PrototypeStruct = {
 };
 
 declare global {
-  interface Map<K, V> {
-    len: LenFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Map<K, V> extends Len {}
 }

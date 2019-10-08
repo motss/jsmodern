@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type EntryFn<K, V> = (key: K) => [K, V];
+interface Entry<K, V> {
+  entry(key: K): [K, V];
+}
+
 export const entry: PrototypeStruct = {
   label: 'entry',
   fn: function mapEntry<K, V>(key: K): [] | [K, undefined | V] {
@@ -12,7 +15,5 @@ export const entry: PrototypeStruct = {
 };
 
 declare global {
-  interface Map<K, V> {
-    entry: EntryFn<K, V>;
-  }
+  interface Map<K, V> extends Entry<K, V> {}
 }

@@ -12,9 +12,60 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import {
+  entry,
+  entryOrDefault,
+  from,
+  getOrDefault,
+  isEmpty,
+  isMap,
+  iter,
+  len,
+  of,
+  removeEntry,
+  toArray,
+} from 'jsmodern/dist/map.js';
+
+extend({
+  map: [
+    entry,
+    entryOrDefault,
+    from,
+    getOrDefault,
+    isEmpty,
+    isMap,
+    iter,
+    len,
+    of,
+    removeEntry,
+    toArray,
+  ],
+});
+
+console.log([
+  Map.prototype.entry,
+  Map.prototype.entryOrDefault,
+  Map.from,
+  Map.prototype.getOrDefault,
+  Map.prototype.isEmpty,
+  Map.isMap,
+  Map.prototype.iter,
+  Map.prototype.len,
+  Map.of,
+  Map.prototype.removeEntry,
+  Map.prototype.toArray,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

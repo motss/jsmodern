@@ -1,9 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export interface MapOf {
-  of<K, V>(...elemnts: [K, V][]): Map<K, V>;
+interface MapOf {
+  of<K, V>(...elements: [K, V][]): Map<K, V>;
 }
-export type OfFn<K, V> = (...elements: [K, V][]) => Map<K, V>;
+
 export const of: PrototypeStruct = {
   isStatic: true,
   label: 'of',

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsMapFn = (x: any) => boolean;
+interface IsMap {
+  isMap(x: any): boolean;
+}
+
 export const isMap: PrototypeStruct = {
   isStatic: true,
   label: 'isMap',
@@ -10,7 +13,6 @@ export const isMap: PrototypeStruct = {
 };
 
 declare global {
-  interface MapConstructor {
-    isMap: IsMapFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface MapConstructor extends IsMap {}
 }

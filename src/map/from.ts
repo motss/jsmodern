@@ -1,10 +1,10 @@
 import { PrototypeStruct } from '..';
 
 type FromSetFn<K, V> = (n: [K, V]) => [K, V];
-export interface MapFrom {
+interface MapFrom {
   from<K, V>(mapEntries: [K, V][], mapFn?: FromSetFn<K, V>): Map<K, V>;
 }
-export type FromFn<K, V> = (mapEntries: [K, V][], mapFn?: FromSetFn<K, V>) => Map<K, V>;
+
 export const from: PrototypeStruct = {
   isStatic: true,
   label: 'from',

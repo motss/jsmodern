@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IterFn<K, V> = () => IterableIterator<[K, V]>;
+interface Iter<K, V> {
+  iter(): IterableIterator<[K, V]>;
+}
+
 export const iter: PrototypeStruct = {
   label: 'iter',
   fn: function mapIter<K, V>(): IterableIterator<[K, V]> {
@@ -11,7 +14,5 @@ export const iter: PrototypeStruct = {
 };
 
 declare global {
-  interface Map<K, V> {
-    iter: IterFn<K, V>;
-  }
+  interface Map<K, V> extends Iter<K, V> {}
 }

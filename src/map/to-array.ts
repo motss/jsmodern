@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ToArrayFn<K, V> = () => [K, V][];
+interface ToArray<K, V> {
+  toArray(): [K, V][];
+}
+
 export const toArray: PrototypeStruct = {
   label: 'toArray',
   fn: function mapToArray<K, V>(): [K, V][] {
@@ -16,7 +19,5 @@ export const toArray: PrototypeStruct = {
 };
 
 declare global {
-  interface Map<K, V> {
-    toArray: ToArrayFn<K, V>;
-  }
+  interface Map<K, V> extends ToArray<K, V> {}
 }
