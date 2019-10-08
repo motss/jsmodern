@@ -12,9 +12,39 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import {
+  difference,
+  isAfter,
+  isBefore,
+  isDate,
+} from 'jsmodern/dist/date.js';
+import { extend } from 'jsmodern';
+
+extend({
+  date: [
+    difference,
+    isAfter,
+    isBefore,
+    isDate,
+  ],
+});
+
+console.log([
+  Date.prototype.difference,
+  Date.prototype.isAfter,
+  Date.prototype.isBefore,
+  Date.isDate,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

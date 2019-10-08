@@ -121,7 +121,6 @@ console.log([
   Array.prototype.sum,
   Array.prototype.truncate,
 ].every(n => 'function' === typeof(n)));
-
 ```
 
 ## Available extensions

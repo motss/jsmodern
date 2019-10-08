@@ -35,7 +35,6 @@ extend({
 console.log([
   Boolean.isBoolean,
 ].every(n => 'function' === typeof(n)));
-
 ```
 
 ## Available extensions
