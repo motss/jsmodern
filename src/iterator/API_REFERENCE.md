@@ -1,4 +1,12 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Iterator](#iterator)
+  - [Constructor](#constructor)
+    - [isAsyncIterator(x)](#isasynciteratorx)
+    - [isIterator(x)](#isiteratorx)
+  - [Prototype](#prototype)
 
 ## Iterator
 

@@ -12,9 +12,33 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import {
+  isAsyncIterator,
+  isIterator,
+} from 'jsmodern/dist/iterator.js';
+
+extend({
+  iterator: [
+    isAsyncIterator,
+    isIterator,
+  ],
+});
+
+console.log([
+  isAsyncIterator,
+  isIterator,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

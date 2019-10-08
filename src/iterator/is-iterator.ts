@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsIteratorFn = (x: any) => boolean;
+interface IsIterator {
+  isIterator(x: any): boolean;
+}
+
 export const isIterator: PrototypeStruct = {
   isStatic: true,
   label: 'isIterator',
@@ -18,8 +21,12 @@ export const isIterator: PrototypeStruct = {
 
 declare global {
   namespace NodeJS {
-    interface Global {
-      isIterator: IsIteratorFn;
-    }
+    // tslint:disable-next-line: no-empty-interface
+    interface Global extends IsIterator {}
+  }
+
+  namespace globalThis {
+    // tslint:disable-next-line: no-empty-interface
+    interface Window extends IsIterator {}
   }
 }
