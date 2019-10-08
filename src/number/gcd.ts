@@ -14,7 +14,10 @@ export function utilGcd(a: number, b: number): number {
   return x;
 }
 
-export type GcdFn = (divisor: number) => number;
+interface Gcd {
+  gcd(divisor: number): number;
+}
+
 export const gcd: PrototypeStruct = {
   label: 'gcd',
   fn: function numberGcd(divisor: number): number {
@@ -25,7 +28,6 @@ export const gcd: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    gcd: GcdFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends Gcd {}
 }

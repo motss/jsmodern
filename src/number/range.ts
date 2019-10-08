@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { checkInt } from './check-int';
 
-export type RangeFn = (start: number, end?: number, step?: number) => number[];
+interface Range {
+  range(start: number, end?: number, step?: number): number[];
+}
+
 export const range: PrototypeStruct = {
   isStatic: true,
   label: 'range',
@@ -39,7 +42,6 @@ export const range: PrototypeStruct = {
 };
 
 declare global {
-  interface NumberConstructor {
-    range: RangeFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface NumberConstructor extends Range {}
 }

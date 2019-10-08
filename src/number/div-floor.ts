@@ -4,7 +4,10 @@ export function utilDivFloor(a: number, b: number): number {
   return Math.floor(a / b);
 }
 
-export type DivFloorFn = (divisor: number) => number;
+interface DivFloor {
+  divFloor(divisor: number): number;
+}
+
 export const divFloor: PrototypeStruct = {
   label: 'divFloor',
   fn: function numberDivFloor(divisor: number): number {
@@ -20,7 +23,6 @@ export const divFloor: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    divFloor: DivFloorFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends DivFloor {}
 }

@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { utilDivFloor } from './div-floor';
 
-export type DivModFloorFn = (divisor: number) => number[];
+interface DivModFloor {
+  divModFloor(divisor: number): number[];
+}
+
 export const divModFloor: PrototypeStruct = {
   label: 'divModFloor',
   fn: function numberDivModFloor(divisor: number): number[] {
@@ -20,7 +23,6 @@ export const divModFloor: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    divModFloor: DivModFloorFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends DivModFloor {}
 }

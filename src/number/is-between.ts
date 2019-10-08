@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsBetweenFn = (min: number, max: number) => boolean;
+interface IsBetween {
+  isBetween(min: number, max: number): boolean;
+}
+
 export const isBetween: PrototypeStruct = {
   label: 'isBetween',
   fn: function numberIsBetween(min: number, max: number): boolean {
@@ -11,7 +14,6 @@ export const isBetween: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    isBetween: IsBetweenFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends IsBetween {}
 }

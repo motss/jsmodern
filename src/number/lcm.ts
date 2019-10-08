@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { utilGcd } from './gcd';
 
-export type LcmFn = (divisor: number) => number;
+interface Lcm {
+  lcm(divisor: number): number;
+}
+
 export const lcm: PrototypeStruct = {
   label: 'lcm',
   fn: function numberLcm(divisor: number): number {
@@ -25,7 +28,6 @@ export const lcm: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    lcm: LcmFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends Lcm {}
 }

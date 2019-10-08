@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type DivRemFn = (divisor: number) => number[];
+interface DivRem {
+  divRem(divisor: number): number[];
+}
+
 export const divRem: PrototypeStruct = {
   label: 'divRem',
   fn: function numberDivRem(divisor: number): number[] {
@@ -15,7 +18,6 @@ export const divRem: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    divRem: DivRemFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends DivRem {}
 }

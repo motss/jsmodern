@@ -5,3 +5,4 @@ import './error.js';
 import './function.js';
 import './iterator.js';
 import './map.js';
+import './number.js';

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsMultipleOfFn = (divisor: number) => boolean;
+interface IsMultipleOf {
+  isMultipleOf(divisor: number): boolean;
+}
+
 export const isMultipleOf: PrototypeStruct = {
   label: 'isMultipleOf',
   fn: function numberIsMultipleOf(divisor: number): boolean {
@@ -13,7 +16,6 @@ export const isMultipleOf: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    isMultipleOf: IsMultipleOfFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends IsMultipleOf {}
 }

@@ -12,9 +12,63 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import {
+  divFloor,
+  divModFloor,
+  divRem,
+  gcd,
+  isBetween,
+  isEven,
+  isMultipleOf,
+  isNumber,
+  isOdd,
+  lcm,
+  modFloor,
+  range,
+} from 'jsmodern/dist/number.js';
+
+extend({
+  number: [
+    divFloor,
+    divModFloor,
+    divRem,
+    gcd,
+    isBetween,
+    isEven,
+    isMultipleOf,
+    isNumber,
+    isOdd,
+    lcm,
+    modFloor,
+    range,
+  ],
+});
+
+console.log([
+  Number.prototype.divFloor,
+  Number.prototype.divModFloor,
+  Number.prototype.divRem,
+  Number.prototype.gcd,
+  Number.prototype.isBetween,
+  Number.prototype.isEven,
+  Number.prototype.isMultipleOf,
+  Number.isNumber,
+  Number.prototype.isOdd,
+  Number.prototype.lcm,
+  Number.prototype.modFloor,
+  Number.range,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

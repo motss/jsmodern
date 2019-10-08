@@ -4,7 +4,10 @@ export function numberIsNumber(n: any): n is number {
   return 'number' === typeof(n) && n === n;
 }
 
-export type IsNumberFn = (n: any) => boolean;
+interface IsNumber {
+  isNumber(n: any): boolean;
+}
+
 export const isNumber: PrototypeStruct = {
   isStatic: true,
   label: 'isNumber',
@@ -12,7 +15,6 @@ export const isNumber: PrototypeStruct = {
 };
 
 declare global {
-  interface NumberConstructor {
-    isNumber: IsNumberFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface NumberConstructor extends IsNumber {}
 }

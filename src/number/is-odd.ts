@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsOddFn = () => boolean;
+interface IsOdd {
+  isOdd(): boolean;
+}
+
 export const isOdd: PrototypeStruct = {
   label: 'isOdd',
   fn: function numberIsOdd(): boolean {
@@ -12,7 +15,6 @@ export const isOdd: PrototypeStruct = {
 };
 
 declare global {
-  interface Number {
-    isOdd: IsOddFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Number extends IsOdd {}
 }

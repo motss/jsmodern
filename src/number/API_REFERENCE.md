@@ -1,4 +1,22 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Number](#number)
+  - [Constructor](#constructor)
+    - [isNumber(value)](#isnumbervalue)
+    - [range(start[, stop, step])](#rangestart-stop-step)
+  - [Prototype](#prototype)
+    - [divFloor(divisor)](#divfloordivisor)
+    - [divModFloor(divisor)](#divmodfloordivisor)
+    - [divRem(divisor)](#divremdivisor)
+    - [gcd(divisor)](#gcddivisor)
+    - [isBetween(min, max)](#isbetweenmin-max)
+    - [isEven()](#iseven)
+    - [isMultipleOf(other)](#ismultipleofother)
+    - [isOdd()](#isodd)
+    - [lcm(divisor)](#lcmdivisor)
+    - [modFloor(divisor)](#modfloordivisor)
 
 ## Number
 
