@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsAsyncFunctionFn = (x: any) => boolean;
+interface IsAsyncFunction {
+  isAsyncFunction(x: any): boolean;
+}
+
 export const isAsyncFunction: PrototypeStruct = {
   isStatic: true,
   label: 'isAsyncFunction',
@@ -10,7 +13,6 @@ export const isAsyncFunction: PrototypeStruct = {
 };
 
 declare global {
-  interface Function {
-    isAsyncFunction: IsAsyncFunctionFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Function extends IsAsyncFunction {}
 }

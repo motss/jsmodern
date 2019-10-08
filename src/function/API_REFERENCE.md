@@ -1,4 +1,14 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Function](#function)
+  - [Constructor](#constructor)
+    - [isAsyncFunction(x)](#isasyncfunctionx)
+    - [isAsyncGeneratorFunction(x)](#isasyncgeneratorfunctionx)
+    - [isFunction(x)](#isfunctionx)
+    - [isGeneratorFunction(x)](#isgeneratorfunctionx)
+  - [Prototype](#prototype)
 
 ## Function
 

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsFunctionFn = (x: any) => boolean;
+interface IsFunction {
+  isFunction(x: any): boolean;
+}
+
 export const isFunction: PrototypeStruct = {
   isStatic: true,
   label: 'isFunction',
@@ -10,7 +13,6 @@ export const isFunction: PrototypeStruct = {
 };
 
 declare global {
-  interface Function {
-    isFunction: IsFunctionFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Function extends IsFunction {}
 }

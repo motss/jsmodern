@@ -1,15 +1,14 @@
-# API Reference
+# API Reference <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 
-- [API Reference](#api-reference)
-  - [Date](#date)
-    - [Constructor](#constructor)
-      - [isDate(x)](#isdatex)
-    - [Prototype](#prototype)
-      - [difference(other)](#differenceother)
-      - [isAfter(other)](#isafterother)
-      - [isBefore(other)](#isbeforeother)
+- [Date](#date)
+  - [Constructor](#constructor)
+    - [isDate(x)](#isdatex)
+  - [Prototype](#prototype)
+    - [difference(other)](#differenceother)
+    - [isAfter(other)](#isafterother)
+    - [isBefore(other)](#isbeforeother)
 
 ## Date
 

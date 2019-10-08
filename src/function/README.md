@@ -12,9 +12,39 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import {
+  isAsyncFunction,
+  isAsyncGeneratorFunction,
+  isFunction,
+  isGeneratorFunction,
+} from 'jsmodern/dist/function.js';
+import { extend } from 'jsmodern';
+
+extend({
+  function: [
+    isAsyncFunction,
+    isAsyncGeneratorFunction,
+    isFunction,
+    isGeneratorFunction,
+  ],
+});
+
+console.log([
+  Function.isAsyncFunction,
+  Function.isAsyncGeneratorFunction,
+  Function.isFunction,
+  Function.isGeneratorFunction,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 
