@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type RemoveFn<T> = (index: number) => T;
+interface Remove<T> {
+  remove(index: number): T;
+}
+
 export const remove: PrototypeStruct = {
   label: 'remove',
   fn: function arrayRemove<T = unknown>(index?: number): T {
@@ -17,7 +20,5 @@ export const remove: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    remove: RemoveFn<T>;
-  }
+  interface Array<T> extends Remove<T> {}
 }

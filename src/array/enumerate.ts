@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type EnumerateFn<T> = () => [number, T];
+interface Enumerate<T> {
+  enumerate(): [number, T];
+}
+
 export const enumerate: PrototypeStruct = {
   label: 'enumerate',
   fn: function arrayEnumerate<T>(): [number, T][] {
@@ -11,7 +14,5 @@ export const enumerate: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    enumerate: EnumerateFn<T>;
-  }
+  interface Array<T> extends Enumerate<T> {}
 }

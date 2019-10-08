@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 
 type SplitPredicate<T> = (x: T) => boolean;
-export type SplitFn<T> = (predicate: SplitPredicate<T>) => T[][];
+interface Split<T> {
+  split(predicate: SplitPredicate<T>): T[][];
+}
+
 export const split: PrototypeStruct = {
   label: 'split',
   fn: function arraySplit<T>(predicate: SplitPredicate<T>): T[][] {
@@ -46,7 +49,5 @@ export const split: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    split: SplitFn<T>;
-  }
+  interface Array<T> extends Split<T> {}
 }

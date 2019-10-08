@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type InsertFn<T = unknown> = (index: number, element: T) => void;
+interface Insert<T> {
+  insert(index: number, element: T): void;
+}
+
 export const insert: PrototypeStruct = {
   label: 'insert',
   fn: function arrayInsert<T = unknown>(index: number, element: T): void {
@@ -27,7 +30,5 @@ export const insert: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    insert: InsertFn<T>;
-  }
+  interface Array<T> extends Insert<T> {}
 }

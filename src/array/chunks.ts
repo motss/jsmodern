@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ChunksFn<T> = (chunkSize: number) => T[] | T[][];
+interface Chunks<T> {
+  chunks(chunkSize: number): T[] | T[][];
+}
+
 export const chunks: PrototypeStruct = {
   label: 'chunks',
   fn: function arrayChunks<T>(chunkSize: number): T[] | T[][] {
@@ -39,7 +42,5 @@ export const chunks: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    chunks: ChunksFn<T>;
-  }
+  interface Array<T> extends Chunks<T> {}
 }

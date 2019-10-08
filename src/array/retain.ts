@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 
-type RetainPredicate<T> = (element: T, index: number) => boolean;
-export type RetainFn<T = unknown> = (predicate: RetainPredicate<T>) => void;
+type RetainPredicate<T> = (element: T, index: number) => void;
+interface Retain<T> {
+  retain(predicate: RetainPredicate<T>): void;
+}
+
 export const retain: PrototypeStruct = {
   label: 'retain',
   fn: function arrayRetain<T = unknown>(predicate: RetainPredicate<T>): void {
@@ -23,7 +26,5 @@ export const retain: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    retain: RetainFn<T>;
-  }
+  interface Array<T> extends Retain<T> {}
 }

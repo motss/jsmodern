@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type FilledFn<T = unknown> = (len: number, value?: T) => T[];
+interface Filled {
+  filled<T>(len: number, value?: T): T[];
+}
+
 export const filled: PrototypeStruct = {
   isStatic: true,
   label: 'filled',
@@ -17,7 +20,6 @@ export const filled: PrototypeStruct = {
 };
 
 declare global {
-  interface ArrayConstructor {
-    filled: FilledFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface ArrayConstructor extends Filled {}
 }

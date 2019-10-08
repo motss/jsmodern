@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 
 type AnyPredicate<T> = (value: T) => boolean;
-export type AnyFn<T> = (predicate: AnyPredicate<T>) => boolean;
+interface Any<T> {
+  any(predicate: AnyPredicate<T>): boolean;
+}
+
 // tslint:disable-next-line: variable-name
 export const any: PrototypeStruct = {
   label: 'any',
@@ -13,7 +16,5 @@ export const any: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    any: AnyFn<T>;
-  }
+  interface Array<T> extends Any<T> {}
 }

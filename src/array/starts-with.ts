@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type StartsWithFn<T> = (needle: T[]) => boolean;
+interface StartsWith<T> {
+  startsWith(needle: T[]): boolean;
+}
+
 export const startsWith: PrototypeStruct = {
   label: 'startsWith',
   fn: function arrayStartsWith<T>(needle: T[]): boolean {
@@ -33,7 +36,5 @@ export const startsWith: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    startsWith: StartsWithFn<T>;
-  }
+  interface Array<T> extends StartsWith<T> {}
 }

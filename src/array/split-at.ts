@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type SplitAtFn<T> = (valueToFind: T) => boolean;
+interface SplitAt<T> {
+  splitAt(valueToFind: T): boolean;
+}
+
 export const splitAt: PrototypeStruct = {
   label: 'splitAt',
   fn: function arraySplitAt<T>(at: number): T[][] {
@@ -23,7 +26,5 @@ export const splitAt: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    splitAt: SplitAtFn<T>;
-  }
+  interface Array<T> extends SplitAt<T> {}
 }

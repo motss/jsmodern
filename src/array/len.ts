@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type LenFn = () => number;
+interface Len {
+  len(): number;
+}
+
 export const len: PrototypeStruct = {
   label: 'len',
   fn: function arrayLen<T>(): number {
@@ -11,7 +14,6 @@ export const len: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    len: LenFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Array<T> extends Len {}
 }

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ProductFn<T> = () => T | string | number;
+interface Product<T> {
+  product(): T | string | number;
+}
+
 export const product: PrototypeStruct = {
   label: 'product',
   fn: function arrayProduct<T>(): T | string | number {
@@ -15,7 +18,5 @@ export const product: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    product: ProductFn<T>;
-  }
+  interface Array<T> extends Product<T> {}
 }

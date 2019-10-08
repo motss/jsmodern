@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type MinFn<T> = () => T | undefined;
+interface Min<T> {
+  min(): T | undefined;
+}
+
 export const min: PrototypeStruct = {
   label: 'min',
   fn: function arrayMin<T>(): T | undefined {
@@ -34,7 +37,5 @@ export const min: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    min: MinFn<T>;
-  }
+  interface Array<T> extends Min<T> {}
 }

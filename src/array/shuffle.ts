@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ShuffleFn = () => void;
+interface Shuffle {
+  shuffle(): void;
+}
+
 export const shuffle: PrototypeStruct = {
   label: 'shuffle',
   fn: function arrayShuffle<T>(): void {
@@ -23,7 +26,6 @@ export const shuffle: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    shuffle: ShuffleFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Array<T> extends Shuffle {}
 }

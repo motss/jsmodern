@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type MaxFn<T> = () => T | undefined;
+interface Max<T> {
+  max(): T | undefined;
+}
+
 export const max: PrototypeStruct = {
   label: 'max',
   fn: function arrayMax<T>(): T | undefined {
@@ -34,7 +37,5 @@ export const max: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    max: MaxFn<T>;
-  }
+  interface Array<T> extends Max<T> {}
 }

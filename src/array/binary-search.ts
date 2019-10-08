@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type BinarySearchFn<T> = (x: T) => number;
+interface BinarySearch<T> {
+  binarySearch(x: T): number;
+}
+
 export const binarySearch: PrototypeStruct = {
   label: 'binarySearch',
   fn: function arrayBinarySearch<T>(x: T): number {
@@ -24,7 +27,5 @@ export const binarySearch: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    binarySearch: BinarySearchFn<T>;
-  }
+  interface Array<T> extends BinarySearch<T> {}
 }

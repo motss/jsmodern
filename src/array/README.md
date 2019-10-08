@@ -12,9 +12,117 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import {
+  all,
+  any,
+  binarySearch,
+  chunks,
+  clear,
+  endsWith,
+  enumerate,
+  filled,
+  firstItem,
+  fold,
+  insert,
+  isEmpty,
+  isSorted,
+  iter,
+  lastItem,
+  len,
+  max,
+  min,
+  partition,
+  product,
+  remove,
+  repeat,
+  retain,
+  shuffle,
+  split,
+  splitAt,
+  startsWith,
+  sum,
+  truncate,
+} from '../src/array.js';
+import { extend } from '../src/index.js';
+
+
+// Extend Array.prototype with extensions.
+extend({
+  array: [
+    all,
+    any,
+    binarySearch,
+    chunks,
+    clear,
+    endsWith,
+    enumerate,
+    filled,
+    firstItem,
+    fold,
+    insert,
+    isEmpty,
+    isSorted,
+    iter,
+    lastItem,
+    len,
+    max,
+    min,
+    partition,
+    product,
+    remove,
+    repeat,
+    retain,
+    shuffle,
+    split,
+    splitAt,
+    startsWith,
+    sum,
+    truncate,
+  ],
+});
+
+console.log([
+  Array.prototype.all,
+  Array.prototype.any,
+  Array.prototype.binarySearch,
+  Array.prototype.chunks,
+  Array.prototype.clear,
+  Array.prototype.endsWith,
+  Array.prototype.enumerate,
+  Array.filled,
+  Array.prototype.firstItem,
+  Array.prototype.fold,
+  Array.prototype.insert,
+  Array.prototype.isEmpty,
+  Array.prototype.isSorted,
+  Array.prototype.iter,
+  Array.prototype.lastItem,
+  Array.prototype.len,
+  Array.prototype.max,
+  Array.prototype.min,
+  Array.prototype.partition,
+  Array.prototype.product,
+  Array.prototype.remove,
+  Array.prototype.repeat,
+  Array.prototype.retain,
+  Array.prototype.shuffle,
+  Array.prototype.split,
+  Array.prototype.splitAt,
+  Array.prototype.startsWith,
+  Array.prototype.sum,
+  Array.prototype.truncate,
+].every(n => 'function' === typeof(n)));
+
+```
 
 ## Available extensions
 

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type RepeatFn<T> = (n: number) => T[];
+interface Repeat<T> {
+  repeat(n: number): T[];
+}
+
 export const repeat: PrototypeStruct = {
   label: 'repeat',
   fn: function arrayRepeat<T>(n: number): T[] {
@@ -15,7 +18,5 @@ export const repeat: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    repeat: RepeatFn<T>;
-  }
+  interface Array<T> extends Repeat<T> {}
 }

@@ -4,7 +4,7 @@ import { extend } from '../../extend';
 extend({ array: [fold] });
 
 describe('Array.prototype.fold', () => {
-  const cb = (p: number, n: number) => p + n;
+  const cb = (p: any, n: any): any => p + n;
 
   type TestSuccess = [string, number[], undefined | null | number, undefined | null | number];
   test.each<TestSuccess>([

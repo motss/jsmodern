@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type LastItemFn<T> = () => T | undefined;
+interface LastItem<T> {
+  lastItem(): T | undefined;
+}
+
 export const lastItem: PrototypeStruct = {
   label: 'lastItem',
   fn: function arrayLastItem<T>(): T | undefined {
@@ -15,7 +18,5 @@ export const lastItem: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    lastItem: LastItemFn<T>;
-  }
+  interface Array<T> extends LastItem<T> {}
 }

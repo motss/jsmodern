@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ContainsFn<T> = (valueToFind: T) => boolean;
+interface Contains<T> {
+  contains(valueToFind: T): boolean;
+}
+
 export const contains: PrototypeStruct = {
   label: 'contains',
   fn: function arrayContains<T>(valueToFind: T): boolean {
@@ -11,7 +14,5 @@ export const contains: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    contains: ContainsFn<T>;
-  }
+  interface Array<T> extends Contains<T> {}
 }

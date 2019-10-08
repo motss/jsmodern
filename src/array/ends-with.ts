@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type EndsWithFn<T> = (needle: T[]) => boolean;
+interface EndsWith<T> {
+  endsWith(needle: T[]): boolean;
+}
+
 export const endsWith: PrototypeStruct = {
   label: 'endsWith',
   fn: function arrayEndsWith<T>(needle: T[]): boolean {
@@ -77,7 +80,5 @@ export const endsWith: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    endsWith: EndsWithFn<T>;
-  }
+  interface Array<T> extends EndsWith<T> {}
 }

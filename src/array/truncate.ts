@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type TruncateFn = (len: number) => void;
+interface Truncate {
+  truncate(len: number): void;
+}
+
 export const truncate: PrototypeStruct = {
   label: 'truncate',
   fn: function arrayTruncate<T>(len: number): void {
@@ -24,7 +27,6 @@ export const truncate: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    truncate: TruncateFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Array<T> extends Truncate {}
 }

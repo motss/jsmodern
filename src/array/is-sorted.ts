@@ -38,7 +38,10 @@ export function isArraySorted<T>(list: T[]): boolean {
   return sorted;
 }
 
-export type IsSortedFn = () => boolean;
+interface IsSorted {
+  isSorted(): boolean;
+}
+
 export const isSorted: PrototypeStruct = {
   label: 'isSorted',
   fn: function arrayIsSorted<T>(): boolean {
@@ -49,7 +52,6 @@ export const isSorted: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    isSorted: IsSortedFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Array<T> extends IsSorted {}
 }

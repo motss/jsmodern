@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 
 type PartitionPredicate<T> = (n: T) => boolean;
-export type PartitionFn<T> = (predicate: PartitionPredicate<T>) => [T[], T[]];
+interface Partition<T> {
+  partition(n: PartitionPredicate<T>): boolean;
+}
+
 export const partition: PrototypeStruct = {
   label: 'partition',
   fn: function arrayPartition<T>(predicate: PartitionPredicate<T>): [T[], T[]] {
@@ -25,7 +28,5 @@ export const partition: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    partition: PartitionFn<T>;
-  }
+  interface Array<T> extends Partition<T> {}
 }

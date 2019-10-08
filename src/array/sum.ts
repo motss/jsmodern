@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type SumFn<T> = () => T;
+interface Sum<T> {
+  sum(): T;
+}
+
 export const sum: PrototypeStruct = {
   label: 'sum',
   fn: function arraySum<T>(): string | number {
@@ -15,7 +18,5 @@ export const sum: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    sum: SumFn<T>;
-  }
+  interface Array<T> extends Sum<T> {}
 }

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ClearFn = () => void;
+interface Clear {
+  clear(): void;
+}
+
 export const clear: PrototypeStruct = {
   label: 'clear',
   fn: function arrayClear<T>(): void {
@@ -11,7 +14,6 @@ export const clear: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    clear: ClearFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Array<T> extends Clear {}
 }

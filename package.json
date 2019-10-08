@@ -45,7 +45,9 @@
     "watch:build": "npm run ts -- --watch -p tsconfig.test.json",
     "watch:test": "npm run jest -- --watchAll"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^1.10.0"
+  },
   "devDependencies": {
     "@reallyland/tsconfig": "^1.0.0",
     "@reallyland/tslint-config": "^1.1.1",

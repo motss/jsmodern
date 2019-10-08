@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 
 type AllPredicate<T> = (value: T) => boolean;
-export type AllFn<T> = (predicate: AllPredicate<T>) => boolean;
+interface All<T> {
+  all(predicate: AllPredicate<T>): boolean;
+}
+
 export const all: PrototypeStruct = {
   label: 'all',
   fn: function arrayAll<T>(predicate: AllPredicate<T>): boolean {
@@ -12,7 +15,5 @@ export const all: PrototypeStruct = {
 };
 
 declare global {
-  interface Array<T> {
-    all: AllFn<T>;
-  }
+  interface Array<T> extends All<T> {}
 }
