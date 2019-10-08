@@ -12,9 +12,31 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import {
+  isBoolean,
+} from 'jsmodern/dist/boolean.js';
+import { extend } from 'jsmodern';
+
+extend({
+  boolean: [
+    isBoolean,
+  ],
+});
+
+console.log([
+  Boolean.isBoolean,
+].every(n => 'function' === typeof(n)));
+
+```
 
 ## Available extensions
 

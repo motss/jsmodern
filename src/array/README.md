@@ -51,8 +51,8 @@ import {
   startsWith,
   sum,
   truncate,
-} from '../src/array.js';
-import { extend } from '../src/index.js';
+} from 'jsmodern/dist/array.js';
+import { extend } from 'jsmodern';
 
 
 // Extend Array.prototype with extensions.

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsBooleanFn = (x: any) => boolean;
+interface IsBoolean {
+  isBoolean(x: any): boolean;
+}
+
 export const isBoolean: PrototypeStruct = {
   isStatic: true,
   label: 'isBoolean',
@@ -10,7 +13,6 @@ export const isBoolean: PrototypeStruct = {
 };
 
 declare global {
-  interface BooleanConstructor {
-    isBoolean: IsBooleanFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface BooleanConstructor extends IsBoolean {}
 }

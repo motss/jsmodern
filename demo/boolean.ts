@@ -1,9 +1,8 @@
 import {
   isBoolean,
-} from '../src/boolean';
+} from '../src/boolean.js';
 import { extend } from '../src/index.js';
 
-// Extend Array.prototype with extensions.
 extend({
   boolean: [
     isBoolean,

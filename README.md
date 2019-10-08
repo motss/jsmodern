@@ -93,22 +93,22 @@ console.log(total === 6); // true
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
 
-[Array extensions]: /src/array/README.md
-[Boolean extensions]: /src/boolean/README.md
-[Date extensions]: /src/date/README.md
-[Error extensions]: /src/error/README.md
-[Function extensions]: /src/function/README.md
-[Iterator extensions]: /src/iterator/README.md
-[Map extensions]: /src/map/README.md
-[Number extensions]: /src/number/README.md
-[Object extensions]: /src/object/README.md
-[Promise extensions]: /src/promise/README.md
-[RegExp extensions]: /src/regexp/README.md
-[Set extensions]: /src/set/README.md
-[String extensions]: /src/string/README.md
-[Symbol extensions]: /src/symbol/README.md
-[WeakMap extensions]: /src/weak-map/README.md
-[WeakSet extensions]: /src/weak-set/README.md
+[Array extensions]: /src/array
+[Boolean extensions]: /src/boolean
+[Date extensions]: /src/date
+[Error extensions]: /src/error
+[Function extensions]: /src/function
+[Iterator extensions]: /src/iterator
+[Map extensions]: /src/map
+[Number extensions]: /src/number
+[Object extensions]: /src/object
+[Promise extensions]: /src/promise
+[RegExp extensions]: /src/regexp
+[Set extensions]: /src/set
+[String extensions]: /src/string
+[Symbol extensions]: /src/symbol
+[WeakMap extensions]: /src/weak-map
+[WeakSet extensions]: /src/weak-set
 
 <!-- Badges -->
 [tippin-me-badge]: https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@igarshmyb/F0918E

@@ -31,8 +31,6 @@ import {
 } from '../src/array.js';
 import { extend } from '../src/index.js';
 
-
-// Extend Array.prototype with extensions.
 extend({
   array: [
     all,

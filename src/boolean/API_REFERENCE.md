@@ -1,5 +1,13 @@
 # API Reference
 
+## Table of contents <!-- omit in toc -->
+
+- [API Reference](#api-reference)
+  - [Boolean](#boolean)
+    - [Constructor](#constructor)
+      - [isBoolean(x)](#isbooleanx)
+    - [Prototype](#prototype)
+
 ## Boolean
 
 ### Constructor
