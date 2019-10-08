@@ -4,7 +4,10 @@ export function dateIsDate(x: any): boolean {
   return null == x ? false : 'object' === typeof(x) && 'Date' === x.constructor.name;
 }
 
-export type IsDateFn = (x: any) => boolean;
+interface IsDate {
+  isDate(x: any): boolean;
+}
+
 export const isDate: PrototypeStruct = {
   isStatic: true,
   label: 'isDate',
@@ -12,7 +15,6 @@ export const isDate: PrototypeStruct = {
 };
 
 declare global {
-  interface DateConstructor {
-    isDate: IsDateFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface DateConstructor extends IsDate {}
 }

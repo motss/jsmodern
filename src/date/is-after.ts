@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { utilDateDifference } from './difference';
 
-export type IsAfterFn = (other: Date) => boolean;
+interface IsAfter {
+  isAfter(other: Date): boolean;
+}
+
 export const isAfter: PrototypeStruct = {
   label: 'isAfter',
   fn: function dateIsAfter(other: Date): boolean {
@@ -12,7 +15,6 @@ export const isAfter: PrototypeStruct = {
 };
 
 declare global {
-  interface Date {
-    isAfter: IsAfterFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Date extends IsAfter {}
 }

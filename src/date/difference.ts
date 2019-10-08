@@ -13,7 +13,10 @@ export function utilDateDifference(a: Date, b: Date) {
   return aTime - bTime;
 }
 
-export type DifferenceFn = (other: Date) => number;
+interface Difference {
+  difference(other: Date): number;
+}
+
 export const difference: PrototypeStruct = {
   label: 'difference',
   fn: function dateDifference(other: Date): number {
@@ -24,7 +27,6 @@ export const difference: PrototypeStruct = {
 };
 
 declare global {
-  interface Date {
-    difference: DifferenceFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Date extends Difference {}
 }
