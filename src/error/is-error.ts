@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsErrorFn = (x: any) => boolean;
+interface IsError {
+  isError(x: any): boolean;
+}
+
 export const isError: PrototypeStruct = {
   isStatic: true,
   label: 'isError',
@@ -10,7 +13,6 @@ export const isError: PrototypeStruct = {
 };
 
 declare global {
-  interface ErrorConstructor {
-    isError: IsErrorFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface ErrorConstructor extends IsError {}
 }

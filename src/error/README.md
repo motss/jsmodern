@@ -12,9 +12,30 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import {
+  isError,
+} from 'jsmodern/dist/error.js';
+import { extend } from 'jsmodern';
+
+extend({
+  error: [
+    isError,
+  ],
+});
+
+console.log([
+  Error.isError,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

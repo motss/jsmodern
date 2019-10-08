@@ -1,5 +1,13 @@
 # API Reference
 
+## Table of contents <!-- omit in toc -->
+
+- [API Reference](#api-reference)
+  - [Error](#error)
+    - [Constructor](#constructor)
+      - [isError(x)](#iserrorx)
+    - [Prototype](#prototype)
+
 ## Error
 
 ### Constructor
