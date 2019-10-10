@@ -1,4 +1,11 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [WeakMap](#weakmap)
+  - [Constructor](#constructor)
+    - [isWeakMap(x)](#isweakmapx)
+  - [Prototype](#prototype)
 
 ## WeakMap
 

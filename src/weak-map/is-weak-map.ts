@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsWeakMapFn = (x: any) => boolean;
+interface IsWeakMap {
+  isWeakMap(x: any): boolean;
+}
+
 export const isWeakMap: PrototypeStruct = {
   isStatic: true,
   label: 'isWeakMap',
@@ -10,7 +13,6 @@ export const isWeakMap: PrototypeStruct = {
 };
 
 declare global {
-  interface WeakMapConstructor {
-    isWeakMap: IsWeakMapFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface WeakMapConstructor extends IsWeakMap {}
 }
