@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { isIterator } from '../../iterator/is-iterator';
+import { extend } from '../../extend.js';
+import { isIterator } from '../../iterator/is-iterator.js';
 
 extend({ iterator: [isIterator] });
 

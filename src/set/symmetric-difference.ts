@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
-import { utilIsSet } from './is-set';
+import { utilIsSet } from './is-set.js';
 
-export type SymmetricDifferenceFn<T> = (other: Set<T>) => T[];
+interface SymmetricDifference<T> {
+  symmetricDifference(other: Set<T>): T[];
+}
+
 export const symmetricDifference: PrototypeStruct = {
   label: 'symmetricDifference',
   fn: function setSymmetricDifference<T>(other: Set<T>): T[] {
@@ -30,7 +33,5 @@ export const symmetricDifference: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    symmetricDifference: SymmetricDifferenceFn<T>;
-  }
+  interface Set<T> extends SymmetricDifference<T> {}
 }

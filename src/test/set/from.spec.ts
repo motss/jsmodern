@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { from } from '../../set/from';
+import { extend } from '../../extend.js';
+import { from } from '../../set/from.js';
 
 extend({ set: [from] });
 

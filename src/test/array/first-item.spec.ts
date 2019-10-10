@@ -1,5 +1,5 @@
-import { firstItem } from '../../array/first-item';
-import { extend } from '../../extend';
+import { firstItem } from '../../array/first-item.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [firstItem] });
 

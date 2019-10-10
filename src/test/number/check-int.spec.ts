@@ -1,4 +1,4 @@
-import { checkInt } from '../../number/check-int';
+import { checkInt } from '../../number/check-int.js';
 
 describe('check-int', () => {
   const errorMessage = new TypeError(`Expect 'value' to be of type number`);

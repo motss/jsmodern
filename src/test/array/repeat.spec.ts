@@ -1,5 +1,5 @@
-import { repeat } from '../../array/repeat';
-import { extend } from '../../extend';
+import { repeat } from '../../array/repeat.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [repeat] });
 

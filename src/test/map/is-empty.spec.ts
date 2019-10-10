@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { isEmpty } from '../../map/is-empty';
+import { extend } from '../../extend.js';
+import { isEmpty } from '../../map/is-empty.js';
 
 extend({ map: [isEmpty] });
 

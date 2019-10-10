@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { utilDivFloor } from './div-floor';
+import { utilDivFloor } from './div-floor.js';
 
 interface DivModFloor {
   divModFloor(divisor: number): number[];

@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { checkInt } from './check-int';
+import { checkInt } from './check-int.js';
 
 interface Range {
   range(start: number, end?: number, step?: number): number[];

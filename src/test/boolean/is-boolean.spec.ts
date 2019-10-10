@@ -1,5 +1,5 @@
-import { isBoolean } from '../../boolean/is-boolean';
-import { extend } from '../../extend';
+import { isBoolean } from '../../boolean/is-boolean.js';
+import { extend } from '../../extend.js';
 
 extend({ boolean: [isBoolean] });
 

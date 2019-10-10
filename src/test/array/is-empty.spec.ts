@@ -1,5 +1,5 @@
-import { isEmpty } from '../../array/is-empty';
-import { extend } from '../../extend';
+import { isEmpty } from '../../array/is-empty.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [isEmpty] });
 

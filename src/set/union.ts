@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
-import { utilIsSet } from './is-set';
+import { utilIsSet } from './is-set.js';
 
-export type UnionFn<T> = (other: Set<T>) => T[];
+interface Union<T> {
+  union(other: Set<T>): T[];
+}
+
 export const union: PrototypeStruct = {
   label: 'union',
   fn: function setUnion<T>(other: Set<T>): T[] {
@@ -22,7 +25,5 @@ export const union: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    union: UnionFn<T>;
-  }
+  interface Set<T> extends Union<T> {}
 }

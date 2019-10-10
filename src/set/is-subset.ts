@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
-import { utilIsSet } from './is-set';
+import { utilIsSet } from './is-set.js';
 
-export type IsSubsetFn<T> = (other: Set<T>) => boolean;
+interface IsSubset<T> {
+  isSubset(other: Set<T>): boolean;
+}
+
 export const isSubset: PrototypeStruct = {
   label: 'isSubset',
   fn: function setIsSubset<T>(other: Set<T>): boolean {
@@ -18,7 +21,5 @@ export const isSubset: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    isSubset: IsSubsetFn<T>;
-  }
+  interface Set<T> extends IsSubset<T> {}
 }

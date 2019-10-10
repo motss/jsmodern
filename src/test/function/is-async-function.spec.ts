@@ -1,6 +1,6 @@
-import { extend } from '../../extend';
-import { isAsyncFunction } from '../../function/is-async-function';
-import { hasAsync } from '../feature-detect';
+import { extend } from '../../extend.js';
+import { isAsyncFunction } from '../../function/is-async-function.js';
+import { hasAsync } from '../feature-detect.js';
 
 extend({ function: [isAsyncFunction] });
 

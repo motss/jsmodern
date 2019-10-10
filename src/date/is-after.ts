@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { utilDateDifference } from './difference';
+import { utilDateDifference } from './difference.js';
 
 interface IsAfter {
   isAfter(other: Date): boolean;

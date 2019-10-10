@@ -1,5 +1,5 @@
-import { clear } from '../../array/clear';
-import { extend } from '../../extend';
+import { clear } from '../../array/clear.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [clear] });
 

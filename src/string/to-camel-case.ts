@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { postCase, preCase } from './to-case';
+import { postCase, preCase } from './to-case.js';
 
 export type ToCamelCaseFn = () => string;
 export const toCamelCase: PrototypeStruct = {

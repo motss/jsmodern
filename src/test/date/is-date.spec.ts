@@ -1,5 +1,5 @@
-import { isDate } from '../../date/is-date';
-import { extend } from '../../extend';
+import { isDate } from '../../date/is-date.js';
+import { extend } from '../../extend.js';
 
 extend({ date: [isDate] });
 

@@ -4,7 +4,10 @@ export function utilIsSet<T>(x: any): x is Set<T> {
   return null == x ? false : 'object' === typeof(x) && 'Set' === x.constructor.name;
 }
 
-export type IsSetFn = (x: any) => boolean;
+interface IsSet {
+  isSet(x: any): boolean;
+}
+
 export const isSet: PrototypeStruct = {
   isStatic: true,
   label: 'isSet',
@@ -12,7 +15,6 @@ export const isSet: PrototypeStruct = {
 };
 
 declare global {
-  interface SetConstructor {
-    isSet: IsSetFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface SetConstructor extends IsSet {}
 }

@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { divRem } from '../../number/div-rem';
+import { extend } from '../../extend.js';
+import { divRem } from '../../number/div-rem.js';
 
 extend({ number: [divRem] });
 

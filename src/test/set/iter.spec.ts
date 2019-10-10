@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { iter } from '../../set/iter';
+import { extend } from '../../extend.js';
+import { iter } from '../../set/iter.js';
 
 extend({ set: [iter] });
 

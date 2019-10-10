@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { isOdd } from '../../number/is-odd';
+import { extend } from '../../extend.js';
+import { isOdd } from '../../number/is-odd.js';
 
 extend({ number: [isOdd] });
 

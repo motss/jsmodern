@@ -1,5 +1,5 @@
-import { min } from '../../array/min';
-import { extend } from '../../extend';
+import { min } from '../../array/min.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [min] });
 

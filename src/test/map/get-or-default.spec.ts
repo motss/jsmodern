@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { getOrDefault } from '../../map/get-or-default';
+import { extend } from '../../extend.js';
+import { getOrDefault } from '../../map/get-or-default.js';
 
 extend({ map: [getOrDefault] });
 

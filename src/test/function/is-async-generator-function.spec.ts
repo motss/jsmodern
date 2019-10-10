@@ -1,6 +1,6 @@
-import { extend } from '../../extend';
-import { isAsyncGeneratorFunction } from '../../function/is-async-generator-function';
-import { hasAsync, hasAsyncIter } from '../feature-detect';
+import { extend } from '../../extend.js';
+import { isAsyncGeneratorFunction } from '../../function/is-async-generator-function.js';
+import { hasAsync, hasAsyncIter } from '../feature-detect.js';
 
 extend({ function: [isAsyncGeneratorFunction] });
 

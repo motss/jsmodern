@@ -1,5 +1,5 @@
-import { fold } from '../../array/fold';
-import { extend } from '../../extend';
+import { fold } from '../../array/fold.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [fold] });
 

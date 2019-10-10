@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
-import { utilIsSet } from './is-set';
+import { utilIsSet } from './is-set.js';
 
-export type IntersectionFn<T> = (other: Set<T>) => T[];
+interface Intersection<T> {
+  intersection(other: Set<T>): T[];
+}
+
 export const intersection: PrototypeStruct = {
   label: 'intersection',
   fn: function setIntersection<T>(other: Set<T>): T[] {
@@ -20,7 +23,5 @@ export const intersection: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    intersection: IntersectionFn<T>;
-  }
+  interface Set<T> extends Intersection<T> {}
 }

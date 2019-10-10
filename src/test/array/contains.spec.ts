@@ -1,5 +1,5 @@
-import { contains } from '../../array/contains';
-import { extend } from '../../extend';
+import { contains } from '../../array/contains.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [contains] });
 

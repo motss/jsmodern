@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { utilGcd } from './gcd';
+import { utilGcd } from './gcd.js';
 
 interface Lcm {
   lcm(divisor: number): number;

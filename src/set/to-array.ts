@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ToArrayFn<T> = () => T[];
+interface ToArray<T> {
+  toArray(): T[];
+}
+
 export const toArray: PrototypeStruct = {
   label: 'toArray',
   fn: function setToArray<T>(): T[] {
@@ -16,7 +19,5 @@ export const toArray: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    toArray: ToArrayFn<T>;
-  }
+  interface Set<T> extends ToArray<T> {}
 }

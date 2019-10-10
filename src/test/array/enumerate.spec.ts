@@ -1,5 +1,5 @@
-import { enumerate } from '../../array/enumerate';
-import { extend } from '../../extend';
+import { enumerate } from '../../array/enumerate.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [enumerate] });
 

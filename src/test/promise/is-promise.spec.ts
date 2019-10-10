@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { isPromise } from '../../promise/is-promise';
+import { extend } from '../../extend.js';
+import { isPromise } from '../../promise/is-promise.js';
 
 extend({ promise: [isPromise] });
 

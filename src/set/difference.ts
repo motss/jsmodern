@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { utilIsSet } from './is-set';
 
-export type DifferenceFn<T> = (other: Set<T>) => T[];
+interface Difference<T> {
+  difference(other: Set<T>): T[];
+}
+
 export const difference: PrototypeStruct = {
   label: 'difference',
   fn: function setDifference<T>(other: Set<T>): T[] {
@@ -24,7 +27,5 @@ export const difference: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    difference: DifferenceFn<T>;
-  }
+  interface Set<T> extends Difference<T> {}
 }

@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
-import { utilIsSet } from './is-set';
+import { utilIsSet } from './is-set.js';
 
-export type IsDisjointFn<T> = (other: Set<T>) => boolean;
+interface IsDisjoint<T> {
+  isDisjoint(other: Set<T>): boolean;
+}
+
 export const isDisjoint: PrototypeStruct = {
   label: 'isDisjoint',
   fn: function setIsDisjoint<T>(other: Set<T>): boolean {
@@ -18,7 +21,5 @@ export const isDisjoint: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    isDisjoint: IsDisjointFn<T>;
-  }
+  interface Set<T> extends IsDisjoint<T> {}
 }

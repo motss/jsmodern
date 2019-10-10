@@ -1,4 +1,24 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Set](#set)
+  - [Constructor](#constructor)
+    - [from(setEntries[, mapFn])](#fromsetentries-mapfn)
+    - [isSet(x)](#issetx)
+    - [of(element0[, element1[, ...[, elementN]]])](#ofelement0-element1--elementn)
+  - [Prototype](#prototype)
+    - [difference(other)](#differenceother)
+    - [intersection(other)](#intersectionother)
+    - [isDisjoint(other)](#isdisjointother)
+    - [isEmpty()](#isempty)
+    - [isSubset(other)](#issubsetother)
+    - [isSuperset(other)](#issupersetother)
+    - [iter()](#iter)
+    - [len()](#len)
+    - [symmetricDifference(other)](#symmetricdifferenceother)
+    - [toArray()](#toarray)
+    - [union(other)](#unionother)
 
 ## Set
 

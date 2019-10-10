@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { difference } from '../../set/difference';
+import { extend } from '../../extend.js';
+import { difference } from '../../set/difference.js';
 
 extend({ set: [difference] });
 

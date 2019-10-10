@@ -1,6 +1,6 @@
-import { extend } from '../../extend';
-import { isAsyncIterator } from '../../iterator/is-async-iterator';
-import { hasAsyncIter } from '../feature-detect';
+import { extend } from '../../extend.js';
+import { isAsyncIterator } from '../../iterator/is-async-iterator.js';
+import { hasAsyncIter } from '../feature-detect.js';
 
 extend({ iterator: [isAsyncIterator] });
 

@@ -1,9 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export interface SetOf {
-  of<T>(...elemnts: T[]): Set<T>;
+interface SetOf {
+  of<T>(...elements: T[]): Set<T>;
 }
-export type OfFn<T> = (...elements: T[]) => Set<T>;
+
 export const of: PrototypeStruct = {
   isStatic: true,
   label: 'of',

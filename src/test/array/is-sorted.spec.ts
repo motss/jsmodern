@@ -1,5 +1,5 @@
-import { isSorted } from '../../array/is-sorted';
-import { extend } from '../../extend';
+import { isSorted } from '../../array/is-sorted.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [isSorted] });
 

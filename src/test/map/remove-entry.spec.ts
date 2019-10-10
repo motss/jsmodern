@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { removeEntry } from '../../map/remove-entry';
+import { extend } from '../../extend.js';
+import { removeEntry } from '../../map/remove-entry.js';
 
 extend({ map: [removeEntry] });
 

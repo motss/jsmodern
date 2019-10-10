@@ -1,5 +1,5 @@
-import { split } from '../../array/split';
-import { extend } from '../../extend';
+import { split } from '../../array/split.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [split] });
 

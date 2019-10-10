@@ -1,4 +1,4 @@
-import { numberIsNumber } from './is-number';
+import { numberIsNumber } from './is-number.js';
 
 export function checkInt(n: number | null | undefined, name: string) {
   if (numberIsNumber(n)) return Number(n);

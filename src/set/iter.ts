@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IterFn<T> = () => IterableIterator<T>;
+interface Iter<T> {
+  iter(): IterableIterator<T>;
+}
+
 export const iter: PrototypeStruct = {
   label: 'iter',
   fn: function setIter<T>(): IterableIterator<T> {
@@ -11,7 +14,5 @@ export const iter: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    iter: IterFn<T>;
-  }
+  interface Set<T> extends Iter<T> {}
 }

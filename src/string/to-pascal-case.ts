@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { postCase, preCase } from './to-case';
+import { postCase, preCase } from './to-case.js';
 
 export type ToPascalCaseFn = () => string;
 export const toPascalCase: PrototypeStruct = {

@@ -1,5 +1,5 @@
-import { difference } from '../../date/difference';
-import { extend } from '../../extend';
+import { difference } from '../../date/difference.js';
+import { extend } from '../../extend.js';
 
 extend({ date: [difference] });
 

@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { intersection } from '../../set/intersection';
+import { extend } from '../../extend.js';
+import { intersection } from '../../set/intersection.js';
 
 extend({ set: [intersection] });
 

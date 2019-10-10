@@ -1,5 +1,5 @@
-import { isBefore } from '../../date/is-before';
-import { extend } from '../../extend';
+import { isBefore } from '../../date/is-before.js';
+import { extend } from '../../extend.js';
 
 extend({ date: [isBefore] });
 

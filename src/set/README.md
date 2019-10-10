@@ -12,9 +12,69 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import {
+  difference,
+  from,
+  intersection,
+  isDisjoint,
+  isEmpty,
+  isSet,
+  isSubset,
+  isSuperset,
+  iter,
+  len,
+  of,
+  symmetricDifference,
+  toArray,
+  union,
+} from 'jsmodern/dist/set.js';
+
+extend({
+  set: [
+    difference,
+    from,
+    intersection,
+    isDisjoint,
+    isEmpty,
+    isSet,
+    isSubset,
+    isSuperset,
+    iter,
+    len,
+    of,
+    symmetricDifference,
+    toArray,
+    union,
+  ],
+});
+
+console.log([
+  Set.prototype.difference,
+  Set.from,
+  Set.prototype.intersection,
+  Set.prototype.isDisjoint,
+  Set.prototype.isEmpty,
+  Set.isSet,
+  Set.prototype.isSubset,
+  Set.prototype.isSuperset,
+  Set.prototype.iter,
+  Set.prototype.len,
+  Set.of,
+  Set.prototype.symmetricDifference,
+  Set.prototype.toArray,
+  Set.prototype.union,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

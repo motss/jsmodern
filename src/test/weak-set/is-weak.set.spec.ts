@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { isWeakSet } from '../../weak-set/is-weak-set';
+import { extend } from '../../extend.js';
+import { isWeakSet } from '../../weak-set/is-weak-set.js';
 
 extend({ weakSet: [isWeakSet] });
 

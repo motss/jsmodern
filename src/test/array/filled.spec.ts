@@ -1,5 +1,5 @@
-import { filled } from '../../array/filled';
-import { extend } from '../../extend';
+import { filled } from '../../array/filled.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [filled] });
 

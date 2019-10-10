@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { isMultipleOf } from '../../number/is-multiple-of';
+import { extend } from '../../extend.js';
+import { isMultipleOf } from '../../number/is-multiple-of.js';
 
 extend({ number: [isMultipleOf] });
 

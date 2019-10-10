@@ -4,7 +4,7 @@ type FromSetFn<T> = (n: T) => T;
 export interface SetFrom {
   from<T>(setEntry: T[], mapFn?: FromSetFn<T>): Set<T>;
 }
-export type FromFn<T> = (setEntry: T[], mapFn?: FromSetFn<T>) => Set<T>;
+
 export const from: PrototypeStruct = {
   isStatic: true,
   label: 'from',

@@ -9,3 +9,4 @@ import './number.js';
 import './object.js';
 import './promise.js';
 import './regexp.js';
+import './set.js';

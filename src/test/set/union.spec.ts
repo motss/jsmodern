@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { union } from '../../set/union';
+import { extend } from '../../extend.js';
+import { union } from '../../set/union.js';
 
 extend({ set: [union] });
 

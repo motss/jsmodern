@@ -1,5 +1,5 @@
-import { remove } from '../../array/remove';
-import { extend } from '../../extend';
+import { remove } from '../../array/remove.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [remove] });
 

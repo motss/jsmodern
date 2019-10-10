@@ -1,5 +1,5 @@
-import { startsWith } from '../../array/starts-with';
-import { extend } from '../../extend';
+import { startsWith } from '../../array/starts-with.js';
+import { extend } from '../../extend.js';
 
 extend({ array: [startsWith] });
 

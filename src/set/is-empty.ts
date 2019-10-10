@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsEmptyFn = () => boolean;
+interface IsEmpty {
+  isEmpty(): boolean;
+}
+
 export const isEmpty: PrototypeStruct = {
   label: 'isEmpty',
   fn: function setIsEmpty<T>(): boolean {
@@ -11,7 +14,6 @@ export const isEmpty: PrototypeStruct = {
 };
 
 declare global {
-  interface Set<T> {
-    isEmpty: IsEmptyFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface Set<T> extends IsEmpty {}
 }

@@ -1,5 +1,5 @@
-import { extend } from '../../extend';
-import { toArray } from '../../map/to-array';
+import { extend } from '../../extend.js';
+import { toArray } from '../../map/to-array.js';
 
 extend({ map: [toArray] });
 
