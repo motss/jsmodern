@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type SplitWhitespaceFn = () => string[];
+interface SplitWhitespace {
+  splitWhitespace(): string[];
+}
+
 export const splitWhitespace: PrototypeStruct = {
   label: 'splitWhitespace',
   fn: function stringSplitWhitespace(): string[] {
@@ -11,7 +14,6 @@ export const splitWhitespace: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    splitWhitespace: SplitWhitespaceFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends SplitWhitespace {}
 }

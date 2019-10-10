@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsSymbolFn = (x: any) => boolean;
+interface IsSymbol {
+  isSymbol(x: any): boolean;
+}
+
 export const isSymbol: PrototypeStruct = {
   isStatic: true,
   label: 'isSymbol',
@@ -10,7 +13,6 @@ export const isSymbol: PrototypeStruct = {
 };
 
 declare global {
-  interface SymbolConstructor {
-    isSymbol: IsSymbolFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface SymbolConstructor extends IsSymbol {}
 }

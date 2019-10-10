@@ -1,4 +1,11 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Symbol](#symbol)
+  - [Constructor](#constructor)
+    - [isSymbol(x)](#issymbolx)
+  - [Prototype](#prototype)
 
 ## Symbol
 

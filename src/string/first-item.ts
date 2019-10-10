@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type FirstItemFn = () => string;
+interface FirstItem {
+  firstItem(): string;
+}
+
 export const firstItem: PrototypeStruct = {
   label: 'firstItem',
   fn: function stringFirstItem(): string {
@@ -11,7 +14,6 @@ export const firstItem: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    firstItem: FirstItemFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends FirstItem {}
 }

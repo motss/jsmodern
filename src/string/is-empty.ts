@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsEmptyFn = () => boolean;
+interface IsEmpty {
+  isEmpty(): boolean;
+}
+
 export const isEmpty: PrototypeStruct = {
   label: 'isEmpty',
   fn: function stringIsEmpty(): boolean {
@@ -9,7 +12,6 @@ export const isEmpty: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    isEmpty: IsEmptyFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends IsEmpty {}
 }

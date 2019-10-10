@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { postCase, preCase } from './to-case.js';
 
-export type ToCamelCaseFn = () => string;
+interface ToCamelCase {
+  toCamelCase(): string;
+}
+
 export const toCamelCase: PrototypeStruct = {
   label: 'toCamelCase',
   fn: function stringToCamelCase(): string {
@@ -15,7 +18,6 @@ export const toCamelCase: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    toCamelCase: ToCamelCaseFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends ToCamelCase {}
 }

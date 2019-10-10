@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type ContainsFn = (s: string) => boolean;
+interface Contains {
+  contains(s: string): boolean;
+}
+
 export const contains: PrototypeStruct = {
   label: 'contains',
   fn: function stringContains(s: string): boolean {
@@ -14,7 +17,6 @@ export const contains: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    contains: ContainsFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends Contains {}
 }

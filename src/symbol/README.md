@@ -12,9 +12,26 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import { isSymbol } from 'jsmodern/dist/symbol.js';
+
+extend({
+  symbol: [isSymbol],
+});
+
+console.log([
+  Symbol.isSymbol,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

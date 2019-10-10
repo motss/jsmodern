@@ -1,9 +1,13 @@
 import { PrototypeStruct } from '..';
 
-export type RetainPredicate = (predicate: (character: string) => boolean) => string;
+type RetainPredicate = (character: string) => string;
+interface Retain {
+  retain(predicate: RetainPredicate): string;
+}
+
 export const retain: PrototypeStruct = {
   label: 'retain',
-  fn: function stringRetain(predicate: (character: string) => boolean): string {
+  fn: function stringRetain(predicate: RetainPredicate): string {
     const ctx = this as unknown as string;
 
     if (!ctx.length) return '';
@@ -13,7 +17,6 @@ export const retain: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    retain: RetainPredicate;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends Retain {}
 }

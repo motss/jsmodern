@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type CapitalizeFn = () => string;
+interface Capitalize {
+  capitalize(): string;
+}
+
 export const capitalize: PrototypeStruct = {
   label: 'capitalize',
   fn: function stringCapitalize(): string {
@@ -17,7 +20,6 @@ export const capitalize: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    capitalize: CapitalizeFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends Capitalize {}
 }

@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type LastIndexFn = () => number;
+interface LastIndex {
+  lastIndex(): number;
+}
+
 export const lastIndex: PrototypeStruct = {
   label: 'lastIndex',
   fn: function stringLastIndex(): number {
@@ -12,7 +15,6 @@ export const lastIndex: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    lastIndex: LastIndexFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends LastIndex {}
 }

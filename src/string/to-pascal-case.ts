@@ -1,7 +1,10 @@
 import { PrototypeStruct } from '..';
 import { postCase, preCase } from './to-case.js';
 
-export type ToPascalCaseFn = () => string;
+interface ToPascalCase {
+  toPascalCase(): string;
+}
+
 export const toPascalCase: PrototypeStruct = {
   label: 'toPascalCase',
   fn: function stringToPascalCase(): string {
@@ -15,7 +18,6 @@ export const toPascalCase: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    toPascalCase: ToPascalCaseFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends ToPascalCase {}
 }

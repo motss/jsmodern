@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type InsertFn = (index: number, s: string) => string;
+interface Insert {
+  insert(index: number, s: string): string;
+}
+
 export const insert: PrototypeStruct = {
   label: 'insert',
   fn: function stringInsert(index: number, s: string): string {
@@ -21,7 +24,6 @@ export const insert: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    insert: InsertFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends Insert {}
 }

@@ -2,7 +2,10 @@ import { PrototypeStruct } from '..';
 
 const NEWLINE_REGEXP = /\r?\n/i;
 
-export type LinesFn = () => string[];
+interface Lines {
+  lines(): string[];
+}
+
 export const lines: PrototypeStruct = {
   label: 'lines',
   fn: function stringLines(): string[] {
@@ -19,7 +22,6 @@ export const lines: PrototypeStruct = {
 };
 
 declare global {
-  interface String {
-    lines: LinesFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface String extends Lines {}
 }

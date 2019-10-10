@@ -4,7 +4,10 @@ export function isAnyString(s: any): s is string {
   return 'string' === typeof(s);
 }
 
-export type IsStringFn = (s: any) => boolean;
+interface IsString {
+  isString(s: any): boolean;
+}
+
 export const isString: PrototypeStruct = {
   isStatic: true,
   label: 'isString',
@@ -12,7 +15,6 @@ export const isString: PrototypeStruct = {
 };
 
 declare global {
-  interface StringConstructor {
-    isString: IsStringFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface StringConstructor extends IsString {}
 }
