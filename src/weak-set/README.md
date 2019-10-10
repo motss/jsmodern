@@ -12,9 +12,26 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import { isWeakSet } from 'jsmodern/dist/weak-set.js';
+
+extend({
+  weakSet: [isWeakSet],
+});
+
+console.log([
+  WeakSet.isWeakSet,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

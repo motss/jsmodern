@@ -1,4 +1,11 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [WeakSet](#weakset)
+  - [Constructor](#constructor)
+    - [isWeakSet(x)](#isweaksetx)
+  - [Prototype](#prototype)
 
 ## WeakSet
 

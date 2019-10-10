@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsWeakSetFn = (x: any) => boolean;
+interface IsWeakSet {
+  isWeakSet(x: any): boolean;
+}
+
 export const isWeakSet: PrototypeStruct = {
   isStatic: true,
   label: 'isWeakSet',
@@ -10,7 +13,6 @@ export const isWeakSet: PrototypeStruct = {
 };
 
 declare global {
-  interface WeakSetConstructor {
-    isWeakSet: IsWeakSetFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface WeakSetConstructor extends IsWeakSet {}
 }

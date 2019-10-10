@@ -13,3 +13,4 @@ import './set.js';
 import './string.js';
 import './symbol.js';
 import './weak-map.js';
+import './weak-set.js';
