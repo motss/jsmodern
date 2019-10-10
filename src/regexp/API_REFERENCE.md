@@ -1,4 +1,11 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Usage <!-- omit in toc -->
+
+- [RegExp](#regexp)
+  - [Constructor](#constructor)
+    - [isRegExp(x)](#isregexpx)
+  - [Prototype](#prototype)
 
 ## RegExp
 

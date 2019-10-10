@@ -8,3 +8,4 @@ import './map.js';
 import './number.js';
 import './object.js';
 import './promise.js';
+import './regexp.js';
