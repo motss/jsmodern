@@ -1,6 +1,6 @@
 import { PrototypeStruct } from '..';
 
-type RetainPredicate = (character: string) => string;
+type RetainPredicate = (character: string) => boolean;
 interface Retain {
   retain(predicate: RetainPredicate): string;
 }
