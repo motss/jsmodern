@@ -12,9 +12,26 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from '../src/index.js';
+import { isObject } from '../src/object';
+
+extend({
+  object: [isObject],
+});
+
+console.log([
+  Object.isObject,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

@@ -6,3 +6,4 @@ import './function.js';
 import './iterator.js';
 import './map.js';
 import './number.js';
+import './object.js';

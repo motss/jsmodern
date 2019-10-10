@@ -1,4 +1,11 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Object](#object)
+  - [Constructor](#constructor)
+    - [isObject(x)](#isobjectx)
+  - [Prototype](#prototype)
 
 ## Object
 

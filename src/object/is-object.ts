@@ -1,6 +1,9 @@
 import { PrototypeStruct } from '..';
 
-export type IsObjectFn = (x: any) => boolean;
+interface IsObject {
+  isObject(x: any): boolean;
+}
+
 export const isObject: PrototypeStruct = {
   isStatic: true,
   label: 'isObject',
@@ -16,7 +19,6 @@ export const isObject: PrototypeStruct = {
 };
 
 declare global {
-  interface Object {
-    isObject: IsObjectFn;
-  }
+  // tslint:disable-next-line: no-empty-interface
+  interface ObjectConstructor extends IsObject {}
 }
