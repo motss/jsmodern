@@ -1,5 +1,5 @@
 import { extend } from '../src/index.js';
-import { isObject } from '../src/object';
+import { isObject } from '../src/object.js';
 
 extend({
   object: [isObject],

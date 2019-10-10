@@ -7,3 +7,4 @@ import './iterator.js';
 import './map.js';
 import './number.js';
 import './object.js';
+import './promise.js';

@@ -12,9 +12,33 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import {
+  delayed,
+  isPromise,
+} from 'jsmodern/dist/promise.js';
+
+extend({
+  promise: [
+    delayed,
+    isPromise,
+  ],
+});
+
+console.log([
+  Promise.delayed,
+  Promise.isPromise,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

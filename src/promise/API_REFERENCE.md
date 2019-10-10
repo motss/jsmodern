@@ -1,4 +1,12 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [Promise](#promise)
+  - [Constructor](#constructor)
+    - [isPromise(x)](#ispromisex)
+    - [delayed(delay, callback)](#delayeddelay-callback)
+  - [Prototype](#prototype)
 
 ## Promise
 

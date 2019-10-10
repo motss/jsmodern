@@ -1,10 +1,10 @@
 import { PrototypeStruct } from '..';
 
 type DelayedCallback<T> = (...args: any) => T;
-export type DelayedFn<T> = (delay: number, callback: DelayedCallback<T>) => Promise<undefined | T>;
 export interface PromiseDelayed {
   delayed<T>(delay: number, callback: DelayedCallback<T>): Promise<undefined | T>;
 }
+
 export const delayed: PrototypeStruct = {
   isStatic: true,
   label: 'delayed',
