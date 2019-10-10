@@ -28,7 +28,7 @@
     "dist/**/*.d.ts"
   ],
   "main": "dist/index",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "npm run ts -- -p tsconfig.prod.json",
