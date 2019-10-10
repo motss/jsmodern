@@ -1,4 +1,28 @@
-# API Reference
+# API Reference <!-- omit in toc -->
+
+## Table of contents <!-- omit in toc -->
+
+- [String](#string)
+  - [Constructor](#constructor)
+    - [isString(x)](#isstringx)
+  - [Prototype](#prototype)
+    - [capitalize()](#capitalize)
+    - [contains(pattern)](#containspattern)
+    - [firstIndex()](#firstindex)
+    - [firstItem()](#firstitem)
+    - [insert(index, string)](#insertindex-string)
+    - [isEmpty()](#isempty)
+    - [lastIndex()](#lastindex)
+    - [lastItem()](#lastitem)
+    - [len()](#len)
+    - [lines()](#lines)
+    - [retain(predicate)](#retainpredicate)
+    - [splitWhitespace()](#splitwhitespace)
+    - [toCamelCase()](#tocamelcase)
+    - [toKebabCase()](#tokebabcase)
+    - [toPascalCase()](#topascalcase)
+    - [toSnakeCase()](#tosnakecase)
+    - [toStartCase()](#tostartcase)
 
 ## String
 

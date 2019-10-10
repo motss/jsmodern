@@ -12,9 +12,81 @@
 
 ## Table of contents <!-- omit in toc -->
 
-- [Usage](#Usage)
-- [API Reference](#API-Reference)
-- [License](#License)
+- [Usage](#usage)
+- [Available extensions](#available-extensions)
+  - [Constructor](#constructor)
+  - [Prototype](#prototype)
+- [License](#license)
+
+## Usage
+
+```ts
+import { extend } from 'jsmodern';
+import {
+  capitalize,
+  contains,
+  firstIndex,
+  firstItem,
+  insert,
+  isEmpty,
+  isString,
+  lastIndex,
+  lastItem,
+  len,
+  lines,
+  retain,
+  splitWhitespace,
+  toCamelCase,
+  toKebabCase,
+  toPascalCase,
+  toSnakeCase,
+  toStartCase,
+} from 'jsmodern/dist/string.js';
+
+extend({
+  string: [
+    capitalize,
+    contains,
+    firstIndex,
+    firstItem,
+    insert,
+    isEmpty,
+    isString,
+    lastIndex,
+    lastItem,
+    len,
+    lines,
+    retain,
+    splitWhitespace,
+    toCamelCase,
+    toKebabCase,
+    toPascalCase,
+    toSnakeCase,
+    toStartCase,
+  ],
+});
+
+console.log([
+  String.prototype.capitalize,
+  String.prototype.contains,
+  String.prototype.firstIndex,
+  String.prototype.firstItem,
+  String.prototype.insert,
+  String.prototype.isEmpty,
+  String.isString,
+  String.prototype.lastIndex,
+  String.prototype.lastItem,
+  String.prototype.len,
+  String.prototype.lines,
+  String.prototype.retain,
+  String.prototype.splitWhitespace,
+  String.prototype.toCamelCase,
+  String.prototype.toKebabCase,
+  String.prototype.toPascalCase,
+  String.prototype.toSnakeCase,
+  String.prototype.toStartCase,
+].every(n => 'function' === typeof(n)));
+```
 
 ## Available extensions
 

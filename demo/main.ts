@@ -10,3 +10,4 @@ import './object.js';
 import './promise.js';
 import './regexp.js';
 import './set.js';
+import './string.js';
