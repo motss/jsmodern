@@ -17,6 +17,7 @@ describe('array', () => {
     ['Array.prototype.isEmpty', 'isEmpty', false, true],
     ['Array.prototype.isSorted', 'isSorted', false, true],
     ['Array.prototype.iter', 'iter', false, true],
+    ['Array.prototype.lastIndex', 'lastIndex', false, true],
     ['Array.prototype.lastItem', 'lastItem', false, true],
     ['Array.prototype.len', 'len', false, true],
     ['Array.prototype.max', 'max', false, true],

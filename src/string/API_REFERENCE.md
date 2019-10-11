@@ -105,7 +105,7 @@ Returns the last index in this string.
 
 ```ts
 'foobar'.lastIndex() === 5;
-''.lastIndex() === -1;
+''.lastIndex() === 0;
 ```
 
 #### lastItem()

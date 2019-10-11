@@ -20,6 +20,7 @@
     - [isEmpty()](#isempty)
     - [isSorted()](#issorted)
     - [iter()](#iter)
+    - [lastIndex()](#lastindex)
     - [lastItem()](#lastitem)
     - [len()](#len)
     - [max()](#max)
@@ -234,6 +235,15 @@ iterator.next().value === 1;
 iterator.next().value === 2;
 iterator.next().value === 4;
 iterator.next().done === true;
+```
+
+#### lastIndex()
+
+Returns the last index in the array.
+
+```ts
+[1, 2, 3].lastIndex() === 2;
+[].lastIndex() === 0;
 ```
 
 #### lastItem()

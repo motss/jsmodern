@@ -13,6 +13,7 @@ export * from './array/insert.js';
 export * from './array/is-empty.js';
 export * from './array/is-sorted.js';
 export * from './array/iter.js';
+export * from './array/last-index.js';
 export * from './array/last-item.js';
 export * from './array/len.js';
 export * from './array/max.js';

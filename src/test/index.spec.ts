@@ -55,6 +55,7 @@ import './array/insert.spec.js';
 import './array/is-empty.spec.js';
 import './array/is-sorted.spec.js';
 import './array/iter.spec.js';
+import './array/last-index.spec.js';
 import './array/last-item.spec.js';
 import './array/len.spec.js';
 import './array/max.spec.js';

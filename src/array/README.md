@@ -27,6 +27,7 @@ import {
   binarySearch,
   chunks,
   clear,
+  contains,
   endsWith,
   enumerate,
   filled,
@@ -36,6 +37,7 @@ import {
   isEmpty,
   isSorted,
   iter,
+  lastIndex,
   lastItem,
   len,
   max,
@@ -54,8 +56,6 @@ import {
 } from 'jsmodern/dist/array.js';
 import { extend } from 'jsmodern';
 
-
-// Extend Array.prototype with extensions.
 extend({
   array: [
     all,
@@ -63,6 +63,7 @@ extend({
     binarySearch,
     chunks,
     clear,
+    contains,
     endsWith,
     enumerate,
     filled,
@@ -72,6 +73,7 @@ extend({
     isEmpty,
     isSorted,
     iter,
+    lastIndex,
     lastItem,
     len,
     max,
@@ -96,6 +98,7 @@ console.log([
   Array.prototype.binarySearch,
   Array.prototype.chunks,
   Array.prototype.clear,
+  Array.prototype.contains,
   Array.prototype.endsWith,
   Array.prototype.enumerate,
   Array.filled,
@@ -105,6 +108,7 @@ console.log([
   Array.prototype.isEmpty,
   Array.prototype.isSorted,
   Array.prototype.iter,
+  Array.prototype.lastIndex,
   Array.prototype.lastItem,
   Array.prototype.len,
   Array.prototype.max,
