@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -42,22 +40,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isPromise(x)]
-* [delayed(delay, callback)]
-
-### Prototype
-
-None
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isPromise(x)]: /src/promise/API_REFERENCE.md#ispromisex
-[delayed(delay, callback)]: /src/promise/API_REFERENCE.md#delayeddelay-callback
+[API_REFERENCES]: /src/promise/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

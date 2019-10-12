@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -90,54 +88,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isString(x)]
-
-### Prototype
-
-* [capitalize()]
-* [contains(pattern)]
-* [firstIndex()]
-* [firstItem()]
-* [insert(index, string)]
-* [isEmpty()]
-* [lastIndex()]
-* [lastItem()]
-* [len()]
-* [lines()]
-* [retain(predicate)]
-* [splitWhitespace()]
-* [toCamelCase()]
-* [toKebabCase()]
-* [toPascalCase()]
-* [toSnakeCase()]
-* [toStartCase()]
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isString(x)]: /src/string/API_REFERENCE.md#isstringx
-
-[capitalize()]: /src/string/API_REFERENCE.md#capitalize
-[contains(pattern)]: /src/string/API_REFERENCE.md#containspattern
-[firstIndex()]: /src/string/API_REFERENCE.md#firstindex
-[firstItem()]: /src/string/API_REFERENCE.md#firstitem
-[insert(index, string)]: /src/string/API_REFERENCE.md#insertindex-string
-[isEmpty()]: /src/string/API_REFERENCE.md#isempty
-[lastIndex()]: /src/string/API_REFERENCE.md#lastindex
-[lastItem()]: /src/string/API_REFERENCE.md#lastitem
-[len()]: /src/string/API_REFERENCE.md#len
-[lines()]: /src/string/API_REFERENCE.md#lines
-[retain(predicate)]: /src/string/API_REFERENCE.md#retainpredicate
-[splitWhitespace()]: /src/string/API_REFERENCE.md#splitwhitespace
-[toCamelCase()]: /src/string/API_REFERENCE.md#tocamelcase
-[toKebabCase()]: /src/string/API_REFERENCE.md#tokebabcase
-[toPascalCase()]: /src/string/API_REFERENCE.md#topascalcase
-[toSnakeCase()]: /src/string/API_REFERENCE.md#tosnakecase
-[toStartCase()]: /src/string/API_REFERENCE.md#tostartcase
+[API_REFERENCES]: /src/string/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

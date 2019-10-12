@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -48,26 +46,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isDate(x)]
-
-### Prototype
-
-* [difference(other)]
-* [isAfter(other)]
-* [isBefore(other)]
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isDate(x)]: /src/date/API_REFERENCE.md#isdatex
-
-[difference(other)]: /src/date/API_REFERENCE.md#differenceother
-[isAfter(other)]: /src/date/API_REFERENCE.md#isafterother
-[isBefore(other)]: /src/date/API_REFERENCE.md#isbeforeother
+[API_REFERENCES]: /src/date/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -72,42 +70,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isNumber(value)]
-* [range(start\[, stop, step\])]
-
-### Prototype
-
-* [divFloor(divisor)]
-* [divModFloor(divisor)]
-* [divRem(divisor)]
-* [gcd(divisor)]
-* [isBetween(min, max)]
-* [isEven()]
-* [isMultipleOf(other)]
-* [isOdd()]
-* [lcm(divisor)]
-* [modFloor(divisor)]
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isNumber(value)]: /src/number/API_REFERENCE.md#isnumbervalue
-[range(start\[, stop, step\])]: /src/number/API_REFERENCE.md#rangestart-stop-step
-
-[divFloor(divisor)]: /src/number/API_REFERENCE.md#divfloordivisor
-[divModFloor(divisor)]: /src/number/API_REFERENCE.md#divmodfloordivisor
-[divRem(divisor)]: /src/number/API_REFERENCE.md#divremdivisor
-[gcd(divisor)]: /src/number/API_REFERENCE.md#gcddivisor
-[isBetween(min, max)]: /src/number/API_REFERENCE.md#isbetweenmin-max
-[isEven()]: /src/number/API_REFERENCE.md#iseven
-[isMultipleOf(other)]: /src/number/API_REFERENCE.md#ismultipleofother
-[isOdd()]: /src/number/API_REFERENCE.md#isodd
-[lcm(divisor)]: /src/number/API_REFERENCE.md#lcmdivisor
-[modFloor(divisor)]: /src/number/API_REFERENCE.md#modfloordivisor
+[API_REFERENCES]: /src/number/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -42,22 +40,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isAsyncIterator(x)]
-* [isIterator(x)]
-
-### Prototype
-
-None
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isAsyncIterator(x)]: /src/iterator/API_REFERENCE.md#isasynciteratorx
-[isIterator(x)]: /src/iterator/API_REFERENCE.md#isiteratorx
+[API_REFERENCES]: /src/iterator/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

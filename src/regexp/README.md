@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -35,20 +33,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isRegExp(x)]
-
-### Prototype
-
-None
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isRegExp(x)]: /src/regexp/API_REFERENCE.md#isregexpx
+[API_REFERENCES]: /src/regexp/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

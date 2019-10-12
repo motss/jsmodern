@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -48,26 +46,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [isAsyncFunction(x)]
-* [isAsyncGeneratorFunction(x)]
-* [isFunction(x)]
-* [isGeneratorFunction(x)]
-
-### Prototype
-
-None
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isAsyncFunction(x)]: /src/function/API_REFERENCE.md#isasyncfunctionx
-[isAsyncGeneratorFunction(x)]: /src/function/API_REFERENCE.md#isasyncgeneratorfunctionx
-[isFunction(x)]: /src/function/API_REFERENCE.md#isfunctionx
-[isGeneratorFunction(x)]: /src/function/API_REFERENCE.md#isgeneratorfunctionx
+[API_REFERENCES]: /src/function/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

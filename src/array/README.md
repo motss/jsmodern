@@ -14,8 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -129,77 +127,14 @@ console.log([
 
 ## Available extensions
 
-### Constructor
-
-* [filled(length\[, filledValue = 0\])]
-
-### Prototype
-
-* [all(predicate)]
-* [any(predicate)]
-* [binarySearch(x)]
-* [chunks(chunkSize)]
-* [clear()]
-* [contains(x)]
-* [endsWith(needle)]
-* [enumerate()]
-* [firstItem()]
-* [fold(initialValue, predicate)]
-* [insert(index, element)]
-* [isEmpty()]
-* [isSorted()]
-* [iter()]
-* [lastItem()]
-* [len()]
-* [max()]
-* [min()]
-* [partition(predicate)]
-* [remove(\[index\])]
-* [repeat(n)]
-* [retain(predicate)]
-* [shuffle()]
-* [splitAt(at)]
-* [split(predicate)]
-* [startsWith(needle)]
-* [sum()]
-* [truncate(len)]
+Check out [API_REFERENCES].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[filled(length\[, filledValue = 0\])]: /src/array/API_REFERENCE.md#filledlength-filledValue--0
-
-[all(predicate)]: /src/array/API_REFERENCE.md#allpredicate
-[any(predicate)]: /src/array/API_REFERENCE.md#anypredicate
-[binarySearch(x)]: /src/array/API_REFERENCE.md#binarysearchx
-[chunks(chunkSize)]: /src/array/API_REFERENCE.md#chunkschunksize
-[clear()]: /src/array/API_REFERENCE.md#clear
-[contains(x)]: /src/array/API_REFERENCE.md#containsx
-[endsWith(needle)]: /src/array/API_REFERENCE.md#endswithneedle
-[enumerate()]: /src/array/API_REFERENCE.md#enumerate
-[firstItem()]: /src/array/API_REFERENCE.md#firstitem
-[fold(initialValue, predicate)]: /src/array/API_REFERENCE.md#foldinitialvalue-predicate
-[insert(index, element)]: /src/array/API_REFERENCE.md#insertindex-element
-[isEmpty()]: /src/array/API_REFERENCE.md#isempty
-[isSorted()]: /src/array/API_REFERENCE.md#issorted
-[iter()]: /src/array/API_REFERENCE.md#iter
-[lastItem()]: /src/array/API_REFERENCE.md#lastitem
-[len()]: /src/array/API_REFERENCE.md#len
-[max()]: /src/array/API_REFERENCE.md#max
-[min()]: /src/array/API_REFERENCE.md#min
-[partition(predicate)]: /src/array/API_REFERENCE.md#partitionpredicate
-[product()]: /src/array/API_REFERENCE.md#product
-[remove(\[index\])]: /src/array/API_REFERENCE.md#removeindex
-[repeat(n)]: /src/array/API_REFERENCE.md#repeatn
-[retain(predicate)]: /src/array/API_REFERENCE.md#retainpredicate
-[shuffle()]: /src/array/API_REFERENCE.md#shuffle
-[splitAt(at)]: /src/array/API_REFERENCE.md#splitatat
-[split(predicate)]: /src/array/API_REFERENCE.md#splitpredicate
-[startsWith(needle)]: /src/array/API_REFERENCE.md#startswithneedle
-[sum()]: /src/array/API_REFERENCE.md#sum
-[truncate(len)]: /src/array/API_REFERENCE.md#truncatelen
+[API_REFERENCES]: /src/array/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

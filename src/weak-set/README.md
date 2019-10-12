@@ -14,7 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Prototype](#prototype)
 - [License](#license)
 
 ## Usage
@@ -46,10 +45,6 @@ console.log([
 ## Available extensions
 
 Check out [API_REFERENCES].
-
-### Prototype
-
-None
 
 ## License
 
