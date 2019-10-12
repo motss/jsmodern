@@ -67,14 +67,14 @@ console.log([
 
 ## Available extensions
 
-Check out [API_REFERENCES].
+Check out [API Reference].
 
 ## License
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[API_REFERENCES]: /src/map/API_REFERENCE.md
+[API Reference]: /src/map/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
