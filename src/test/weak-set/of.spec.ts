@@ -1,10 +1,10 @@
 import { extend } from '../../extend.js';
-import { of } from '../../map/of.js';
+import { of } from '../../weak-set/of.js';
 
-extend({ map: [of] });
+extend({ weakSet: [of] });
 
-describe('Map.of', () => {
-  const errorMessage = new TypeError(`A Map entry in a list [key, value]`);
+describe('WeakSet.of', () => {
+  const errorMessage = new TypeError(`WeakSet key must be an object`);
 
   type TestError = [string, any, TypeError];
   test.each<TestError>([
@@ -29,23 +29,27 @@ describe('Map.of', () => {
     [`.of(new Map())`, new Map(), errorMessage],
   ])('%s', (_, a, expected) => {
     try {
-      Map.of(a!);
+      WeakSet.of(a!);
     } catch (e) {
       expect(e).toStrictEqual(expected);
     }
   });
 
-  type TestSuccess = [string, any, Map<number, number>, number];
+  const key1 = {};
+  const key2 = {};
+
+  type TestSuccess = [string, object[]];
   test.each<TestSuccess>([
-    ['.of([])', [], new Map(), 0],
+    ['.of([])', []],
 
-    ['.of([[1, 1]])', [[1, 1]], new Map([[1, 1]]), 1],
-    ['.of([[1, 1], [2, 2]])', [[1, 1], [2, 2]], new Map([[1, 1], [2, 2]]), 2],
-  ])('%s', (_, a, expected, f) => {
-    const d = Map.of(...a);
+    ['.of(key1)', [key1]],
+    ['.of(key1, key2)', [key1, key2]],
+  ])('%s', (_, expected) => {
+    const d = WeakSet.of(...expected);
 
-    expect(d).toEqual(expected);
-    expect(d.size).toStrictEqual(f);
+    expect(expected.every((k) => {
+      return d.has(k);
+    })).toStrictEqual(true);
   });
 
 });

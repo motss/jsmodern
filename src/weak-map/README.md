@@ -14,7 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
   - [Prototype](#prototype)
 - [License](#license)
 
@@ -22,22 +21,30 @@
 
 ```ts
 import { extend } from 'jsmodern';
-import { isWeakMap } from 'jsmodern/dist/weak-map.js';
+import {
+  from,
+  isWeakMap,
+  of,
+} from 'jsmodern/dist/weak-map.js';
 
 extend({
-  weakMap: [isWeakMap],
+  weakMap: [
+    from,
+    isWeakMap,
+    of,
+  ],
 });
 
 console.log([
+  WeakMap.from,
   WeakMap.isWeakMap,
+  WeakMap.of,
 ].every(n => 'function' === typeof(n)));
 ```
 
 ## Available extensions
 
-### Constructor
-
-* [isWeakMap(x)]
+Check out [API_REFERENCES].
 
 ### Prototype
 
@@ -48,7 +55,7 @@ None
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isWeakMap(x)]: /src/weak-map/API_REFERENCE.md#isweakmapx
+[API_REFERENCES]: /src/weak-map/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

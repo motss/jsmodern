@@ -14,7 +14,6 @@
 
 - [Usage](#usage)
 - [Available extensions](#available-extensions)
-  - [Constructor](#constructor)
   - [Prototype](#prototype)
 - [License](#license)
 
@@ -22,22 +21,31 @@
 
 ```ts
 import { extend } from 'jsmodern';
-import { isWeakSet } from 'jsmodern/dist/weak-set.js';
+import {
+  from,
+  isWeakSet,
+  of,
+} from 'jsmodern/dist/weak-set.js';
 
 extend({
-  weakSet: [isWeakSet],
+  weakSet: [
+    from,
+    isWeakSet,
+    of,
+  ],
 });
 
 console.log([
+  WeakSet.from,
   WeakSet.isWeakSet,
+  WeakSet.of,
 ].every(n => 'function' === typeof(n)));
+
 ```
 
 ## Available extensions
 
-### Constructor
-
-* [isWeakSet(x)]
+Check out [API_REFERENCES].
 
 ### Prototype
 
@@ -48,7 +56,7 @@ None
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[isWeakSet(x)]: /src/weak-set/API_REFERENCE.md#isweaksetx
+[API_REFERENCES]: /src/weak-set/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

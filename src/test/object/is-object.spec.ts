@@ -21,6 +21,10 @@ describe('Object.isObject', () => {
     [`.isObject('a')`, 'a', false],
     [`.isObject(class A {})`, class A {}, false],
     [`.isObject(new Error())`, new Error(), false],
+    [`.isObject(new WeakMap)`, new WeakMap(), false],
+    [`.isObject(new WeakSet)`, new WeakSet(), false],
+    [`.isObject(new Map)`, new Map(), false],
+    [`.isObject(new Set)`, new Set(), false],
 
     [`.isObject({})`, {}, true],
     [`.isObject({ a: 1 })`, { a: 1 }, true],

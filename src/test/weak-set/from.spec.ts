@@ -1,11 +1,12 @@
 import { extend } from '../../extend.js';
-import { from } from '../../map/from.js';
+import { from } from '../../weak-set/from.js';
 
-extend({ map: [from] });
+extend({ weakSet: [from] });
 
-describe('Map.from', () => {
+describe('WeakSet.from', () => {
   // tslint:disable-next-line: max-line-length
-  const errorMessage = new TypeError(`Invalid Map entries. Each Map entry in a list [key, value]`);
+  const errorMessage = new TypeError(`Invalid WeakSet entries. Each WeakSet entry key must be an object`);
+  const weakSetKeyNotObjectErrorMessage = new TypeError(`WeakSet key must be an object`);
 
   type TestError = [string, any, TypeError];
   test.each<TestError>([
@@ -28,30 +29,28 @@ describe('Map.from', () => {
     [`.from(async function () {})`, async function a() { return void 0; }, errorMessage],
     [`.from(Symbol('a'))`, Symbol('a'), errorMessage],
     [`.from(new Map())`, new Map(), errorMessage],
+    [`.from([1])`, [1], weakSetKeyNotObjectErrorMessage],
   ])('%s', (_, a, expected) => {
     try {
-      Map.from(a);
+      WeakSet.from(a);
     } catch (e) {
       expect(e).toStrictEqual(expected!);
     }
   });
 
-  const mapFn = ([k, v]: [number, number]): [number, number] => [k, 1 + v];
+  const key1 = {};
+  const key2 = {};
 
-  type TestSuccess = [string, any, undefined | null | typeof mapFn, Map<number, number>, number];
+  type TestSuccess = [string, object[]];
   test.each<TestSuccess>([
-    ['.from([])', [], undefined, new Map(), 0],
-    ['.from([], null)', [], null, new Map(), 0],
-    ['.from([], mapFn)', [], mapFn, new Map(), 0],
+    ['.from([])', []],
 
-    ['.from([[1, 1], [2, 2]])', [[1, 1], [2, 2]], undefined, new Map([[1, 1], [2, 2]]), 2],
-    ['.from([[1, 1], [2, 2]], null)', [[1, 1], [2, 2]], null, new Map([[1, 1], [2, 2]]), 2],
-    ['.from([[1, 1], [2, 2]], mapFn)', [[1, 1], [2, 2]], mapFn, new Map([[1, 2], [2, 3]]), 2],
-  ])('%s', (_, a, b, expected, f) => {
-    const d = Map.from(a, b!);
+    ['.from([key1])', [key1]],
+    ['.from([key1, key2])', [key1, key2]],
+  ])('%s', (_, a) => {
+    const d = WeakSet.from(a);
 
-    expect(d).toEqual(expected);
-    expect(d.size).toStrictEqual(f);
+    expect(a.every(n => d.has(n))).toStrictEqual(true);
   });
 
 });

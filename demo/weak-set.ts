@@ -1,10 +1,20 @@
 import { extend } from '../src/index.js';
-import { isWeakSet } from '../src/weak-set.js';
+import {
+  from,
+  isWeakSet,
+  of,
+} from '../src/weak-set.js';
 
 extend({
-  weakSet: [isWeakSet],
+  weakSet: [
+    from,
+    isWeakSet,
+    of,
+  ],
 });
 
 console.log([
+  WeakSet.from,
   WeakSet.isWeakSet,
+  WeakSet.of,
 ].every(n => 'function' === typeof(n)));

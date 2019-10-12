@@ -1,14 +1,14 @@
 import { PrototypeStruct } from '..';
 
-type FromSetFn<T> = (n: T) => T;
+type MapFn<T> = (n: T) => T;
 export interface SetFrom {
-  from<T>(setEntry: T[], mapFn?: FromSetFn<T>): Set<T>;
+  from<T>(setEntry: T[], mapFn?: MapFn<T>): Set<T>;
 }
 
 export const from: PrototypeStruct = {
   isStatic: true,
   label: 'from',
-  fn: function setFrom<T>(setEntry: T[], mapFn?: FromSetFn<T>): Set<T> {
+  fn: function setFrom<T>(setEntry: T[], mapFn?: MapFn<T>): Set<T> {
     if (!Array.isArray(setEntry)) {
       throw new TypeError(`Expect an array of Set elements`);
     }
