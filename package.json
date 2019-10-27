@@ -46,6 +46,11 @@
     "watch:build": "npm run ts -- --watch -p tsconfig.test.json",
     "watch:test": "npm run jest -- --watchAll"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run ts && npm run clean"
+    }
+  },
   "dependencies": {
     "tslib": "^1.10.0"
   },
@@ -54,6 +59,7 @@
     "@reallyland/tslint-config": "^1.1.1",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "shx": "^0.3.2",
     "tslint": "^5.20.0",
