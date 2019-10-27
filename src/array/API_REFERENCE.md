@@ -27,9 +27,11 @@
     - [min()](#min)
     - [partition(predicate)](#partitionpredicate)
     - [product()](#product)
+    - [reject(callbackFn)](#rejectcallbackfn)
     - [remove([index])](#removeindex)
     - [repeat(n)](#repeatn)
     - [retain(predicate)](#retainpredicate)
+    - [select(callbackFn)](#selectcallbackfn)
     - [shuffle()](#shuffle)
     - [splitAt(at)](#splitatat)
     - [split(predicate)](#splitpredicate)
@@ -302,6 +304,16 @@ Iterates over the entire list, multiplying all the elements.
 [1, 2, 3].product() === 6;
 ```
 
+#### reject(callbackFn)
+
+Filters out the elements specified by `callbackFn`. If true, it would remove the current item.
+
+```ts
+const a = [1, 2, 3, 4, 5];
+
+a.reject(n => n > 2); // [1, 2];
+```
+
 #### remove([index])
 
 Removes and returns the element at position `index` within the list, shifting all elements after it to the left, where `index` is between `0` and the length of the list and defaults to `0` if it is not set.
@@ -331,6 +343,16 @@ const a = [1, 2, 3, 4];
 
 a.retain(n => n % 2 === 0);
 a; /** [2, 4] */
+```
+
+#### select(callbackFn)
+
+Filters in the elements specified by `callbackFn`. If true, it would keep the current item.
+
+```ts
+const a = [1, 2, 3, 4, 5];
+
+a.select(n => n > 2); // [3, 4, 5];
 ```
 
 #### shuffle()
