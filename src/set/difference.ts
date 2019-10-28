@@ -1,5 +1,5 @@
 import { PrototypeStruct } from '..';
-import { utilIsSet } from './is-set';
+import { utilIsSet } from './is-set.js';
 
 interface Difference<T> {
   difference(other: Set<T>): T[];
