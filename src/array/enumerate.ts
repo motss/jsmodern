@@ -1,7 +1,7 @@
 import { PrototypeStruct } from '..';
 
 interface Enumerate<T> {
-  enumerate(): [number, T];
+  enumerate(): [number, T][];
 }
 
 export const enumerate: PrototypeStruct = {

@@ -1,12 +1,12 @@
 import { PrototypeStruct } from '..';
 
 interface SplitAt<T> {
-  splitAt(valueToFind: T): boolean;
+  splitAt(valueToFind: T): [T[], T[]];
 }
 
 export const splitAt: PrototypeStruct = {
   label: 'splitAt',
-  fn: function arraySplitAt<T>(at: number): T[][] {
+  fn: function arraySplitAt<T>(at: number): [T[], T[]] {
     const ctx = this as unknown as T[];
     const len = ctx.length;
 

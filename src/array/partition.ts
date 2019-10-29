@@ -2,7 +2,7 @@ import { PrototypeStruct } from '..';
 
 type PartitionPredicate<T> = (n: T) => boolean;
 interface Partition<T> {
-  partition(n: PartitionPredicate<T>): boolean;
+  partition(n: PartitionPredicate<T>): [T[], T[]];
 }
 
 export const partition: PrototypeStruct = {
