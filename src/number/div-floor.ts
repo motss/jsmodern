@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '../index.js';
+// @ts-ignore
+import { PrototypeStruct } from '../index.d.ts';
 
 export function utilDivFloor(a: number, b: number): number {
   return Math.floor(a / b);

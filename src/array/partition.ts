@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '../index.js';
+// @ts-ignore
+import { PrototypeStruct } from '../index.d.ts';
 
 type PartitionPredicate<T> = (n: T) => boolean;
 interface Partition<T> {

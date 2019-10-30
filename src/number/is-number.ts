@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '../index.js';
+// @ts-ignore
+import { PrototypeStruct } from '../index.d.ts';
 
 export function numberIsNumber(n: any): n is number {
   return 'number' === typeof(n) && n === n;

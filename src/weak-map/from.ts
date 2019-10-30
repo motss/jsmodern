@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '../index.js';
+// @ts-ignore
+import { PrototypeStruct } from '../index.d.ts';
 
 type MapFn<K, V> = (n: [K, V]) => [K, V];
 interface WeakMapFrom {

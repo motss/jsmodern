@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '../index.js';
+// @ts-ignore
+import { PrototypeStruct } from '../index.d.ts';
 
 export type IsRegExpFn = (x: any) => boolean;
 export const isRegExp: PrototypeStruct = {

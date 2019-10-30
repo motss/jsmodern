@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '../index.js';
+// @ts-ignore
+import { PrototypeStruct } from '../index.d.ts';
 import { utilIsSet } from './is-set.js';
 
 interface IsDisjoint<T> {
