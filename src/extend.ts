@@ -1,4 +1,5 @@
-import { PrototypeStruct } from '.';
+// @ts-ignore
+import { PrototypeStruct } from './index.d.ts';
 
 function toObject(name: keyof Extensions) {
   switch (name) {
