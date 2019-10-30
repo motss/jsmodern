@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 type AnyPredicate<T> = (value: T) => boolean;
 interface Any<T> {

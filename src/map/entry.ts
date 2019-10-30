@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 interface Entry<K, V> {
   entry(key: K): [K, V];

@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 interface IsAsyncGeneratorFunction {
   isAsyncGeneratorFunction(x: any): boolean;

@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 interface WeakSetOf {
   of<K extends object>(...elements: K[]): WeakSet<K>;

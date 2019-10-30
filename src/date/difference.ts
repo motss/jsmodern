@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 import { dateIsDate } from './is-date.js';
 
 export function utilDateDifference(a: Date, b: Date) {

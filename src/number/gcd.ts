@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 export function utilGcd(a: number, b: number): number {
   // gcd(4, 8) = 4

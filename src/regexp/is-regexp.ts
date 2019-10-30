@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 export type IsRegExpFn = (x: any) => boolean;
 export const isRegExp: PrototypeStruct = {

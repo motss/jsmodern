@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 const NEWLINE_REGEXP = /\r?\n/i;
 

@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '..';
+import { PrototypeStruct } from '../index.js';
 
 interface IsWeakSet {
   isWeakSet(x: any): boolean;
