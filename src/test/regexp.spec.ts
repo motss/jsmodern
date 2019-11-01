@@ -1,6 +1,6 @@
-import '../regexp.js';
+import '../reg-exp.js';
 
-describe('regexp', () => {
+describe('reg-exp', () => {
   type TestSuccess = [string, string, boolean, boolean];
   test.each<TestSuccess>([
     ['RegExp.isRegExp', 'isRegExp', true, true],

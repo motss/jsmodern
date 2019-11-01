@@ -1,5 +1,5 @@
 import { extend } from '../../extend.js';
-import { isRegExp } from '../../regexp/is-regexp.js';
+import { isRegExp } from '../../reg-exp/is-reg-exp.js';
 
 extend({ regExp: [isRegExp] });
 

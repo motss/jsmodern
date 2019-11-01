@@ -14,7 +14,7 @@ import * as mapExtend from './map.js';
 import * as numberExtend from './number.js';
 import * as objectExtend from './object.js';
 import * as promiseExtend from './promise.js';
-import * as regExpExtend from './regexp.js';
+import * as regExpExtend from './reg-exp.js';
 import * as setExtend from './set.js';
 import * as stringExtend from './string.js';
 import * as symbolExtend from './symbol.js';

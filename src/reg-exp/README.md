@@ -20,7 +20,7 @@
 
 ```ts
 import { extend } from 'jsmodern';
-import { isRegExp } from 'jsmodern/dist/regexp.js';
+import { isRegExp } from 'jsmodern/dist/reg-exp.js';
 
 extend({
   regExp: [isRegExp],
@@ -40,7 +40,7 @@ Check out [API Reference].
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[API Reference]: /src/regexp/API_REFERENCE.md
+[API Reference]: /src/reg-exp/API_REFERENCE.md
 
 <!-- MDN -->
 [array-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -50,7 +50,7 @@ Check out [API Reference].
 [number-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 [object-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[regexp-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+[reg-exp-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 [set-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 [string-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [void-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void

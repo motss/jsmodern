@@ -137,9 +137,9 @@ import './symbol.spec.js';
 
 /** RegExp */
 
-import './regexp/is-regexp.spec.js';
+import './reg-exp/is-reg-exp.spec.js';
 
-import './regexp.spec.js';
+import './reg-exp.spec.js';
 
 /** Map */
 
@@ -180,7 +180,7 @@ import './set.spec.js';
 /** WeakMap */
 
 import './weak-map/from.spec.js';
-import './weak-map/is-weak.map.spec.js';
+import './weak-map/is-weak-map.spec.js';
 import './weak-map/of.spec.js';
 
 import './weak-map.spec.js';
@@ -188,7 +188,7 @@ import './weak-map.spec.js';
 /** WeakSet */
 
 import './weak-set/from.spec.js';
-import './weak-set/is-weak.set.spec.js';
+import './weak-set/is-weak-set.spec.js';
 import './weak-set/of.spec.js';
 
 import './weak-set.spec.js';
