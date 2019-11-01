@@ -1,6 +1,6 @@
 {
   "name": "jsmodern",
-  "version": "0.5.7",
+  "version": "0.6.0",
   "description": "An extension to existing JavaScript, influenced by other great languages such as Rust, Dart, Java, Golang, etc.",
   "keywords": [
     "extensions",
