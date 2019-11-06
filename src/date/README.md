@@ -24,6 +24,7 @@ import {
   isAfter,
   isBefore,
   isDate,
+  isInvalidDate,
 } from 'jsmodern/dist/date.js';
 import { extend } from 'jsmodern';
 
@@ -33,6 +34,7 @@ extend({
     isAfter,
     isBefore,
     isDate,
+    isInvalidDate,
   ],
 });
 
@@ -41,6 +43,7 @@ console.log([
   Date.prototype.isAfter,
   Date.prototype.isBefore,
   Date.isDate,
+  Date.isInvalidDate,
 ].every(n => 'function' === typeof(n)));
 ```
 

@@ -119,6 +119,7 @@ import './date/is-after.spec.js';
 import './date/is-before.spec.js';
 
 import './date/is-date.spec.js';
+import './date/is-invalid-date.spec.js';
 
 import './date.spec.js';
 
