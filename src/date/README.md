@@ -25,7 +25,7 @@ import {
   isBefore,
   isDate,
   isInvalidDate,
-} from 'jsmodern/dist/date.js';
+} from 'jsmodern/dist/date.ts';
 import { extend } from 'jsmodern';
 
 extend({

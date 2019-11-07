@@ -1,4 +1,4 @@
-import '../array.js';
+import '../array.ts';
 
 describe('array', () => {
   type TestSuccess = [string, string, boolean, boolean];

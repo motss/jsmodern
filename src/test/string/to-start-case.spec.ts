@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { toStartCase } from '../../string/to-start-case.js';
+import { extend } from '../../extend.ts';
+import { toStartCase } from '../../string/to-start-case.ts';
 
 extend({ string: [toStartCase] });
 

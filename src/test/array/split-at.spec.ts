@@ -1,5 +1,5 @@
-import { splitAt } from '../../array/split-at.js';
-import { extend } from '../../extend.js';
+import { splitAt } from '../../array/split-at.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [splitAt] });
 

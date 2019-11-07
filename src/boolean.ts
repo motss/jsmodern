@@ -1,1 +1,1 @@
-export * from './boolean/is-boolean.js';
+export * from './boolean/is-boolean.ts';

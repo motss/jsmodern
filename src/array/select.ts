@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 type SelectCallbackFn<T> = (element: T) => boolean;
 interface Select<T> {

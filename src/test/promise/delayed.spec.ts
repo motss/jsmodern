@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { delayed } from '../../promise/delayed.js';
+import { extend } from '../../extend.ts';
+import { delayed } from '../../promise/delayed.ts';
 
 extend({ promise: [delayed] });
 

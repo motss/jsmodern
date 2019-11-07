@@ -1,5 +1,5 @@
-import { select } from '../../array/select.js';
-import { extend } from '../../extend.js';
+import { select } from '../../array/select.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [select] });
 

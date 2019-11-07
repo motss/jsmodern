@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface IsAsyncFunction {
   isAsyncFunction(x: any): boolean;

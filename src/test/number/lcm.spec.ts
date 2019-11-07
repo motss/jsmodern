@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { lcm } from '../../number/lcm.js';
+import { extend } from '../../extend.ts';
+import { lcm } from '../../number/lcm.ts';
 
 extend({ number: [lcm] });
 

@@ -1,4 +1,4 @@
-import '../object.js';
+import '../object.ts';
 
 describe('object', () => {
   type TestSuccess = [string, string, boolean, boolean];

@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isMap } from '../../map/is-map.js';
+import { extend } from '../../extend.ts';
+import { isMap } from '../../map/is-map.ts';
 
 extend({ map: [isMap] });
 

@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { of } from '../../weak-map/of.js';
+import { extend } from '../../extend.ts';
+import { of } from '../../weak-map/of.ts';
 
 extend({ weakMap: [of] });
 

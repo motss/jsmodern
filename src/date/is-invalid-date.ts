@@ -1,5 +1,5 @@
-import { PrototypeStruct } from '../index.js';
-import { dateIsDate } from './is-date.js';
+import { PrototypeStruct } from '../index.ts';
+import { dateIsDate } from './is-date.ts';
 
 interface IsInvalidDate {
   isInvalidDate(x: any): boolean;

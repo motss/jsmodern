@@ -1,5 +1,5 @@
-import { binarySearch } from '../../array/binary-search.js';
-import { extend } from '../../extend.js';
+import { binarySearch } from '../../array/binary-search.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [binarySearch] });
 

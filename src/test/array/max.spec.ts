@@ -1,5 +1,5 @@
-import { max } from '../../array/max.js';
-import { extend } from '../../extend.js';
+import { max } from '../../array/max.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [max] });
 

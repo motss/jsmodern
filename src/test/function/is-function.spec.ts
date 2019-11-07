@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isFunction } from '../../function/is-function.js';
+import { extend } from '../../extend.ts';
+import { isFunction } from '../../function/is-function.ts';
 
 extend({ function: [isFunction] });
 

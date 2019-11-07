@@ -1,1 +1,1 @@
-export * from './object/is-object.js';
+export * from './object/is-object.ts';

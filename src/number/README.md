@@ -33,7 +33,7 @@ import {
   lcm,
   modFloor,
   range,
-} from 'jsmodern/dist/number.js';
+} from 'jsmodern/dist/number.ts';
 
 extend({
   number: [

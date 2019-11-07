@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 export function isAnyString(s: any): s is string {
   return 'string' === typeof(s);

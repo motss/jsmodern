@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isDisjoint } from '../../set/is-disjoint.js';
+import { extend } from '../../extend.ts';
+import { isDisjoint } from '../../set/is-disjoint.ts';
 
 extend({ set: [isDisjoint] });
 

@@ -1,5 +1,5 @@
-import { split } from '../../array/split.js';
-import { extend } from '../../extend.js';
+import { split } from '../../array/split.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [split] });
 

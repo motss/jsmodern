@@ -1,2 +1,2 @@
-export * from './promise/delayed.js';
-export * from './promise/is-promise.js';
+export * from './promise/delayed.ts';
+export * from './promise/is-promise.ts';

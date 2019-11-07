@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { contains } from '../../string/contains.js';
+import { extend } from '../../extend.ts';
+import { contains } from '../../string/contains.ts';
 
 extend({ string: [contains] });
 

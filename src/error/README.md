@@ -21,7 +21,7 @@
 ```ts
 import {
   isError,
-} from 'jsmodern/dist/error.js';
+} from 'jsmodern/dist/error.ts';
 import { extend } from 'jsmodern';
 
 extend({

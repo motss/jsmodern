@@ -24,7 +24,7 @@ import {
   from,
   isWeakSet,
   of,
-} from 'jsmodern/dist/weak-set.js';
+} from 'jsmodern/dist/weak-set.ts';
 
 extend({
   weakSet: [

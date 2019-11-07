@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { splitWhitespace } from '../../string/split-whitespace.js';
+import { extend } from '../../extend.ts';
+import { splitWhitespace } from '../../string/split-whitespace.ts';
 
 extend({ string: [splitWhitespace] });
 

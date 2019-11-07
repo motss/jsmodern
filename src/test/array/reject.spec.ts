@@ -1,5 +1,5 @@
-import { reject } from '../../array/reject.js';
-import { extend } from '../../extend.js';
+import { reject } from '../../array/reject.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [reject] });
 

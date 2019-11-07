@@ -1,5 +1,5 @@
-import { product } from '../../array/product.js';
-import { extend } from '../../extend.js';
+import { product } from '../../array/product.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [product] });
 

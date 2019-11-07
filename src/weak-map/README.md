@@ -24,7 +24,7 @@ import {
   from,
   isWeakMap,
   of,
-} from 'jsmodern/dist/weak-map.js';
+} from 'jsmodern/dist/weak-map.ts';
 
 extend({
   weakMap: [

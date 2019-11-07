@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { len } from '../../string/len.js';
+import { extend } from '../../extend.ts';
+import { len } from '../../string/len.ts';
 
 extend({ string: [len] });
 

@@ -1,1 +1,1 @@
-export * from './reg-exp/is-reg-exp.js';
+export * from './reg-exp/is-reg-exp.ts';

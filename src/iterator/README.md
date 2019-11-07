@@ -23,7 +23,7 @@ import { extend } from 'jsmodern';
 import {
   isAsyncIterator,
   isIterator,
-} from 'jsmodern/dist/iterator.js';
+} from 'jsmodern/dist/iterator.ts';
 
 extend({
   iterator: [

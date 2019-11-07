@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface MapOf {
   of<K, V>(...elements: [K, V][]): Map<K, V>;

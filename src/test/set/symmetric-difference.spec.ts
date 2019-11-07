@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { symmetricDifference } from '../../set/symmetric-difference.js';
+import { extend } from '../../extend.ts';
+import { symmetricDifference } from '../../set/symmetric-difference.ts';
 
 extend({ set: [symmetricDifference] });
 

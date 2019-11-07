@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface WeakSetFrom {
   from<K extends object>(mapEntries: K[]): WeakSet<K>;

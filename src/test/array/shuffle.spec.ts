@@ -1,5 +1,5 @@
-import { shuffle } from '../../array/shuffle.js';
-import { extend } from '../../extend.js';
+import { shuffle } from '../../array/shuffle.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [shuffle] });
 

@@ -21,7 +21,7 @@
 ```ts
 import {
   isBoolean,
-} from 'jsmodern/dist/boolean.js';
+} from 'jsmodern/dist/boolean.ts';
 import { extend } from 'jsmodern';
 
 extend({

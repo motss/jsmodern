@@ -39,7 +39,7 @@ import {
   toPascalCase,
   toSnakeCase,
   toStartCase,
-} from 'jsmodern/dist/string.js';
+} from 'jsmodern/dist/string.ts';
 
 extend({
   string: [

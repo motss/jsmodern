@@ -1,4 +1,4 @@
-import '../reg-exp.js';
+import '../reg-exp.ts';
 
 describe('reg-exp', () => {
   type TestSuccess = [string, string, boolean, boolean];

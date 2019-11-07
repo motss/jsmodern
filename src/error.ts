@@ -1,1 +1,1 @@
-export * from './error/is-error.js';
+export * from './error/is-error.ts';

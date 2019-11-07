@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 type RetainPredicate<T> = (element: T, index: number) => void;
 interface Retain<T> {

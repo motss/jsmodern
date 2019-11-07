@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { toSnakeCase } from '../../string/to-snake-case.js';
+import { extend } from '../../extend.ts';
+import { toSnakeCase } from '../../string/to-snake-case.ts';
 
 extend({ string: [toSnakeCase] });
 

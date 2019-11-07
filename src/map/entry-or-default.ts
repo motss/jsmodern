@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface EntryOrDefault<K, V> {
   entryOrDefault(key: K, defaultValue: V): [K, V];

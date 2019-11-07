@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { toCamelCase } from '../../string/to-camel-case.js';
+import { extend } from '../../extend.ts';
+import { toCamelCase } from '../../string/to-camel-case.ts';
 
 extend({ string: [toCamelCase] });
 

@@ -1,5 +1,5 @@
-import { chunks } from '../../array/chunks.js';
-import { extend } from '../../extend.js';
+import { chunks } from '../../array/chunks.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [chunks] });
 

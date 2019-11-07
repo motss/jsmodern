@@ -1,5 +1,5 @@
-import { insert } from '../../array/insert.js';
-import { extend } from '../../extend.js';
+import { insert } from '../../array/insert.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [insert] });
 

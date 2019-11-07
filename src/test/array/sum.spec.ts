@@ -1,5 +1,5 @@
-import { sum } from '../../array/sum.js';
-import { extend } from '../../extend.js';
+import { sum } from '../../array/sum.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [sum] });
 

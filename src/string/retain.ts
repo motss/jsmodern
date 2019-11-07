@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 type RetainPredicate = (character: string) => boolean;
 interface Retain {

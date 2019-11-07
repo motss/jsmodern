@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 type MapFn<K, V> = (n: [K, V]) => [K, V];
 interface MapFrom {

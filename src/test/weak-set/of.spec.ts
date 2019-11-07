@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { of } from '../../weak-set/of.js';
+import { extend } from '../../extend.ts';
+import { of } from '../../weak-set/of.ts';
 
 extend({ weakSet: [of] });
 

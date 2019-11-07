@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { insert } from '../../string/insert.js';
+import { extend } from '../../extend.ts';
+import { insert } from '../../string/insert.ts';
 
 extend({ string: [insert] });
 

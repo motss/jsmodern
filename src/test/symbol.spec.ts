@@ -1,4 +1,4 @@
-import '../symbol.js';
+import '../symbol.ts';
 
 describe('symbol', () => {
   type TestSuccess = [string, string, boolean, boolean];

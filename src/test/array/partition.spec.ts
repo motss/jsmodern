@@ -1,5 +1,5 @@
-import { partition } from '../../array/partition.js';
-import { extend } from '../../extend.js';
+import { partition } from '../../array/partition.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [partition] });
 

@@ -35,7 +35,7 @@ import {
   symmetricDifference,
   toArray,
   union,
-} from 'jsmodern/dist/set.js';
+} from 'jsmodern/dist/set.ts';
 
 extend({
   set: [

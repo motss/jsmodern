@@ -32,7 +32,7 @@ import {
   of,
   removeEntry,
   toArray,
-} from 'jsmodern/dist/map.js';
+} from 'jsmodern/dist/map.ts';
 
 extend({
   map: [

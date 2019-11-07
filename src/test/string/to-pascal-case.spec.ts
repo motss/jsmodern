@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { toPascalCase } from '../../string/to-pascal-case.js';
+import { extend } from '../../extend.ts';
+import { toPascalCase } from '../../string/to-pascal-case.ts';
 
 extend({ string: [toPascalCase] });
 

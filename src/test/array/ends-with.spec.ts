@@ -1,5 +1,5 @@
-import { endsWith } from '../../array/ends-with.js';
-import { extend } from '../../extend.js';
+import { endsWith } from '../../array/ends-with.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [endsWith] });
 

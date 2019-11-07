@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { entryOrDefault } from '../../map/entry-or-default.js';
+import { extend } from '../../extend.ts';
+import { entryOrDefault } from '../../map/entry-or-default.ts';
 
 extend({ map: [entryOrDefault] });
 

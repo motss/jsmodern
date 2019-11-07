@@ -1,5 +1,5 @@
-import { remove } from '../../array/remove.js';
-import { extend } from '../../extend.js';
+import { remove } from '../../array/remove.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [remove] });
 

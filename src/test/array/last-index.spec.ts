@@ -1,5 +1,5 @@
-import { lastIndex } from '../../array/last-index.js';
-import { extend } from '../../extend.js';
+import { lastIndex } from '../../array/last-index.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [lastIndex] });
 

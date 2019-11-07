@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { firstIndex } from '../../string/first-index.js';
+import { extend } from '../../extend.ts';
+import { firstIndex } from '../../string/first-index.ts';
 
 extend({ string: [firstIndex] });
 

@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isEmpty } from '../../string/is-empty.js';
+import { extend } from '../../extend.ts';
+import { isEmpty } from '../../string/is-empty.ts';
 
 extend({ string: [isEmpty] });
 

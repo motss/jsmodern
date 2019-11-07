@@ -1,5 +1,5 @@
-import { retain } from '../../array/retain.js';
-import { extend } from '../../extend.js';
+import { retain } from '../../array/retain.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [retain] });
 

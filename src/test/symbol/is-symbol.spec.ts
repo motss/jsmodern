@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isSymbol } from '../../symbol/is-symbol.js';
+import { extend } from '../../extend.ts';
+import { isSymbol } from '../../symbol/is-symbol.ts';
 
 extend({ symbol: [isSymbol] });
 

@@ -1,4 +1,4 @@
-import '../map.js';
+import '../map.ts';
 
 describe('map', () => {
   type TestSuccess = [string, string, boolean, boolean];

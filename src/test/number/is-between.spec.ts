@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isBetween } from '../../number/is-between.js';
+import { extend } from '../../extend.ts';
+import { isBetween } from '../../number/is-between.ts';
 
 extend({ number: [isBetween] });
 

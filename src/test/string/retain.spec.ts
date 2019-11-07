@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { retain } from '../../string/retain.js';
+import { extend } from '../../extend.ts';
+import { retain } from '../../string/retain.ts';
 
 extend({ string: [retain] });
 

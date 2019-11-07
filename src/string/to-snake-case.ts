@@ -1,5 +1,5 @@
-import { PrototypeStruct } from '../index.js';
-import { postCase, preCase } from './to-case.js';
+import { PrototypeStruct } from '../index.ts';
+import { postCase, preCase } from './to-case.ts';
 
 interface ToSnakeCase {
   toSnakeCase(): string;

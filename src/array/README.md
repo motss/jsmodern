@@ -53,7 +53,7 @@ import {
   startsWith,
   sum,
   truncate,
-} from 'jsmodern/dist/array.js';
+} from 'jsmodern/dist/array.ts';
 import { extend } from 'jsmodern';
 
 extend({

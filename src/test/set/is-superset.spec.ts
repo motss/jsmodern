@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isSuperset } from '../../set/is-superset.js';
+import { extend } from '../../extend.ts';
+import { isSuperset } from '../../set/is-superset.ts';
 
 extend({ set: [isSuperset] });
 

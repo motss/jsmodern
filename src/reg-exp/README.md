@@ -20,7 +20,7 @@
 
 ```ts
 import { extend } from 'jsmodern';
-import { isRegExp } from 'jsmodern/dist/reg-exp.js';
+import { isRegExp } from 'jsmodern/dist/reg-exp.ts';
 
 extend({
   regExp: [isRegExp],

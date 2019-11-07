@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { capitalize } from '../../string/capitalize.js';
+import { extend } from '../../extend.ts';
+import { capitalize } from '../../string/capitalize.ts';
 
 extend({ string: [capitalize] });
 

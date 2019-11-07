@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { range } from '../../number/range.js';
+import { extend } from '../../extend.ts';
+import { range } from '../../number/range.ts';
 
 extend({ number: [range] });
 

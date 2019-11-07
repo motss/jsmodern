@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isWeakMap } from '../../weak-map/is-weak-map.js';
+import { extend } from '../../extend.ts';
+import { isWeakMap } from '../../weak-map/is-weak-map.ts';
 
 extend({ weakMap: [isWeakMap] });
 

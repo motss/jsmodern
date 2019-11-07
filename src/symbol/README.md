@@ -20,7 +20,7 @@
 
 ```ts
 import { extend } from 'jsmodern';
-import { isSymbol } from 'jsmodern/dist/symbol.js';
+import { isSymbol } from 'jsmodern/dist/symbol.ts';
 
 extend({
   symbol: [isSymbol],

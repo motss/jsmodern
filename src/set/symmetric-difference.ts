@@ -1,5 +1,5 @@
-import { PrototypeStruct } from '../index.js';
-import { utilIsSet } from './is-set.js';
+import { PrototypeStruct } from '../index.ts';
+import { utilIsSet } from './is-set.ts';
 
 interface SymmetricDifference<T> {
   symmetricDifference(other: Set<T>): T[];

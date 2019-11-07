@@ -1,5 +1,5 @@
-import { PrototypeStruct } from '../index.js';
-import { utilDateDifference } from './difference.js';
+import { PrototypeStruct } from '../index.ts';
+import { utilDateDifference } from './difference.ts';
 
 interface IsBefore {
   isBefore(other: Date): boolean;

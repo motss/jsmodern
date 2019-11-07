@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface Chunks<T> {
   chunks(chunkSize: number): T[] | T[][];

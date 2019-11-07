@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { divModFloor } from '../../number/div-mod-floor.js';
+import { extend } from '../../extend.ts';
+import { divModFloor } from '../../number/div-mod-floor.ts';
 
 extend({ number: [divModFloor] });
 

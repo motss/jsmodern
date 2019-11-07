@@ -23,7 +23,7 @@ import { extend } from 'jsmodern';
 import {
   delayed,
   isPromise,
-} from 'jsmodern/dist/promise.js';
+} from 'jsmodern/dist/promise.ts';
 
 extend({
   promise: [

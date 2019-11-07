@@ -1,4 +1,4 @@
-import '../boolean.js';
+import '../boolean.ts';
 
 describe('boolean', () => {
   type TestSuccess = [string, string, boolean, boolean];

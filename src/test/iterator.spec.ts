@@ -1,4 +1,4 @@
-import '../iterator.js';
+import '../iterator.ts';
 
 describe('iterator', () => {
   type TestSuccess = [string, string, boolean, boolean];

@@ -1,4 +1,4 @@
-import '../error.js';
+import '../error.ts';
 
 describe('error', () => {
   type TestSuccess = [string, string, boolean, boolean];

@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { toArray } from '../../set/to-array.js';
+import { extend } from '../../extend.ts';
+import { toArray } from '../../set/to-array.ts';
 
 extend({ set: [toArray] });
 

@@ -1,5 +1,5 @@
-import { iter } from '../../array/iter.js';
-import { extend } from '../../extend.js';
+import { iter } from '../../array/iter.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [iter] });
 

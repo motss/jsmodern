@@ -1,4 +1,4 @@
-import '../weak-set.js';
+import '../weak-set.ts';
 
 describe('weakSet', () => {
   type TestSuccess = [string, string, boolean, boolean];

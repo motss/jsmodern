@@ -1,4 +1,4 @@
-import '../promise.js';
+import '../promise.ts';
 
 describe('promise', () => {
   type TestSuccess = [string, string, boolean, boolean];

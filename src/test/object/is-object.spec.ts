@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isObject } from '../../object/is-object.js';
+import { extend } from '../../extend.ts';
+import { isObject } from '../../object/is-object.ts';
 
 extend({ object: [isObject] });
 

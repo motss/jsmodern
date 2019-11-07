@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 type SplitPredicate<T> = (x: T) => boolean;
 interface Split<T> {

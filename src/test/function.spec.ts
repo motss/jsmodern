@@ -1,4 +1,4 @@
-import '../function.js';
+import '../function.ts';
 
 describe('function', () => {
   type TestSuccess = [string, string, boolean, boolean];

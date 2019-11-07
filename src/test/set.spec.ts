@@ -1,4 +1,4 @@
-import '../set.js';
+import '../set.ts';
 
 describe('set', () => {
   type TestSuccess = [string, string, boolean, boolean];

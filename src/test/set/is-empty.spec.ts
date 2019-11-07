@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isEmpty } from '../../set/is-empty.js';
+import { extend } from '../../extend.ts';
+import { isEmpty } from '../../set/is-empty.ts';
 
 extend({ set: [isEmpty] });
 

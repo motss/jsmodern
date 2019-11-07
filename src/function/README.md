@@ -24,7 +24,7 @@ import {
   isAsyncGeneratorFunction,
   isFunction,
   isGeneratorFunction,
-} from 'jsmodern/dist/function.js';
+} from 'jsmodern/dist/function.ts';
 import { extend } from 'jsmodern';
 
 extend({

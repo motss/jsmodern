@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isSet } from '../../set/is-set.js';
+import { extend } from '../../extend.ts';
+import { isSet } from '../../set/is-set.ts';
 
 extend({ set: [isSet] });
 

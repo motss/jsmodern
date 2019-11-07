@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isGeneratorFunction } from '../../function/is-generator-function.js';
+import { extend } from '../../extend.ts';
+import { isGeneratorFunction } from '../../function/is-generator-function.ts';
 
 extend({ function: [isGeneratorFunction] });
 

@@ -20,7 +20,7 @@
 
 ```ts
 import { extend } from 'jsmodern';
-import { isObject } from 'jsmodern/dist/object.js';
+import { isObject } from 'jsmodern/dist/object.ts';
 
 extend({
   object: [isObject],

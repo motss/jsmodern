@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface RemoveEntry<K, V> {
   removeEntry(key: K): [K, V];

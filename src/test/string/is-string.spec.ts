@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { isString } from '../../string/is-string.js';
+import { extend } from '../../extend.ts';
+import { isString } from '../../string/is-string.ts';
 
 extend({ string: [isString] });
 

@@ -1,4 +1,4 @@
-import { PrototypeStruct } from './index.js';
+import { PrototypeStruct } from './index.ts';
 
 function toObject(name: keyof Extensions) {
   switch (name) {

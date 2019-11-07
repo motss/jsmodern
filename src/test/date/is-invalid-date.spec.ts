@@ -1,5 +1,5 @@
-import { isInvalidDate } from '../../date/is-invalid-date.js';
-import { extend } from '../../extend.js';
+import { isInvalidDate } from '../../date/is-invalid-date.ts';
+import { extend } from '../../extend.ts';
 
 extend({ date: [isInvalidDate] });
 

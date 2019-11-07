@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { gcd } from '../../number/gcd.js';
+import { extend } from '../../extend.ts';
+import { gcd } from '../../number/gcd.ts';
 
 extend({ number: [gcd] });
 

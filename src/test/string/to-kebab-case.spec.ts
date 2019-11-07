@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { toKebabCase } from '../../string/to-kebab-case.js';
+import { extend } from '../../extend.ts';
+import { toKebabCase } from '../../string/to-kebab-case.ts';
 
 extend({ string: [toKebabCase] });
 

@@ -1,1 +1,1 @@
-export * from './symbol/is-symbol.js';
+export * from './symbol/is-symbol.ts';

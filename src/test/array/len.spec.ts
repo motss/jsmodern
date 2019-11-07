@@ -1,5 +1,5 @@
-import { len } from '../../array/len.js';
-import { extend } from '../../extend.js';
+import { len } from '../../array/len.ts';
+import { extend } from '../../extend.ts';
 
 extend({ array: [len] });
 

@@ -1,4 +1,4 @@
-import '../date.js';
+import '../date.ts';
 
 describe('date', () => {
   type TestSuccess = [string, string, boolean, boolean];

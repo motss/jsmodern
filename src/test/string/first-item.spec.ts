@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { firstItem } from '../../string/first-item.js';
+import { extend } from '../../extend.ts';
+import { firstItem } from '../../string/first-item.ts';
 
 extend({ string: [firstItem] });
 

@@ -1,5 +1,5 @@
-import { isError } from '../../error/is-error.js';
-import { extend } from '../../extend.js';
+import { isError } from '../../error/is-error.ts';
+import { extend } from '../../extend.ts';
 
 extend({ error: [isError] });
 

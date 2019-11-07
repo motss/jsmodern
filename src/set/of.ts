@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import { PrototypeStruct } from '../index.ts';
 
 interface SetOf {
   of<T>(...elements: T[]): Set<T>;

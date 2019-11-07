@@ -1,5 +1,5 @@
-import { extend, Extensions } from '../extend.js';
-import { PrototypeStruct } from '../index.js';
+import { extend, Extensions } from '../extend.ts';
+import { PrototypeStruct } from '../index.ts';
 
 const dummy: PrototypeStruct = {
   label: 'dummy',

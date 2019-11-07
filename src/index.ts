@@ -4,24 +4,24 @@ export interface PrototypeStruct<T = (...params: any[]) => any> {
   fn: T;
 }
 
-import * as arrayExtend from './array.js';
-import * as booleanExtend from './boolean.js';
-import * as dateExtend from './date.js';
-import * as errorExtend from './error.js';
-import * as functionExtend from './function.js';
-import * as iteratorExtend from './iterator.js';
-import * as mapExtend from './map.js';
-import * as numberExtend from './number.js';
-import * as objectExtend from './object.js';
-import * as promiseExtend from './promise.js';
-import * as regExpExtend from './reg-exp.js';
-import * as setExtend from './set.js';
-import * as stringExtend from './string.js';
-import * as symbolExtend from './symbol.js';
-import * as weakMapExtend from './weak-map.js';
-import * as weakSetExtend from './weak-set.js';
+import * as arrayExtend from './array.ts';
+import * as booleanExtend from './boolean.ts';
+import * as dateExtend from './date.ts';
+import * as errorExtend from './error.ts';
+import * as functionExtend from './function.ts';
+import * as iteratorExtend from './iterator.ts';
+import * as mapExtend from './map.ts';
+import * as numberExtend from './number.ts';
+import * as objectExtend from './object.ts';
+import * as promiseExtend from './promise.ts';
+import * as regExpExtend from './reg-exp.ts';
+import * as setExtend from './set.ts';
+import * as stringExtend from './string.ts';
+import * as symbolExtend from './symbol.ts';
+import * as weakMapExtend from './weak-map.ts';
+import * as weakSetExtend from './weak-set.ts';
 
-export * from './extend.js';
+export * from './extend.ts';
 
 export {
   arrayExtend,

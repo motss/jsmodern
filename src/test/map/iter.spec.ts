@@ -1,5 +1,5 @@
-import { extend } from '../../extend.js';
-import { iter } from '../../map/iter.js';
+import { extend } from '../../extend.ts';
+import { iter } from '../../map/iter.ts';
 
 extend({ map: [iter] });
 

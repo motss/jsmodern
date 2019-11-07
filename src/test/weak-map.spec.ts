@@ -1,4 +1,4 @@
-import '../weak-map.js';
+import '../weak-map.ts';
 
 describe('weakMap', () => {
   type TestSuccess = [string, string, boolean, boolean];
