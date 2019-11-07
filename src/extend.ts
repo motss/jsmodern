@@ -20,7 +20,7 @@ function toObject(name: keyof Extensions) {
 
     case 'iterator':
     default: {
-      return 'undefined' === typeof(window) ? global : window;
+      return window;
     }
   }
 }
