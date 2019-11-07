@@ -1,3 +1,5 @@
+import { PrototypeStruct } from './index.js';
+
 function toObject(name: keyof Extensions) {
   switch (name) {
     case 'array': return Array;

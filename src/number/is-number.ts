@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 export function numberIsNumber(n: any): n is number {
   return 'number' === typeof(n) && n === n;
 }

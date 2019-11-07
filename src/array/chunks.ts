@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Chunks<T> {
   chunks(chunkSize: number): T[] | T[][];
 }

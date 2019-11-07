@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 type PartitionPredicate<T> = (n: T) => boolean;
 interface Partition<T> {
   partition(n: PartitionPredicate<T>): [T[], T[]];

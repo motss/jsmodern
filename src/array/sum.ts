@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Sum<T> {
   sum(): T;
   sum<U>(): U;

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface BinarySearch<T> {
   binarySearch(x: T): number;
 }

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 type SplitPredicate<T> = (x: T) => boolean;
 interface Split<T> {
   split(predicate: SplitPredicate<T>): T[][];

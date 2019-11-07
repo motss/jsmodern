@@ -1,3 +1,4 @@
+import { PrototypeStruct } from '../index.js';
 import { utilDateDifference } from './difference.js';
 
 interface IsBefore {

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Remove<T> {
   remove(index: number): T;
 }

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Iter<K, V> {
   iter(): IterableIterator<[K, V]>;
 }

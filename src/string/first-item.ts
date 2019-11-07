@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface FirstItem {
   firstItem(): string;
 }

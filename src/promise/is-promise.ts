@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface IsPromise {
   isPromise(x: any): boolean;
 }

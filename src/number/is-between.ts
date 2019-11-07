@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface IsBetween {
   isBetween(min: number, max: number): boolean;
 }

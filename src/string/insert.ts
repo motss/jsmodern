@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Insert {
   insert(index: number, s: string): string;
 }

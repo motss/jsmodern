@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface IsMultipleOf {
   isMultipleOf(divisor: number): boolean;
 }

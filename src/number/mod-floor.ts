@@ -1,3 +1,4 @@
+import { PrototypeStruct } from '../index.js';
 import { utilDivFloor } from './div-floor.js';
 
 interface ModFloor {

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 export function dateIsDate(x: any): boolean {
   return null == x ? false : 'object' === typeof(x) && 'Date' === x.constructor.name;
 }

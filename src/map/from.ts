@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 type MapFn<K, V> = (n: [K, V]) => [K, V];
 interface MapFrom {
   from<K, V>(mapEntries: [K, V][], mapFn?: MapFn<K, V>): Map<K, V>;

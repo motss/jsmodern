@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Contains<T> {
   contains(valueToFind: T): boolean;
 }

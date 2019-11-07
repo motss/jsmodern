@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface Repeat<T> {
   repeat(n: number): T[];
 }

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface GetOrDefault<K, V> {
   getOrDefault(key: K, defaultValue: V): V;
 }

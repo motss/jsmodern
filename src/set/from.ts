@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 type MapFn<T> = (n: T) => T;
 export interface SetFrom {
   from<T>(setEntry: T[], mapFn?: MapFn<T>): Set<T>;

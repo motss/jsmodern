@@ -1,3 +1,4 @@
+import { PrototypeStruct } from '../index.js';
 import { utilGcd } from './gcd.js';
 
 interface Lcm {

@@ -1,3 +1,5 @@
+import { PrototypeStruct } from '../index.js';
+
 interface EndsWith<T> {
   endsWith(needle: T[]): boolean;
 }
