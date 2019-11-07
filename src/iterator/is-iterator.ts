@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface IsIterator {
   isIterator(x: any): boolean;
 }

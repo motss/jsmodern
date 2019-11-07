@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 export function isAnyString(s: any): s is string {
   return 'string' === typeof(s);
 }

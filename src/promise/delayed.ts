@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 type DelayedCallback<T> = (...args: any) => T;
 export interface PromiseDelayed {
   delayed<T>(delay: number, callback: DelayedCallback<T>): Promise<undefined | T>;

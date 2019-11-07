@@ -1,9 +1,3 @@
-export interface PrototypeStruct<T = (...params: any[]) => any> {
-  isStatic?: boolean;
-  label: string;
-  fn: T;
-}
-
 import * as arrayExtend from './array.js';
 import * as booleanExtend from './boolean.js';
 import * as dateExtend from './date.js';

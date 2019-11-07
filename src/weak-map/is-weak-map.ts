@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface IsWeakMap {
   isWeakMap(x: any): boolean;
 }

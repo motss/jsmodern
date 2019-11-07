@@ -1,4 +1,3 @@
-import { PrototypeStruct } from '../index.js';
 import { utilIsSet } from './is-set.js';
 
 interface IsDisjoint<T> {

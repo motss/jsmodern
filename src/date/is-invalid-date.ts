@@ -1,4 +1,3 @@
-import { PrototypeStruct } from '../index.js';
 import { dateIsDate } from './is-date.js';
 
 interface IsInvalidDate {

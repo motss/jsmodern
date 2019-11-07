@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 type RejectCallbackFn<T> = (element: T) => boolean;
 interface Reject<T> {
   reject(callbackFn: RejectCallbackFn<T>): T[];

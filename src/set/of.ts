@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface SetOf {
   of<T>(...elements: T[]): Set<T>;
 }

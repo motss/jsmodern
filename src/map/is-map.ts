@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface IsMap {
   isMap(x: any): boolean;
 }

@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface IsObject {
   isObject(x: any): boolean;
 }

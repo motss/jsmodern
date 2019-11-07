@@ -24,3 +24,4 @@ node_modules/
 
 # Do not ignore
 !rollup.config.js
+!src/global.d.ts

@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 type FoldPredicate<T, U> = (
   previousValue: U,
   currentValue: T,

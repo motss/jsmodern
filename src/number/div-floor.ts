@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 export function utilDivFloor(a: number, b: number): number {
   return Math.floor(a / b);
 }

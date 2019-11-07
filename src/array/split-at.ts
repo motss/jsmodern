@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface SplitAt<T> {
   splitAt(valueToFind: T): [T[], T[]];
 }

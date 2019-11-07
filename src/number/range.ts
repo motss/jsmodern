@@ -1,4 +1,3 @@
-import { PrototypeStruct } from '../index.js';
 import { checkInt } from './check-int.js';
 
 interface Range {

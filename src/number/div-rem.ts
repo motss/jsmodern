@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface DivRem {
   divRem(divisor: number): number[];
 }

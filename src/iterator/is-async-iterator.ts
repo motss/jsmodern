@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface IsAsyncIterator {
   isAsyncIterator(x: any): boolean;
 }

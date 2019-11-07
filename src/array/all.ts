@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 type AllPredicate<T> = (value: T) => boolean;
 interface All<T> {
   all(predicate: AllPredicate<T>): boolean;

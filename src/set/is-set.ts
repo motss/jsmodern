@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 export function utilIsSet<T>(x: any): x is Set<T> {
   return null == x ? false : 'object' === typeof(x) && 'Set' === x.constructor.name;
 }

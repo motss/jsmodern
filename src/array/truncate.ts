@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface Truncate {
   truncate(len: number): void;
 }

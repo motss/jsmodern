@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 export function isArraySorted<T>(list: T[]): boolean {
   const len = list.length;
 

@@ -1,4 +1,3 @@
-import { PrototypeStruct } from '../index.js';
 import { postCase, preCase } from './to-case.js';
 
 interface ToPascalCase {

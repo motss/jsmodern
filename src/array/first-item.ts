@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface FirstItem<T> {
   firstItem(): T | undefined;
 }

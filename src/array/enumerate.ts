@@ -1,5 +1,3 @@
-import { PrototypeStruct } from '../index.js';
-
 interface Enumerate<T> {
   enumerate(): [number, T][];
 }
