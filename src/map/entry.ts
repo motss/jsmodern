@@ -1,5 +1,4 @@
-// @ts-ignore
-import { PrototypeStruct } from '../index.d.ts';
+import { PrototypeStruct } from '../index.js';
 
 interface Entry<K, V> {
   entry(key: K): [K, V];

@@ -1,5 +1,4 @@
-// @ts-ignore
-import { PrototypeStruct } from '../index.d.ts';
+import { PrototypeStruct } from '../index.js';
 import { postCase, preCase } from './to-case.js';
 
 interface ToKebabCase {

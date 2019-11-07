@@ -1,6 +1,5 @@
 import { extend, Extensions } from '../extend.js';
-// @ts-ignore
-import { PrototypeStruct } from '../index.d.ts';
+import { PrototypeStruct } from '../index.js';
 
 const dummy: PrototypeStruct = {
   label: 'dummy',

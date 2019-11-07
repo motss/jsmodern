@@ -1,5 +1,4 @@
-// @ts-ignore
-import { PrototypeStruct } from '../index.d.ts';
+import { PrototypeStruct } from '../index.js';
 import { utilIsSet } from './is-set.js';
 
 interface Intersection<T> {

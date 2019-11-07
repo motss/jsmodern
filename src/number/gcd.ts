@@ -1,5 +1,4 @@
-// @ts-ignore
-import { PrototypeStruct } from '../index.d.ts';
+import { PrototypeStruct } from '../index.js';
 
 export function utilGcd(a: number, b: number): number {
   // gcd(4, 8) = 4

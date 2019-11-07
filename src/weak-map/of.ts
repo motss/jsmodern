@@ -1,5 +1,4 @@
-// @ts-ignore
-import { PrototypeStruct } from '../index.d.ts';
+import { PrototypeStruct } from '../index.js';
 
 interface WeakMapOf {
   of<K extends object, V>(...elements: [K, V][]): WeakMap<K, V>;
