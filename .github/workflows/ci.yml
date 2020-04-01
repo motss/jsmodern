@@ -23,7 +23,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-18.04, windows-2019]
-        target: [13.x]
+        target: [10.x, 12.x, 13.x]
     timeout-minutes: 120
 
     steps:
