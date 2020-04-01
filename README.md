@@ -19,7 +19,6 @@
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
 
-[![CircleCI][circleci-badge]][circleci-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
 [![codecov][codecov-badge]][codecov-url]
 [![Coverage Status][coveralls-badge]][coveralls-url]
@@ -40,8 +39,7 @@
 
 ## Pre-requisites
 
-- [Node.js][nodejs-url] >= 8.16.0
-- [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][nodejs-url] so there is no need to install separately.)
+* [OPTIONAL] TypeScript >= `3.8.3` _Minimum version for TypeScript users_
 
 ## Installation
 
@@ -123,7 +121,6 @@ console.log(total === 6); // true
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/jsmodern
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/jsmodern
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/motss/jsmodern?icon=circleci
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/jsmodern
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/jsmodern?label=codecov&icon=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/jsmodern?label=coveralls
@@ -144,7 +141,6 @@ console.log(total === 6); // true
 [packagephobia-url]: https://packagephobia.now.sh/result?p=jsmodern
 [bundlephobia-url]: https://bundlephobia.com/result?p=jsmodern
 
-[circleci-url]: https://circleci.com/gh/motss/jsmodern/tree/master
 [daviddm-url]: https://david-dm.org/motss/jsmodern
 [codecov-url]: https://codecov.io/gh/motss/jsmodern
 [coveralls-url]: https://coveralls.io/github/motss/jsmodern?branch=master

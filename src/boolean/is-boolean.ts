@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import type { PrototypeStruct } from '../index.js';
 
 interface IsBoolean {
   isBoolean(x: any): boolean;

@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import type { PrototypeStruct } from '../index.js';
 import { utilDateDifference } from './difference.js';
 
 interface IsAfter {

@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import type { PrototypeStruct } from '../index.js';
 
 type PartitionPredicate<T> = (n: T) => boolean;
 interface Partition<T> {

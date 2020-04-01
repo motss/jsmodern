@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import type { PrototypeStruct } from '../index.js';
 
 interface Filled {
   filled<T>(len: number, value?: T): T[];

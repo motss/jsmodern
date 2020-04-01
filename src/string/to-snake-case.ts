@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import type { PrototypeStruct } from '../index.js';
 import { postCase, preCase } from './to-case.js';
 
 interface ToSnakeCase {

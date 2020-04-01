@@ -1,4 +1,4 @@
-import { PrototypeStruct } from '../index.js';
+import type { PrototypeStruct } from '../index.js';
 
 interface StartsWith<T> {
   startsWith(needle: T[]): boolean;

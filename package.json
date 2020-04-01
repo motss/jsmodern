@@ -31,43 +31,43 @@
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run ts -- -p tsconfig.prod.json",
-    "build:test": "npm run ts -- -p tsconfig.test.json",
-    "build:test-es2017": "npm run ts -- -p tsconfig.test.es2017.json",
-    "build:test-watch": "npm run ts -- -p tsconfig.test.json --watch",
-    "clean": "shx rm -rf dist/",
+    "build": "tsc -p tsconfig.prod.json",
+    "build:test": "tsc -p tsconfig.test.json",
+    "build:test-es2017": "tsc -p tsconfig.test.es2017.json",
+    "build:test-watch": "tsc -p tsconfig.test.json --watch",
+    "clean": "shx rm -rf dist/ .*cache *.log",
     "jest": "jest --config ./.jestrc.json",
     "lint": "npm run lint:debug -- --config tslint.prod.json",
     "lint:debug": "tslint --project tsconfig.json --format stylish",
     "prepublishOnly": "npm run lint && npm run build",
     "test": "npm run lint && npm run build:test && npm run jest",
-    "ts": "npm run clean && tsc",
-    "watch": "npm run ts -- --watch",
-    "watch:build": "npm run ts -- --watch -p tsconfig.test.json",
+    "ts": "tsc",
+    "watch": "tsc --watch",
+    "watch:build": "tsc --watch -p tsconfig.test.json",
     "watch:test": "npm run jest -- --watchAll"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run ts && npm run clean"
+      "pre-commit": "npm run lint && tsc --noEmit"
     }
   },
   "dependencies": {
     "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "@reallyland/tsconfig": "^1.0.0",
+    "@reallyland/tsconfig": "^2.0.0",
     "@reallyland/tslint-config": "^1.1.1",
-    "@types/jest": "^24.0.22",
-    "@types/node": "^12.12.6",
-    "husky": "^3.0.9",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.9.8",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
     "shx": "^0.3.2",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.2"
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
   },
   "engines": {
-    "node": ">= 8.16.0",
-    "npm": ">= 6.4.1"
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4"
   },
   "publishConfig": {
     "access": "public"
