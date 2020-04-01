@@ -19,6 +19,7 @@
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
 
+[![ci][ga-badge]][ga-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
 [![codecov][codecov-badge]][codecov-url]
 [![Coverage Status][coveralls-badge]][coveralls-url]
@@ -39,7 +40,7 @@
 
 ## Pre-requisites
 
-* [OPTIONAL] TypeScript >= `3.8.3` _Minimum version for TypeScript users_
+* [OPTIONAL] [TypeScript] >= `3.8.3` _Minimum version for TypeScript users_
 
 ## Installation
 
@@ -86,10 +87,11 @@ console.log(total === 6); // true
 [MIT License](https://motss.mit-license.org/) © Rong Sen Ng (motss)
 
 <!-- References -->
-[typescript-url]: https://github.com/Microsoft/TypeScript
-[nodejs-url]: https://nodejs.org
+[TypeScript]: https://github.com/Microsoft/TypeScript
+
+<!-- [nodejs-url]: https://nodejs.org
 [npm-url]: https://www.npmjs.com
-[node-releases-url]: https://nodejs.org/en/download/releases
+[node-releases-url]: https://nodejs.org/en/download/releases -->
 
 [Array extensions]: /src/array
 [Boolean extensions]: /src/boolean
@@ -121,6 +123,7 @@ console.log(total === 6); // true
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/jsmodern
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/jsmodern
 
+[ga-badge]: https://github.com/motss/jsmodern/workflows/ci/badge.svg?branch=master
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/jsmodern
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/jsmodern?label=codecov&icon=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/jsmodern?label=coveralls
@@ -141,6 +144,7 @@ console.log(total === 6); // true
 [packagephobia-url]: https://packagephobia.now.sh/result?p=jsmodern
 [bundlephobia-url]: https://bundlephobia.com/result?p=jsmodern
 
+[ga-url]: https://github.com/motss/jsmodern/actions?query=workflow%3Aci
 [daviddm-url]: https://david-dm.org/motss/jsmodern
 [codecov-url]: https://codecov.io/gh/motss/jsmodern
 [coveralls-url]: https://coveralls.io/github/motss/jsmodern?branch=master
